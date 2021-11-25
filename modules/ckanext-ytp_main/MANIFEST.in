@@ -1,0 +1,5 @@
+recursive-include ckanext/ytp/templates *
+recursive-include ckanext/ytp/public *
+recursive-include ckanext/ytp/i18n *
+recursive-include ckanext/ytp/postit *
+include ckanext/ytp/dataset/content_types.json

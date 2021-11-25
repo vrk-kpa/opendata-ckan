@@ -1,0 +1,36 @@
+{# {% extends "scheming/package/snippets/additional_info.html" %} #}
+{% ckan_extends %}
+
+{% block package_additional_info %}
+  {%- set ordered_dataset_fields = [
+      'maintainer_email',
+      'maintainer_website',
+      'external_urls',
+      'geographical_coverage',
+      'update_frequency',
+      'valid_from',
+      'valid_till',
+    ] -%}
+
+  {%- for field_key in ordered_dataset_fields -%}
+    {%- set field = schema.dataset_fields | selectattr('field_name', 'equalto', field_key) | list -%}
+      {% if field[0] %}
+        <tr>
+          <th scope="row" class="dataset-label">{{ h.scheming_language_text(field[0].label) }}</th>
+          <td class="dataset-details"{% if field[0].display_property %} property="{{ field[0].display_property }}" {% endif %}>
+          {%- snippet 'scheming/snippets/display_field.html', field=field[0], data=pkg_dict, schema=schema -%}</td>
+        </tr>
+      {% endif %}
+  {%- endfor -%}
+  <tr>
+    <th scope="row" class="dataset-label">{{ _("Last modified") }}</th>
+    <td class="dataset-details">
+      {{ h.render_datetime(pkg_dict.get('metadata_modified'), "%d.%m.%Y") }}<br />
+      <a href="/data/{{ h.lang() }}/dataset/activity/{{pkg_dict.get('name')}}">{{_('Show change log')}}</a>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row" class="dataset-label">{{ _("Created on") }}</th>
+    <td class="dataset-details">{{ h.render_datetime(pkg_dict.get('metadata_created'), "%d.%m.%Y") }}</td>
+  </tr>
+{% endblock %}

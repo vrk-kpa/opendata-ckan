@@ -1,0 +1,28 @@
+{% extends "sixodp_showcasesubmit/base.html" %}
+
+{% block maintag %}<div role="main" class="container-page-wrapper">{% endblock %}
+
+{% block breadcrumb_content %}
+  <li>{{ h.nav_link(_('Showcases'), named_route='ckanext_showcase_index') }}</li>
+  <li class="active">{{ h.nav_link(_('Showcase submit'), controller='ckanext.sixodp_showcasesubmit.controller:Sixodp_ShowcasesubmitController', action='index') }}</li>
+{% endblock %}
+
+{% block pre_primary %}
+  <div class="container row">
+    {% block pre_primary_content %}
+      <h1 class="page-heading">{% block subtitle %}{{ _('Tell us about a showcase') }}{% endblock %}</h1 c>
+      <div class="page-description">
+        {% trans %}
+          Tell us about a showcase you have created or found, and we will add it to our showcase gallery within a few days. Fields marked with an asterisk (*) are required.
+        {% endtrans %}
+      </div>
+      <div class="page-container">
+        {%- snippet 'sixodp_showcasesubmit/snippets/new_package_form.html', c=c, data=data, errors=errors, error_summary=error_summary, message=message -%}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block offcanvas_button %}{% endblock %}
+{% block primary %}{% endblock %}
+{% block secondary %}{% endblock %}

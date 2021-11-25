@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% set user_dict = user_dict or c.user_dict %}
+{% set form = form or c.form %}
+
+{% block secondary_content %}
+{% endblock %}
+
+{% block body_extras %}
+    {{ super() }}
+    {% resource "ytp_common_js/ytp_form.js" %}
+{% endblock %}

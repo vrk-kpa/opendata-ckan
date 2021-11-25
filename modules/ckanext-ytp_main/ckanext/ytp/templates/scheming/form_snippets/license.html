@@ -1,0 +1,39 @@
+{% import 'scheming/macros/form.html' as form %}
+
+{% set licenses = h.license_options() %}
+
+{%- set options=[] -%}
+{%- if field.get('form_include_blank_choice', false) -%}
+    {%- do options.append({
+        'value': '',
+        'text': ''}) -%}
+{%- endif -%}
+{%- if field.get('sorted_choices', true) -%}
+    {%- set licenses = licenses|sort -%}
+{%- endif -%}
+
+{# Change 'text': from license_desc to license_id and retranslate.
+   h.license_options() returns license_desc pre-translated so the translations are always in default language regardless of the language in the context #}
+{%- for license_id, license_desc in licenses -%}
+    {%- if license_id or not h.scheming_field_required(field) -%}
+        {%- do options.append({
+            'value': license_id,
+            'text': _(license_id)}) -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{% call form.select(
+    field.field_name,
+    id='field-' + field.field_name,
+    label=h.scheming_language_text(field.label),
+    options=options,
+    selected=data.get(field.field_name, field.get('default', 'notspecified')),
+    error=errors[field.field_name],
+    classes=['control-full'],
+    attrs=field.form_attrs if 'form_attrs' in field else {},
+    is_required=h.scheming_field_required(field),
+    description=field.description
+    )
+%}
+    {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
+{% endcall %}

@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% block secondary %}
+{% endblock  %}
+
+{% block primary %}
+  <div>
+    {% block primary_content %}
+      {{ super() }}
+    {% endblock %}
+  </div>
+{% endblock %}

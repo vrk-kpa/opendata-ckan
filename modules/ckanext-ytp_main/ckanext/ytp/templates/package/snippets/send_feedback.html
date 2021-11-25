@@ -1,0 +1,16 @@
+<!-- ckanext/ytp/dataset/templates/package/snippets/send_feedback.html -->
+{% import 'macros/ytp_layout.html' as layout %}
+
+{{ layout.moduleBoxHead(_('Send feedback about this dataset')) }}
+{% block package_send_feedback %}
+    {% if pkg_dict.maintainer_email and pkg_dict.maintainer_email != "None" %}
+      <a class="btn btn-primary" href="mailto:{{ pkg_dict.maintainer_email }}">{{ _('Feedback') }}</a>
+    {% elif pkg_dict.author_email and pkg_dict.author_email != "None" %}
+        <a class="btn btn-primary" href="mailto:{{ pkg_dict.author_email }}">{{ _('Feedback') }}</a>
+    {% else %}
+      {% trans %}
+        <p class="empty">Not possible to send feedback on this dataset since there is no valid maintainer.</p>
+      {% endtrans %}
+    {% endif %}
+{% endblock %}
+{{ layout.moduleBoxFoot() }}
