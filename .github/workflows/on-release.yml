@@ -3,7 +3,7 @@ name: Tag build artifacts with released version
 on:
   push:
     tags:
-      - *
+      - v1.*
 
 jobs:
   tag-image:
