@@ -44,7 +44,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.login.outputs.registry }}/opendata/ckan:${{ github.sha }}
+          tags: |
+            ${{ steps.login.outputs.registry }}/opendata/ckan:${{ github.sha }}
+            ${{ steps.login.outputs.registry }}/opendata/ckan:latest
           secret-files: |
             npmrc=./.npmrc
           cache-from: type=gha
