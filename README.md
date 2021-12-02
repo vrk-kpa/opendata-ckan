@@ -1,3 +1,4 @@
-## opendata-ckan ![GitHub workflow](https://github.com/vrk-kpa/opendata-ckan/actions/workflows/create-release.yml/badge.svg)
+# opendata-ckan
+[![Build](https://github.com/vrk-kpa/opendata-ckan/actions/workflows/main.yml/badge.svg)](https://github.com/vrk-kpa/opendata-ckan/actions/workflows/main.yml)
 
 CKAN docker image for open data portal (avoindata.fi). 
