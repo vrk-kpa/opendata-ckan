@@ -1,14 +1,9 @@
-name: Test release of new version
+name: Test
 
 on:
-  push:
+  pull_request:
     branches:
       - master
-
-# on:
-#   pull_request:
-#     branches:
-#       - master
 
 jobs:
   test-build:
@@ -38,7 +33,9 @@ jobs:
         with:
           context: .
           push: false
-          tags: opendata/ckan:${{ github.sha }}
+          tags: |
+            opendata/ckan:${{ github.sha }}
+            opendata/ckan:latest
           secret-files: |
             npmrc=./.npmrc
           cache-from: type=gha
@@ -51,15 +48,16 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          submodules: recursive
 
       - name: semantic release
         uses: cycjimmy/semantic-release-action@v2
         with:
-          semantic_version: 16
+          semantic_version: 18
           branch: master
           dry_run: true
+          extra_plugins: |
+            @semantic-release/changelog@6.0.1
+            @semantic-release/git@10.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
