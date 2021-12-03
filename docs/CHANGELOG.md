@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.0.0...v1.1.0) (2021-12-03)
+
+
+### Features
+
+* AV-1487: Local development environment ([#2](https://github.com/vrk-kpa/opendata-ckan/issues/2)) ([62cdf18](https://github.com/vrk-kpa/opendata-ckan/commit/62cdf189bfec735fe188bc83aa2d26f15a5ad1a1))
+
 # 1.0.0 (2021-12-02)
 
 
