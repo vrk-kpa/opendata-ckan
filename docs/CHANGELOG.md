@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.1.0...v1.1.1) (2021-12-09)
+
+
+### Bug Fixes
+
+* rename CKAN_IMAGE_VERSION to CKAN_IMAGE_TAG ([d2f284d](https://github.com/vrk-kpa/opendata-ckan/commit/d2f284d70a18e6641e64297d76fca2ba62853bff))
+
 # [1.1.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.0.0...v1.1.0) (2021-12-03)
 
 
