@@ -20,7 +20,7 @@ fi
 
 # init ckan if not done or version updated, otherwise run re-init
 flock -x ${DATA_DIR}/.init-lock -c 'echo "waiting for .init-lock to be released ..."'
-if [[ "$(cat ${DATA_DIR}/.init-done)" != "$CKAN_IMAGE_VERSION" ]]; then
+if [[ "$(cat ${DATA_DIR}/.init-done)" != "$CKAN_IMAGE_TAG" ]]; then
   flock -x ${DATA_DIR}/.init-lock -c './init_ckan.sh'
 else
   flock -x ${DATA_DIR}/.init-lock -c './reinit_ckan.sh'
