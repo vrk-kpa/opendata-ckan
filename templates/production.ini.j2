@@ -1,7 +1,6 @@
 [DEFAULT]
 
 debug = {% if environ('DEV_MODE') == 'true' %} true {% else %} false {% endif %}
-
 # smtp settings that need to be configured in default section for WebError middleware
 smtp_username = {{ environ('SMTP_USERNAME') }}
 smtp_password = {{ environ('SMTP_PASS') }}
