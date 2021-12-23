@@ -161,7 +161,8 @@ COPY app/package.default.json               ${APP_DIR}/package.default.json
 
 # build frontend
 WORKDIR ${APP_DIR}
-RUN cp -f ${EXT_DIR}/ytp-assets-common/.stylelintrc ${APP_DIR} && \
+RUN cp -f ${EXT_DIR}/ytp-assets-common/package.json ${APP_DIR} && \
+    cp -f ${EXT_DIR}/ytp-assets-common/.stylelintrc ${APP_DIR} && \
     cp -f ${EXT_DIR}/ytp-assets-common/.stylelintignore ${APP_DIR} && \
     chmod +x ./build_frontend.sh
 RUN --mount=type=secret,id=npmrc ./build_frontend.sh
