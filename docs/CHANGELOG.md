@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.1.1...v1.2.0) (2021-12-29)
+
+
+### Features
+
+* **AV-1563:** refactor project structure ([f9d2e4b](https://github.com/vrk-kpa/opendata-ckan/commit/f9d2e4b2016f0b1e95d75095c7a1a6e8a8e043f3))
+
 ## [1.1.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.1.0...v1.1.1) (2021-12-09)
 
 
