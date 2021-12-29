@@ -74,7 +74,8 @@ RUN cd ${SRC_DIR}/ckan && \
     patch --strip=1 --input=patches/add_group_extra_resource_db_indices.patch && \
     patch --strip=1 --input=patches/add_cache_control_headers_to_flask.patch && \
     patch --strip=1 --input=patches/fix_invalid_search_facets_template_error.patch && \
-    patch --strip=1 --input=patches/remove_stacktraces_from_http_errors.patch
+    patch --strip=1 --input=patches/remove_stacktraces_from_http_errors.patch && \
+    patch --strip=1 --input=patches/set_error_email_logging_level_to_error.patch
 
 # install crontab
 RUN chmod +x ${CRON_DIR}/scripts/*.sh && \
