@@ -1,3 +1,16 @@
+## [1.2.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.0...v1.2.1) (2021-12-30)
+
+
+### Bug Fixes
+
+* **AV-1569:** add missing ckan patch and compile ckanext-matomo translations ([d22e361](https://github.com/vrk-kpa/opendata-ckan/commit/d22e361c6d3722c432be385ec2c478c155c0ff5a))
+* **AV-1569:** do the botocore/boto/boto3 installation in base stage ([f73f2ba](https://github.com/vrk-kpa/opendata-ckan/commit/f73f2bab16eca89132f7ef3af93152ad4f8b22eb))
+* **AV-1569:** fix ckanext-ytp_main drupal API call URL config param ([8cb739f](https://github.com/vrk-kpa/opendata-ckan/commit/8cb739f0d054985e0ecc67232d91ab19293c163f))
+* **AV-1569:** install botocore/boto/boto3 manually to fix ckanext-cloudstorage issues ([eaa2f1c](https://github.com/vrk-kpa/opendata-ckan/commit/eaa2f1cc88859e20f62a197c5d07ff6e64b2c6a5))
+* **AV-1569:** update modules from main repo + fix line endings to LF ([3fa066a](https://github.com/vrk-kpa/opendata-ckan/commit/3fa066afa93316f7410ca5d47a112597c0167d19))
+* **AV-1569:** update submodules ([49b9b00](https://github.com/vrk-kpa/opendata-ckan/commit/49b9b0083192cc35557f254072f0ca9dcd27451a))
+* **AV-1569:** update submodules ([941f50b](https://github.com/vrk-kpa/opendata-ckan/commit/941f50b8f423dc53b716295fa45210ab70587d6e))
+
 # [1.2.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.1.1...v1.2.0) (2021-12-29)
 
 
