@@ -127,3 +127,4 @@ pip install -e ${EXT_DIR}/ckanext-drupal8 \
 (cd ${EXT_DIR}/ckanext-scheming; python setup.py compile_catalog -f)
 (cd ${EXT_DIR}/ckanext-statistics; python setup.py compile_catalog -f)
 (cd ${EXT_DIR}/ckanext-datarequests; python setup.py compile_catalog -f)
+(cd ${EXT_DIR}/ckanext-matomo; python setup.py compile_catalog -f)

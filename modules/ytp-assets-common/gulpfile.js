@@ -24,7 +24,6 @@ var paths = {
     less: "src/less",
     ckan: "src/less/ckan",
     drupal: "src/less/drupal/style.less",
-    drupal_avoindata_header: "src/drupal_scripts/avoindata_header.js",
     drupal_ckeditor_plugins: "src/less/drupal/custom-elements.less",
     templates: "src/templates/**/*",
     static_pages: "src/static_pages",
@@ -211,7 +210,7 @@ gulp.task("font", (done) => {
 
 gulp.task("scripts", (done) => {
   pump([
-    gulp.src([paths.src.scripts, paths.src.drupal_avoindata_header]),
+    gulp.src([paths.src.scripts]),
     gulp.dest(paths.dist + "/scripts")
   ], done)
 });
