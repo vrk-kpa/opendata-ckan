@@ -29,7 +29,10 @@ RUN apt-get update -yq && \
       pyOpenSSL \
       ndg-httpsclient \
       pyasn1 \
-      polib
+      polib \
+      botocore \
+      boto \
+      boto3
 
 # setup env vars, from base image:
 # - APP_DIR=/srv/app
@@ -181,16 +184,12 @@ RUN mkdir -p ${WWW_DIR} && mv ${EXT_DIR}/ytp-assets-common/resources ${WWW_DIR}/
 RUN ${SCRIPT_DIR}/install_extensions.sh
 
 # lock certain python package versions for compatibility
-# NOTE: boto/botocore/boto3 must be installed this way for ckanext-cloudstorage
 RUN pip install \
     flask==0.12 \
     flask-login==0.3.0 \
     simplejson==3.16.0 \
     six==1.13.0 \
-    pyOpenSSL==20.0.0 \
-    boto \
-    botocore \
-    boto3
+    pyOpenSSL==20.0.0
 
 # setup base directory that is used for initializing shared file systems
 RUN mkdir -p ${BASE_DIR} && \
