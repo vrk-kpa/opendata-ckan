@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.1...v1.2.2) (2021-12-31)
+
+
+### Bug Fixes
+
+* **AV-1569:** correct issues with embedded drupal component auth state ([302f590](https://github.com/vrk-kpa/opendata-ckan/commit/302f5901aaa9216d52ce8167ba28539d228905d4))
+* **AV-1569:** improve init_filesystems script ([9dcbc2d](https://github.com/vrk-kpa/opendata-ckan/commit/9dcbc2d20a9ab7a0d21103fcbeefd6a9dd93745a))
+* **ci:** simplify release job to mitigate random AWS OIDC problems ([c442d11](https://github.com/vrk-kpa/opendata-ckan/commit/c442d11d2d826b393a8701678b0fbd20a16a83e7))
+
 ## [1.2.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.0...v1.2.1) (2021-12-30)
 
 
