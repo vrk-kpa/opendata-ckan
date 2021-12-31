@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.2...v1.2.3) (2021-12-31)
+
+
+### Bug Fixes
+
+* correct archiver cache_url_root & user_agent_string ([0f95c80](https://github.com/vrk-kpa/opendata-ckan/commit/0f95c804c7341c5300b13f8cf3c7b7165f4fddb9))
+
 ## [1.2.2](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.1...v1.2.2) (2021-12-31)
 
 
