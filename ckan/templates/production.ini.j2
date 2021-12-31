@@ -141,8 +141,8 @@ disqus.notify.email_field = maintainer_email
 
 ckanext-datarequests.datarequest_notifications_admin_email = None
 
-ckanext.drupal8.site_url = http://{{ environ('NGINX_HOST') }}
-ckanext.drupal8.domain = {{ environ('DOMAIN_NAME') }},{{ environ('SECONDARY_HOST_NAME') }}
+ckanext.drupal8.site_url = {{ environ('CKAN_DRUPAL_SITE_URL') }}
+ckanext.drupal8.domain = {{ environ('DOMAIN_NAME') }},{{ environ('SECONDARY_DOMAIN_NAME') }}
 ckanext.drupal8.sysadmin_role = {{ environ('ROLES_CKAN_ADMIN') }}
 ckanext.drupal8.connection = postgres://{{ environ('DB_DRUPAL_USER') }}:{{ environ('DB_DRUPAL_PASS') }}@{{ environ('DB_HOST') }}/{{ environ('DB_DRUPAL') }}
 ckanext.drupal8.allow_edit = true
