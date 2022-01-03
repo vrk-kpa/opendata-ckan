@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.4...v1.2.5) (2022-01-03)
+
+
+### Bug Fixes
+
+* correct command for solr index refresh on init ([ce964eb](https://github.com/vrk-kpa/opendata-ckan/commit/ce964eb83f597050cd7c219a9c325429bce172ac))
+
 ## [1.2.4](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.3...v1.2.4) (2022-01-03)
 
 
