@@ -1,2 +1,5 @@
 modules/*.tgz
 modules/*.tar
+
+# i18n files
+*.mo
