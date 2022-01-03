@@ -1,0 +1,23 @@
+name: Code quality
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  flake8:
+    name: flake8
+    runs-on: ubuntu-latest
+    container: python:2.7
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install requirements
+        run: |
+          pip install flake8==3.7.9
+
+      - name: Run linter
+        run: |
+          flake8 modules --count --max-line-length=127 --statistics
