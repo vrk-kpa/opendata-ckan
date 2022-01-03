@@ -100,6 +100,9 @@ RUN apt-get install -yq sudo && \
     adduser ckan sudo && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+# fix permissions
+RUN chown -R ckan:ckan ${APP_DIR}
+
 # switch from root to ckan user
 USER ckan
 

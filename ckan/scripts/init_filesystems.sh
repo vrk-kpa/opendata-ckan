@@ -2,8 +2,10 @@
 set -e
 
 if [[ "${DEV_MODE}" == "true" ]]; then
-    # don't do anything because folders are mounted from host
-    echo "init_filesystems - skipping because DEV_MODE = 'true' ..."
+  # init mounted filesystems
+  echo "init_filesystems - DEV_MODE = 'true', initializing '${WWW_DIR}/resources' ..."
+  sudo -E rsync -au --delete ${EXT_DIR}/ytp-assets-common/resources/ ${WWW_DIR}/resources
+  sudo -E chown -R ckan:ckan ${WWW_DIR}/resources
 else
   # migrate data if migration fs is mounted to known path
   # NOTE: this is a bad idea, because EFS->EFS rsync perf is so bad!
