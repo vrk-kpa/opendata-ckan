@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.3...v1.2.4) (2022-01-03)
+
+
+### Bug Fixes
+
+* **AV-1569:** update ckanext-cloudstorage to latest master commit ([38dce3b](https://github.com/vrk-kpa/opendata-ckan/commit/38dce3be87f9ce0c8aef88079b9f490878443fbb))
+
 ## [1.2.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.2...v1.2.3) (2021-12-31)
 
 
