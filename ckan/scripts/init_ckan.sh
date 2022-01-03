@@ -40,9 +40,9 @@ paster --plugin=ckanext-cloudstorage cloudstorage initdb -c ${APP_DIR}/productio
 [[ "${CKAN_PLUGINS}" == *" rating "* ]]       && paster --plugin=ckanext-rating rating init -c ${APP_DIR}/production.ini
 paster --plugin=ckanext-reminder reminder init -c ${APP_DIR}/production.ini
 
-# rebuild solr search indexes
+# refresh solr search indexes
 echo "rebuild solr search indexes ..."
-paster --plugin=ckan search-index rebuild-fast -c ${APP_DIR}/production.ini
+paster --plugin=ckan search-index rebuild -r -c ${APP_DIR}/production.ini
 
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done
