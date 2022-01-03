@@ -1,7 +1,7 @@
 #
 # CKAN build
 #
-FROM ghcr.io/keitaroinc/ckan:2.8.8-focal AS ckan_build
+FROM ghcr.io/keitaroinc/ckan:2.9.4-focal AS ckan_build
 
 # switch from ckan to root user
 USER root
