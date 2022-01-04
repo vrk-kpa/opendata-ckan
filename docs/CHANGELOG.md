@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.5...v1.2.6) (2022-01-04)
+
+
+### Bug Fixes
+
+* necessary structural changes for using opendata-frontend as a submodule ([04c77ca](https://github.com/vrk-kpa/opendata-ckan/commit/04c77caf5ebd2e84acc337c1e6b19545f38f9842))
+
 ## [1.2.5](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.4...v1.2.5) (2022-01-03)
 
 
