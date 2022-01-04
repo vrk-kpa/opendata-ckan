@@ -79,6 +79,6 @@
 [submodule "modules/ckanext-statistics"]
 	path = modules/ckanext-statistics
 	url = https://github.com/vrk-kpa/ckanext-statistics.git
-[submodule "modules/ytp-assets-common"]
-	path = modules/ytp-assets-common
-	url = https://github.com/vrk-kpa/ytp-assets-common.git
+[submodule "modules/opendata-assets"]
+	path = modules/opendata-assets
+	url = https://github.com/vrk-kpa/opendata-assets.git
