@@ -4,7 +4,7 @@ set -e
 if [[ "${DEV_MODE}" == "true" ]]; then
   # init mounted filesystems
   echo "init_filesystems - DEV_MODE = 'true', initializing '${WWW_DIR}/resources' ..."
-  sudo -E rsync -au --delete ${EXT_DIR}/ytp-assets-common/resources/ ${WWW_DIR}/resources
+  sudo -E rsync -au --delete ${EXT_DIR}/opendata-assets/resources/ ${WWW_DIR}/resources
   sudo -E chown -R ckan:ckan ${WWW_DIR}/resources
 else
   # migrate data if migration fs is mounted to known path

@@ -41,7 +41,7 @@ RUN apt-get update -yq && \
 ENV CRON_DIR=${APP_DIR}/cron
 ENV SCRIPT_DIR=${APP_DIR}/scripts
 ENV TEMPLATE_DIR=${APP_DIR}/templates
-ENV EXT_DIR=${APP_DIR}/extensions
+ENV EXT_DIR=${APP_DIR}/modules
 ENV BASE_DIR=/srv/base
 ENV WWW_DIR=/var/www
 
@@ -125,10 +125,10 @@ RUN apt-get install -yq nodejs libjpeg-turbo8
 
 # setup env vars:
 ENV APP_DIR=/srv/app
-ENV EXT_DIR=${APP_DIR}/extensions
+ENV EXT_DIR=${APP_DIR}/modules
 
 # copy custom modules
-RUN mkdir -p ${EXT_DIR}
+RUN mkdir -p ${EXT_DIR} && mkdir -p ${APP_DIR}/frontend
 COPY modules/ckanext-drupal8                ${EXT_DIR}/ckanext-drupal8/
 COPY modules/ckanext-ytp_drupal             ${EXT_DIR}/ckanext-ytp_drupal/
 COPY modules/ckanext-ytp_tasks              ${EXT_DIR}/ckanext-ytp_tasks/
@@ -162,13 +162,12 @@ COPY modules/ckanext-openapiviewer          ${EXT_DIR}/ckanext-openapiviewer/
 COPY modules/ckanext-statistics             ${EXT_DIR}/ckanext-statistics/
 COPY modules/ckanext-sentry                 ${EXT_DIR}/ckanext-sentry/
 
-# copy frontend
-COPY modules/ytp-assets-common              ${EXT_DIR}/ytp-assets-common/
-COPY ckan/build_frontend.sh                 ${EXT_DIR}/ytp-assets-common/build_frontend.sh
-COPY ckan/package.default.json              ${EXT_DIR}/ytp-assets-common/package.default.json
+# copy frontend project
+COPY modules/opendata-assets                ${EXT_DIR}/opendata-assets/
+COPY frontend                               ${APP_DIR}/frontend/
 
 # build frontend
-WORKDIR ${EXT_DIR}/ytp-assets-common/
+WORKDIR ${APP_DIR}/frontend/
 RUN chmod +x ./build_frontend.sh
 RUN --mount=type=secret,id=npmrc ./build_frontend.sh
 
@@ -181,7 +180,7 @@ FROM ckan_build
 COPY --from=modules_build ${EXT_DIR} ${EXT_DIR}
 
 # install frontend
-RUN mkdir -p ${WWW_DIR} && mv ${EXT_DIR}/ytp-assets-common/resources ${WWW_DIR}/
+RUN mkdir -p ${WWW_DIR} && mv ${EXT_DIR}/opendata-assets/resources ${WWW_DIR}/
 
 # install extensions
 RUN ${SCRIPT_DIR}/install_extensions.sh

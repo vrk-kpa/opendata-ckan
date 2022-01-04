@@ -3,3 +3,6 @@ modules/*.tar
 
 # i18n files
 *.mo
+
+# frontend
+node_modules/
