@@ -3,6 +3,12 @@ set -e
 
 echo "entrypoint_cron ..."
 
+# wait for ckan to initialize properly
+while [[ "$(cat ${DATA_DIR}/.init-done)" != "$CKAN_IMAGE_TAG" ]]; do
+  echo "entrypoint_cron - waiting for .init-done flag to be set ..."
+  sleep 1s
+done
+
 # apply templates
 jinja2 ${TEMPLATE_DIR}/production.ini.j2 -o ${APP_DIR}/production.ini
 jinja2 ${TEMPLATE_DIR}/who.ini.j2 -o ${APP_DIR}/who.ini
