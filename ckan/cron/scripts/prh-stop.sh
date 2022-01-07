@@ -4,7 +4,7 @@ set -e
 # source env
 . /srv/app/cron/.environment
 
-echo "stop-prh-crawler"
+echo "job started: prh-stop"
 
 # run commands
 PROCESS_IDS=$(pgrep start-prh-crawl)

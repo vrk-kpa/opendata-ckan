@@ -4,7 +4,7 @@ set -e
 # source env
 . /srv/app/cron/.environment
 
-echo "tracking-update"
+echo "job started: ckan-refresh"
 
 # run commands
 paster --plugin=ckan tracking update -c ${APP_DIR}/production.ini
