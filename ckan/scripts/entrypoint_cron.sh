@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo "entrypoint_cron ..."
 
@@ -10,5 +11,7 @@ jinja2 ${TEMPLATE_DIR}/datastore_permissions.sql.j2 -o ${SCRIPT_DIR}/datastore_p
 # export environment for cron
 printenv | sed 's/=\(.*\)/="\1"/' > ${CRON_DIR}/.environment
 
-# run cron
+# run supervisord
+supervisord --configuration ${SUPERV_DIR}/supervisord.conf &
+# run crond
 cron -f

@@ -25,6 +25,7 @@ RUN apt-get update -yq && \
       libffi-dev && \
     pip install \
       jinja2-cli \
+      supervisor \
       cryptography \
       pyOpenSSL \
       ndg-httpsclient \
@@ -38,6 +39,7 @@ RUN apt-get update -yq && \
 # - APP_DIR=/srv/app
 # - SRC_DIR=/srv/app/src
 # - DATA_DIR=/srv/app/data
+ENV SUPERV_DIR=${APP_DIR}/supervisor
 ENV CRON_DIR=${APP_DIR}/cron
 ENV SCRIPT_DIR=${APP_DIR}/scripts
 ENV TEMPLATE_DIR=${APP_DIR}/templates
@@ -49,6 +51,7 @@ ENV WWW_DIR=/var/www
 COPY ckan/scripts ${SCRIPT_DIR}
 COPY ckan/data ${DATA_DIR}
 COPY ckan/templates ${TEMPLATE_DIR}
+COPY ckan/supervisor ${SUPERV_DIR}
 COPY ckan/cron ${CRON_DIR}
 COPY ckan/src/ckan/patches ${SRC_DIR}/ckan/patches
 RUN chmod +x ${SCRIPT_DIR}/*.sh && \
