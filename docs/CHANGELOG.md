@@ -1,3 +1,11 @@
+## [1.2.7](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.6...v1.2.7) (2022-01-07)
+
+
+### Bug Fixes
+
+* adjust solr reindex command args on init (only-missing) ([5f0199e](https://github.com/vrk-kpa/opendata-ckan/commit/5f0199e53b6c1af7ccb89afc81dbabfcfd8bac3e))
+* install and configure supervisord, runs via crond entrypoint ([443b4bf](https://github.com/vrk-kpa/opendata-ckan/commit/443b4bf7aa036c5f595da5f8061c584920550794))
+
 ## [1.2.6](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.5...v1.2.6) (2022-01-04)
 
 
