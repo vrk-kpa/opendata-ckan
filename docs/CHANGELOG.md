@@ -1,3 +1,11 @@
+## [1.2.8](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.7...v1.2.8) (2022-01-07)
+
+
+### Bug Fixes
+
+* adjust crond job script filenames to be more clear ([5f3db93](https://github.com/vrk-kpa/opendata-ckan/commit/5f3db932c63ee416691517731494c35e046161de))
+* set supervisord/crond entrypoint script to wait for ckan initialization ([0b00752](https://github.com/vrk-kpa/opendata-ckan/commit/0b007523a31160d935b912ad19caba34eb9bd9a3))
+
 ## [1.2.7](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.6...v1.2.7) (2022-01-07)
 
 
