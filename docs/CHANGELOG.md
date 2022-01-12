@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.8...v1.3.0) (2022-01-12)
+
+
+### Features
+
+* add optional integration to dynatrace ([50907df](https://github.com/vrk-kpa/opendata-ckan/commit/50907dfa267d3a6a052353f0b80dad07de8f908b))
+
 ## [1.2.8](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.7...v1.2.8) (2022-01-07)
 
 
