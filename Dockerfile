@@ -1,3 +1,7 @@
+# build args
+ARG SECRET_NPMRC
+ARG DYNATRACE_ENABLED=0
+
 #
 # CKAN build
 #
@@ -116,9 +120,6 @@ ENTRYPOINT ["/srv/app/scripts/entrypoint_ckan.sh"]
 #
 FROM ubuntu:focal AS modules_build
 
-# build args
-ARG SECRET_NPMRC
-
 # install required packages
 RUN apt-get update -yq && apt-get install -yq curl
 
@@ -175,9 +176,33 @@ RUN chmod +x ./build_frontend.sh
 RUN --mount=type=secret,id=npmrc ./build_frontend.sh
 
 #
+# Production stage, dynatrace enabled
+#
+FROM ckan_build AS production-dynatrace-1
+
+# install dynatrace oneagent
+# https://www.dynatrace.com/support/help/setup-and-configuration/setup-on-cloud-platforms/amazon-web-services/deploy-oneagent-on-aws-fargate
+COPY --from=ayv41550.live.dynatrace.com/linux/oneagent-codemodules:sdk / /
+ENV LD_PRELOAD=/opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so
+
+# install autodynatrace
+RUN pip install autodynatrace
+
+# apply patches
+RUN cd ${SRC_DIR}/ckan && \
+    patch --strip=1 --input=patches/add_autodynatrace.patch
+
+#
+# Production stage, dynatrace disabled
+#
+FROM ckan_build AS production-dynatrace-0
+
+# do nothing :^)
+
+#
 # Production image
 #
-FROM ckan_build
+FROM production-dynatrace-${DYNATRACE_ENABLED} AS production
 
 # copy extensions
 COPY --from=modules_build ${EXT_DIR} ${EXT_DIR}
