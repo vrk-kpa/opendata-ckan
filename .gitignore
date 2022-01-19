@@ -6,3 +6,4 @@ modules/*.tar
 
 # frontend
 node_modules/
+.npmrc

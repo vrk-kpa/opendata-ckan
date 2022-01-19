@@ -9,6 +9,12 @@ while [[ "$(cat ${DATA_DIR}/.init-done)" != "$CKAN_IMAGE_TAG" ]]; do
   sleep 1s
 done
 
+# install extensions (DEV_MODE)
+if [[ "${DEV_MODE}" == "true" ]]; then
+  echo "entrypoint_cron - installing extensions because DEV_MODE = 'true' ..."
+  sudo -E ${SCRIPT_DIR}/install_extensions.sh
+fi
+
 # apply templates
 jinja2 ${TEMPLATE_DIR}/production.ini.j2 -o ${APP_DIR}/production.ini
 jinja2 ${TEMPLATE_DIR}/who.ini.j2 -o ${APP_DIR}/who.ini
