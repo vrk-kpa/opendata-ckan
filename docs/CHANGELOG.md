@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.3.0...v1.3.1) (2022-01-20)
+
+
+### Bug Fixes
+
+* remove EFS migration procedure from init_filesystems.sh ([304d5a9](https://github.com/vrk-kpa/opendata-ckan/commit/304d5a99d571aa30489c76b4dec597447fe9560f))
+
 # [1.3.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.2.8...v1.3.0) (2022-01-12)
 
 
