@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.3.1...v1.4.0) (2022-01-21)
+
+
+### Features
+
+* update ckan from 2.8.8 to 2.8.10 ([3b88112](https://github.com/vrk-kpa/opendata-ckan/commit/3b88112f3f4a28ab3883946bd22d89195d815b1a))
+
 ## [1.3.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.3.0...v1.3.1) (2022-01-20)
 
 
