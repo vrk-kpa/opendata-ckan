@@ -1,3 +1,13 @@
+## [1.4.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.4.0...v1.4.1) (2022-01-21)
+
+
+### Bug Fixes
+
+* **AV-1569:** add missing production.ini vars for ckanext-ytp_recommendation ([dee13b2](https://github.com/vrk-kpa/opendata-ckan/commit/dee13b203dbaca547436fa3ee34147aa41c70241))
+* **AV-1569:** update build scripts and configs from main repo ([846565c](https://github.com/vrk-kpa/opendata-ckan/commit/846565cadb64d2875b58873dad1204d5e5938856))
+* **AV-1569:** update modules from main repo + fix line endings to LF ([b538f39](https://github.com/vrk-kpa/opendata-ckan/commit/b538f3966dfbd01333c02b909e7b284879b2877c))
+* **AV-1569:** update submodules ([57bb900](https://github.com/vrk-kpa/opendata-ckan/commit/57bb90034cb47a9bd3846f9f18f3844efe6f19e1))
+
 # [1.4.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.3.1...v1.4.0) (2022-01-21)
 
 
