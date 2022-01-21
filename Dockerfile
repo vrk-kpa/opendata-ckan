@@ -165,6 +165,7 @@ COPY modules/ckanext-prh_tools              ${EXT_DIR}/ckanext-prh_tools/
 COPY modules/ckanext-openapiviewer          ${EXT_DIR}/ckanext-openapiviewer/
 COPY modules/ckanext-statistics             ${EXT_DIR}/ckanext-statistics/
 COPY modules/ckanext-sentry                 ${EXT_DIR}/ckanext-sentry/
+COPY modules/ckanext-ytp_recommendation     ${EXT_DIR}/ckanext-ytp_recommendation/
 
 # copy frontend project
 COPY modules/opendata-assets                ${EXT_DIR}/opendata-assets/

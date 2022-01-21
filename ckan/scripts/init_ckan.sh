@@ -39,6 +39,7 @@ paster --plugin=ckanext-matomo matomo init_db -c ${APP_DIR}/production.ini
 paster --plugin=ckanext-cloudstorage cloudstorage initdb -c ${APP_DIR}/production.ini
 [[ "${CKAN_PLUGINS}" == *" rating "* ]]       && paster --plugin=ckanext-rating rating init -c ${APP_DIR}/production.ini
 paster --plugin=ckanext-reminder reminder init -c ${APP_DIR}/production.ini
+paster --plugin=ckanext-ytp_recommendation recommendation init -c ${APP_DIR}/production.ini
 
 # refresh solr search indexes
 echo "rebuild solr search indexes ..."
