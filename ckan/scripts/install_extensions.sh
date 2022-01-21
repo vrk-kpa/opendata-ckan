@@ -47,6 +47,7 @@ pip_install "${EXT_DIR}/ckanext-prh_tools/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-openapiviewer/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-statistics/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-sentry/requirements.txt"
+pip_install "${EXT_DIR}/ckanext-ytp_recommendation/requirements.txt"
 
 # install extension pip requirements
 pip_install "${EXT_DIR}/ckanext-drupal8/pip-requirements.txt"
@@ -81,6 +82,7 @@ pip_install "${EXT_DIR}/ckanext-prh_tools/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-openapiviewer/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-statistics/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-sentry/pip-requirements.txt"
+pip_install "${EXT_DIR}/ckanext-ytp_recommendation/pip-requirements.txt"
 
 # install extensions
 pip install -e ${EXT_DIR}/ckanext-drupal8 \
@@ -114,7 +116,8 @@ pip install -e ${EXT_DIR}/ckanext-drupal8 \
     -e ${EXT_DIR}/ckanext-prh_tools \
     -e ${EXT_DIR}/ckanext-openapiviewer \
     -e ${EXT_DIR}/ckanext-statistics \
-    -e ${EXT_DIR}/ckanext-sentry
+    -e ${EXT_DIR}/ckanext-sentry \
+    -e ${EXT_DIR}/ckanext-ytp_recommendation
 
 # compile translations
 (cd ${EXT_DIR}/ckanext-ytp_request; python setup.py compile_catalog -f)
@@ -128,3 +131,4 @@ pip install -e ${EXT_DIR}/ckanext-drupal8 \
 (cd ${EXT_DIR}/ckanext-statistics; python setup.py compile_catalog -f)
 (cd ${EXT_DIR}/ckanext-datarequests; python setup.py compile_catalog -f)
 (cd ${EXT_DIR}/ckanext-matomo; python setup.py compile_catalog -f)
+(cd ${EXT_DIR}/ckanext-ytp_recommendation; python setup.py compile_catalog -f)
