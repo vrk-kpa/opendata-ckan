@@ -5,7 +5,7 @@ ARG DYNATRACE_ENABLED=0
 #
 # CKAN build
 #
-FROM ghcr.io/keitaroinc/ckan:2.8.8-focal AS ckan_build
+FROM ghcr.io/keitaroinc/ckan:2.8.10-focal AS ckan_build
 
 # switch from ckan to root user
 USER root
