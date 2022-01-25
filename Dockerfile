@@ -48,12 +48,11 @@ ENV CRON_DIR=${APP_DIR}/cron
 ENV SCRIPT_DIR=${APP_DIR}/scripts
 ENV TEMPLATE_DIR=${APP_DIR}/templates
 ENV EXT_DIR=${APP_DIR}/modules
-ENV BASE_DIR=/srv/base
 ENV WWW_DIR=/var/www
 
 # copy app files
 COPY ckan/scripts ${SCRIPT_DIR}
-COPY ckan/data ${DATA_DIR}
+COPY ckan/data ${DATA_DIR}_base
 COPY ckan/templates ${TEMPLATE_DIR}
 COPY ckan/supervisor ${SUPERV_DIR}
 COPY ckan/cron ${CRON_DIR}
@@ -61,7 +60,8 @@ COPY ckan/src/ckan/patches ${SRC_DIR}/ckan/patches
 RUN chmod +x ${SCRIPT_DIR}/*.sh && \
     rm -f ${APP_DIR}/production.ini && \
     rm -f ${APP_DIR}/ckan.ini && \
-    rm -f ${APP_DIR}/who.ini
+    rm -f ${APP_DIR}/who.ini && \
+    mkdir -p ${WWW_DIR}
 
 # apply patches
 RUN cd ${SRC_DIR}/ckan && \
@@ -91,6 +91,9 @@ RUN cd ${SRC_DIR}/ckan && \
 RUN chmod +x ${CRON_DIR}/scripts/*.sh && \
     crontab -u ckan ${CRON_DIR}/crontab && \
     chmod u+s /usr/sbin/cron
+
+# create symbolic links
+RUN ln -s ${EXT_DIR}/opendata-assets/resources ${WWW_DIR}/resources
 
 #
 # Development image (for local development)
@@ -208,9 +211,6 @@ FROM production-dynatrace-${DYNATRACE_ENABLED} AS production
 # copy extensions
 COPY --from=modules_build ${EXT_DIR} ${EXT_DIR}
 
-# install frontend
-RUN mkdir -p ${WWW_DIR} && mv ${EXT_DIR}/opendata-assets/resources ${WWW_DIR}/
-
 # install extensions
 RUN ${SCRIPT_DIR}/install_extensions.sh
 
@@ -222,14 +222,8 @@ RUN pip install \
     six==1.13.0 \
     pyOpenSSL==20.0.0
 
-# setup base directory that is used for initializing shared file systems
-RUN mkdir -p ${BASE_DIR} && \
-    mv ${DATA_DIR} ${BASE_DIR}/data && \
-    mv ${WWW_DIR}/resources ${BASE_DIR}/resources && \
-    mkdir -p ${DATA_DIR} && \
-    mkdir -p ${WWW_DIR}/resources && \
-    chown -R ckan:ckan ${APP_DIR} && \
-    chown -R ckan:ckan ${WWW_DIR}
+# fix permissions
+RUN chown -R ckan:ckan ${APP_DIR}
 
 # switch from root to ckan user
 USER ckan
