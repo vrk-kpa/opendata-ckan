@@ -38,7 +38,7 @@ pip_install "${EXT_DIR}/ckanext-pdfview/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-disqus/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-reminder/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-archiver/requirements.txt"
-pip_install "${EXT_DIR}/ckanext-qa/requirements.txt"
+#pip_install "${EXT_DIR}/ckanext-qa/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-organizationapproval/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-advancedsearch/requirements.txt"
 pip_install "${EXT_DIR}/ckanext-forcetranslation/requirements.txt"
@@ -73,7 +73,7 @@ pip_install "${EXT_DIR}/ckanext-pdfview/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-disqus/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-reminder/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-archiver/pip-requirements.txt"
-pip_install "${EXT_DIR}/ckanext-qa/pip-requirements.txt"
+#pip_install "${EXT_DIR}/ckanext-qa/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-organizationapproval/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-advancedsearch/pip-requirements.txt"
 pip_install "${EXT_DIR}/ckanext-forcetranslation/pip-requirements.txt"
@@ -108,7 +108,6 @@ pip install -e ${EXT_DIR}/ckanext-drupal8 \
     -e ${EXT_DIR}/ckanext-disqus \
     -e ${EXT_DIR}/ckanext-reminder \
     -e ${EXT_DIR}/ckanext-archiver \
-    -e ${EXT_DIR}/ckanext-qa \
     -e ${EXT_DIR}/ckanext-organizationapproval \
     -e ${EXT_DIR}/ckanext-advancedsearch \
     -e ${EXT_DIR}/ckanext-forcetranslation \
@@ -118,6 +117,8 @@ pip install -e ${EXT_DIR}/ckanext-drupal8 \
     -e ${EXT_DIR}/ckanext-statistics \
     -e ${EXT_DIR}/ckanext-sentry \
     -e ${EXT_DIR}/ckanext-ytp_recommendation
+
+    #-e ${EXT_DIR}/ckanext-qa \
 
 # compile translations
 (cd ${EXT_DIR}/ckanext-ytp_request; python setup.py compile_catalog -f)
