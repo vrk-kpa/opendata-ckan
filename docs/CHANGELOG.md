@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.0...v1.5.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* **AV-1096:** Replace get_original_method with chained_action ([48e4caf](https://github.com/vrk-kpa/opendata-ckan/commit/48e4caf1a87e8c884f0e87386e06d8cfc94abec2))
+
 # [1.5.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.4.1...v1.5.0) (2022-01-25)
 
 
