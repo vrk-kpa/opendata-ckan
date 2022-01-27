@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.2...v1.5.3) (2022-01-27)
+
+
+### Bug Fixes
+
+* search-index rebuild add ignore errors flag ([cebfb53](https://github.com/vrk-kpa/opendata-ckan/commit/cebfb5325e6c717251afb8ebd78a9b255f9ee566))
+
 ## [1.5.2](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.1...v1.5.2) (2022-01-27)
 
 
