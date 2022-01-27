@@ -43,7 +43,7 @@ paster --plugin=ckanext-ytp_recommendation recommendation init -c ${APP_DIR}/pro
 
 # refresh solr search indexes
 echo "rebuild solr search indexes ..."
-paster --plugin=ckan search-index rebuild -c ${APP_DIR}/production.ini
+paster --plugin=ckan search-index rebuild -i -c ${APP_DIR}/production.ini
 
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done
