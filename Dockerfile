@@ -5,7 +5,7 @@ ARG DYNATRACE_ENABLED=0
 #
 # CKAN build
 #
-FROM ghcr.io/keitaroinc/ckan:2.9.3-focal AS ckan_build
+FROM ghcr.io/keitaroinc/ckan:2.9.5-focal AS ckan_build
 
 # switch from ckan to root user
 USER root
@@ -74,13 +74,7 @@ RUN cd ${SRC_DIR}/ckan && \
     patch --strip=1 --input=patches/remove_gravatar.patch && \
     patch --strip=1 --input=patches/json_serializable_lazyjsonobject.patch && \
     patch --strip=1 --input=patches/implement_is_required_for_image_upload.patch && \
-    patch --strip=1 --input=patches/add_drafts_to_search.patch && \
-    patch --strip=1 --input=patches/add_cache_control_headers_to_flask.patch && \
-    patch --strip=1 --input=patches/remove_stacktraces_from_http_errors.patch && \
-    patch --strip=1 --input=patches/add_root_path_middleware.patch && \
-    patch --strip=1 --input=patches/set_error_email_logging_level_to_error.patch && \
-    patch --strip=1 --input=patches/accept_empty_string_in_one_of_validator.patch && \
-    patch --strip=1 --input=patches/fix_organization_edit_auth.patch
+    patch --strip=1 --input=patches/add_drafts_to_search.patch
 
 # install crontab
 RUN chmod +x ${CRON_DIR}/scripts/*.sh && \
