@@ -25,7 +25,6 @@ from ckan.plugins.toolkit import config, chained_action
 from ckanext.report.interfaces import IReport
 from ckanext.spatial.interfaces import ISpatialHarvester
 from ckanext.showcase.model import ShowcaseAdmin
-from paste.deploy.converters import asbool
 from sqlalchemy import and_, or_
 from sqlalchemy.sql.expression import false
 
@@ -187,7 +186,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
     # IConfigurable #
 
     def configure(self, config):
-        self.auto_author = asbool(config.get('ckanext.ytp.auto_author', False))
+        self.auto_author = toolkit.asbool(config.get('ckanext.ytp.auto_author', False))
 
     # ITranslation #
 
