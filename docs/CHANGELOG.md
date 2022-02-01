@@ -1,3 +1,31 @@
+## [1.5.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.2...v1.5.3) (2022-01-27)
+
+
+### Bug Fixes
+
+* search-index rebuild add ignore errors flag ([cebfb53](https://github.com/vrk-kpa/opendata-ckan/commit/cebfb5325e6c717251afb8ebd78a9b255f9ee566))
+
+## [1.5.2](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.1...v1.5.2) (2022-01-27)
+
+
+### Bug Fixes
+
+* remove --only-missing flag from search-index rebuild cmd during init ([91aa2d7](https://github.com/vrk-kpa/opendata-ckan/commit/91aa2d73f28bf1492a9f25982463c95b13f7e2a6))
+
+## [1.5.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.0...v1.5.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* **AV-1096:** Replace get_original_method with chained_action ([48e4caf](https://github.com/vrk-kpa/opendata-ckan/commit/48e4caf1a87e8c884f0e87386e06d8cfc94abec2))
+
+# [1.5.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.4.1...v1.5.0) (2022-01-25)
+
+
+### Features
+
+* **AV-1614:** simplify volume setup, decreases startup time ([640d284](https://github.com/vrk-kpa/opendata-ckan/commit/640d2844b0611c88e806dc19d662191573a1c0e1))
+
 ## [1.4.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.4.0...v1.4.1) (2022-01-21)
 
 

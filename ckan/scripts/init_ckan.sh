@@ -3,8 +3,8 @@ set -e
 
 echo "init_ckan ..."
 
-# init filesystems
-. ${SCRIPT_DIR}/init_filesystems.sh
+# synchronize persistent data files
+rsync -au ${DATA_DIR}_base/. ${DATA_DIR}
 
 # apply templates
 jinja2 ${TEMPLATE_DIR}/production.ini.j2 -o ${APP_DIR}/production.ini
