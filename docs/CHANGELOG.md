@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.3...v1.5.4) (2022-02-03)
+
+
+### Bug Fixes
+
+* **AV-1414:** Show text "Download" instead of "Open" for downloadable resources in datasets resource-list. ([2986b15](https://github.com/vrk-kpa/opendata-ckan/commit/2986b15ca98b6d25b291154c43619191d3ea88c7))
+
 ## [1.5.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.2...v1.5.3) (2022-01-27)
 
 
