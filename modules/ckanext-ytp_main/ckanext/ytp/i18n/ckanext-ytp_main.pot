@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-ytp_main 0.3\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-13 08:21+0000\n"
+"POT-Creation-Date: 2022-02-02 08:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -255,7 +255,7 @@ msgstr ""
 msgid "Date format incorrect"
 msgstr ""
 
-#: ckanext/ytp/helpers.py:96 ckanext/ytp/plugin.py:324
+#: ckanext/ytp/helpers.py:96 ckanext/ytp/plugin.py:326
 msgid "Unnamed resource"
 msgstr ""
 
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: ckanext/ytp/menu.py:155 ckanext/ytp/plugin.py:272
+#: ckanext/ytp/menu.py:155 ckanext/ytp/plugin.py:274
 #: ckanext/ytp/templates/organization/admin_list.html:31
 #: ckanext/ytp/templates/organization/index.html:10
 #: ckanext/ytp/templates/organization/organization_not_found.html:6
@@ -355,41 +355,41 @@ msgstr ""
 msgid "Publish Data"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:268
+#: ckanext/ytp/plugin.py:270
 msgid "International Benchmarks"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:269 ckanext/ytp/plugin.py:283
+#: ckanext/ytp/plugin.py:271 ckanext/ytp/plugin.py:285
 msgid "Collection Types"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:270
+#: ckanext/ytp/plugin.py:272
 msgid "Popular Tags"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:271 ckanext/ytp/plugin.py:285
+#: ckanext/ytp/plugin.py:273 ckanext/ytp/plugin.py:287
 msgid "Content Types"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:273 ckanext/ytp/plugin.py:286
+#: ckanext/ytp/plugin.py:275 ckanext/ytp/plugin.py:288
 #: ckanext/ytp/translations.py:35
 msgid "Formats"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:275
+#: ckanext/ytp/plugin.py:277
 msgid "Sources"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:276
+#: ckanext/ytp/plugin.py:278
 msgid "Licenses"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:284
+#: ckanext/ytp/plugin.py:286
 #: ckanext/ytp/templates/package/snippets/dataset_info.html:14
 msgid "Tags"
 msgstr ""
 
-#: ckanext/ytp/plugin.py:324
+#: ckanext/ytp/plugin.py:326
 #: ckanext/ytp/templates/package/snippets/additional_info.html:2
 msgid "Additional Info"
 msgstr ""
@@ -1552,19 +1552,6 @@ msgid ""
 "You can rearrange the resources by dragging them using the arrow icon. Drag "
 "the resource to the right and place it to the desired location on the list. "
 "When you are done, click the \"Save order\" -button."
-msgstr ""
-
-#: ckanext/ytp/public/vendor/bootstrap-table/dist/bootstrap-table.js:10
-#: ckanext/ytp/public/vendor/bootstrap-table/dist/extensions/export/bootstrap-table-export.js:10
-msgid "div"
-msgstr ""
-
-#: ckanext/ytp/public/vendor/bootstrap-table/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.js:10
-#: ckanext/ytp/public/vendor/bootstrap-table/dist/extensions/export/bootstrap-table-export.js:10
-#: ckanext/ytp/resources/vendor/bootstrap-table/dist/extensions/custom-view/bootstrap-table-custom-view.js:9
-#: ckanext/ytp/resources/vendor/bootstrap-table/dist/extensions/key-events/bootstrap-table-key-events.js:9
-#: ckanext/ytp/resources/vendor/bootstrap-table/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.js:9
-msgid "iframe"
 msgstr ""
 
 #: ckanext/ytp/templates/disqus_comments.html:2
