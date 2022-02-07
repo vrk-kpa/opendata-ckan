@@ -1,3 +1,19 @@
+## [1.5.5](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.4...v1.5.5) (2022-02-03)
+
+
+### Bug Fixes
+
+* **AV-1415:** Push, translate and pull transifex translations ([760038c](https://github.com/vrk-kpa/opendata-ckan/commit/760038c6120f915b174ab47368db5ab0f5b19907))
+* **AV-1531:** Implement new design for dataset list, also fix issues in multiple other layouts ([06edbdf](https://github.com/vrk-kpa/opendata-ckan/commit/06edbdfb10a7b7b43e3e1f99c377dad965379698))
+* Update assets ([bfdac75](https://github.com/vrk-kpa/opendata-ckan/commit/bfdac75350076455792147c49d680a95a79906fe))
+
+## [1.5.4](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.3...v1.5.4) (2022-02-03)
+
+
+### Bug Fixes
+
+* **AV-1414:** Show text "Download" instead of "Open" for downloadable resources in datasets resource-list. ([2986b15](https://github.com/vrk-kpa/opendata-ckan/commit/2986b15ca98b6d25b291154c43619191d3ea88c7))
+
 ## [1.5.3](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.2...v1.5.3) (2022-01-27)
 
 
