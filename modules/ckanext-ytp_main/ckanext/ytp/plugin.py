@@ -1086,7 +1086,6 @@ class YtpThemePlugin(plugins.SingletonPlugin, YtpMainTranslation):
             snippet_url = '%s/%s/%s' % (hostname, lang, path)
             host = config.get('ckanext.drupal8.domain', '').split(',', 1)[0]
             headers = {'Host': host}
-            log.debug('Loading drupal snippet, url: "%s", cookies: %s', snippet_url, cookies, headers)
             response = requests.get(snippet_url, cookies=cookies, verify=verify_cert, headers=headers)
             return response.text
         except requests.exceptions.RequestException as e:
