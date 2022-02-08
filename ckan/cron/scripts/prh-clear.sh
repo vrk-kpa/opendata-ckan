@@ -7,4 +7,4 @@ set -e
 echo "job started: prh-clear"
 
 # run commands (only run during last day of the month)
-[[ "$(date --date=tomorrow +\%d)" == "01" ]] && paster --plugin=ckanext-prh prh-tools clear ${CKAN_STORAGE_PATH}/prh -c ${APP_DIR}/production.ini
+[[ "$(date --date=tomorrow +\%d)" == "01" ]] && ckan -c ${APP_DIR}/production.ini prh-tools clear ${CKAN_STORAGE_PATH}/prh

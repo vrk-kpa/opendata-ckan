@@ -3,6 +3,12 @@ set -e
 
 echo "entrypoint_cron ..."
 
+# If overrides are mounted, copy them over existing files
+if [[ -e ${APP_DIR}/overrides ]]; then
+  echo "entrypoint_cron - installing overrides"
+  rsync -rp --existing ${APP_DIR}/overrides/* .
+fi
+
 # wait for ckan to initialize properly
 while [[ "$(cat ${DATA_DIR}/.init-done)" != "$CKAN_IMAGE_TAG" ]]; do
   echo "entrypoint_cron - waiting for .init-done flag to be set ..."

@@ -7,4 +7,4 @@ set -e
 echo "job started: reminder-send"
 
 # run commands
-[[ "${CKAN_PLUGINS}" == *" reminder "* ]] && paster --plugin=ckanext-reminder reminder send -c ${APP_DIR}/production.ini
+[[ "${CKAN_PLUGINS}" == *" reminder "* ]] && ckan -c ${APP_DIR}/production.ini reminder send
