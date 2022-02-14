@@ -1,3 +1,12 @@
+## [1.5.6](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.5...v1.5.6) (2022-02-10)
+
+
+### Bug Fixes
+
+* **AV-1618:** Minor fixes on dataset-lists main title and resource page ([3c2d7b3](https://github.com/vrk-kpa/opendata-ckan/commit/3c2d7b34b9fa79d7366448a590faac93e696432b))
+* **AV-1618:** Showcase list layout fixed, single showcase fixes started ([71db9ff](https://github.com/vrk-kpa/opendata-ckan/commit/71db9ff3929e62fb617bc2e06210e128327e2d72))
+* **AV-1618:** Showcase list layout styles matched with newest design ([ada2758](https://github.com/vrk-kpa/opendata-ckan/commit/ada2758148093f15a5fae0beb4a0cb00a4e2e6ab))
+
 ## [1.5.5](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.4...v1.5.5) (2022-02-03)
 
 

@@ -7,7 +7,6 @@
 <meta name="robots" content="noindex, follow" />
 {% endblock %}
 
-{% block subtitle %}{{ _("Datasets") }}{% endblock %}
 
 {% block wrapper_class %} search-dataset-wrapper{% endblock %}
 
@@ -19,9 +18,7 @@
   {% block page_primary_action %}
     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
       <h1 class="mb-0">
-        {% trans %}
-        Datasets
-        {% endtrans %}
+        {{ _("Datasets") }}
       </h1>
       {% if h.check_access('package_create') %}
         <div>
