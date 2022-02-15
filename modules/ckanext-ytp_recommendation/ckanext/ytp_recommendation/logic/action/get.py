@@ -36,15 +36,17 @@ def get_user_can_make_recommendation(context, data_dict):
     '''
     def get_client_ip_address():
         # Fallback fields to check original client ip
-        ip_fields = ['HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP', 'REMOTE_ADDR']
+        ip_fields = ['HTTP_X_FORWARDED_FOR', 'HTTP_X_REAL_IP']
         for field in ip_fields:
             ip_address = toolkit.request.environ.get(field)
-            try:
-                # Check that ip_address for given server-env is set and valid
-                if ip_address is not None and ipaddress.ip_address(unicode(ip_address)):
-                    return ip_address
-            except (ValueError):
-                pass
+            # Check that ip_address for given server-env is set
+            if ip_address is not None:
+                try:
+                    # Validate ip address
+                    if ipaddress.ip_address(unicode(ip_address)):
+                        return ip_address
+                except (ValueError):
+                    pass
 
     ip_address = get_client_ip_address()
 
