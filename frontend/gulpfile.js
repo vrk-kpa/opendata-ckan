@@ -39,7 +39,8 @@ var paths = {
     moment_path: "./node_modules/moment",
     root: root_dir + "src"
   },
-  dist: root_dir + "resources"
+  dist: root_dir + "resources",
+  ckanDist: "../modules/ckanext-ytp_main/ckanext/ytp/resources"
 };
 
 let fontawesomeLessPath = './node_modules/@fortawesome/fontawesome-pro/less';
@@ -85,7 +86,8 @@ gulp.task("ckan",(done) => {
     cleancss({ keepBreaks: false }),
     concat("ckan.css"),
     sourcemaps.write("."),
-    gulp.dest(paths.dist + "/styles")
+    gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanDist + "/styles"),
   ], done)
 });
 
@@ -97,7 +99,8 @@ gulp.task("openapi_view",(done) => {
     prefixer(),
     cleancss({ keepBreaks: false }),
     concat("openapi_view.css"),
-    gulp.dest(paths.dist + "/styles")
+    gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanDist + "/styles"),
   ], done)
 });
 
@@ -147,6 +150,7 @@ gulp.task("fontsCss", (done) => {
     concat("fonts.css"),
     sourcemaps.write("./maps"),
     gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanDist + "/styles"),
   ], done)
 });
 
@@ -174,7 +178,8 @@ gulp.task("templates", (done) => {
   pump([
     gulp.src(paths.src.templates),
     template({ timestamp: timestamp }),
-    gulp.dest(paths.dist + "/templates")
+    gulp.dest(paths.dist + "/templates"),
+    gulp.dest(paths.ckanDist + "/templates"),
   ], done)
 });
 
