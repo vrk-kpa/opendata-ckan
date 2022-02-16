@@ -40,7 +40,8 @@ var paths = {
     root: root_dir + "src"
   },
   dist: root_dir + "resources",
-  ckanDist: "../modules/ckanext-ytp_main/ckanext/ytp/resources"
+  ckanResources: "../modules/ckanext-ytp_main/ckanext/ytp/resources",
+  ckanPublic: "../modules/ckanext-ytp_main/ckanext/ytp/public"
 };
 
 let fontawesomeLessPath = './node_modules/@fortawesome/fontawesome-pro/less';
@@ -87,7 +88,7 @@ gulp.task("ckan",(done) => {
     concat("ckan.css"),
     sourcemaps.write("."),
     gulp.dest(paths.dist + "/styles"),
-    gulp.dest(paths.ckanDist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -100,7 +101,7 @@ gulp.task("openapi_view",(done) => {
     cleancss({ keepBreaks: false }),
     concat("openapi_view.css"),
     gulp.dest(paths.dist + "/styles"),
-    gulp.dest(paths.ckanDist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -150,7 +151,7 @@ gulp.task("fontsCss", (done) => {
     concat("fonts.css"),
     sourcemaps.write("./maps"),
     gulp.dest(paths.dist + "/styles"),
-    gulp.dest(paths.ckanDist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -179,7 +180,7 @@ gulp.task("templates", (done) => {
     gulp.src(paths.src.templates),
     template({ timestamp: timestamp }),
     gulp.dest(paths.dist + "/templates"),
-    gulp.dest(paths.ckanDist + "/templates"),
+    gulp.dest(paths.ckanResources + "/templates"),
   ], done)
 });
 
@@ -277,6 +278,7 @@ gulp.task("vendor",
     pump([
       gulp.src(paths.src.root + "/vendor/**/*"),
       gulp.dest(paths.dist + "/vendor"),
+      gulp.dest(paths.ckanPublic + "/vendor"),
     ], done)
   })
 );
