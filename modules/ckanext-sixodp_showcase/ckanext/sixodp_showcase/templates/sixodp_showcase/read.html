@@ -33,10 +33,10 @@
 {% endblock %}
 {% block primary %}
   {% snippet "sixodp_showcase/snippets/showcase_state_banner.html", pkg=pkg %}
-  <div class="dataset-container">
+  <div class="dataset-container showcase-content">
     <div class="dataset-header-row d-flex align-items-end justify-content-between flex-wrap">
       <div>
-        <h1 class="dataset-title m-0">
+        <h1 class="dataset-title page-heading m-0">
           {% block page_heading %}
             {{ h.get_translated(pkg, 'title') or pkg.name }}
           {% endblock %}
@@ -52,10 +52,6 @@
         <section class="dataset-primary-content col-lg-8">
           {% block primary_content_inner %}
             {% block package_description %}
-
-              {% block store_icons %}
-                {{ h.snippet('sixodp_showcase/snippets/store_icon_links.html', store_links=pkg.store_urls) }}
-              {% endblock %}
 
               {% if pkg.private %}
                 <span class="dataset-private label label-inverse pull-right">
