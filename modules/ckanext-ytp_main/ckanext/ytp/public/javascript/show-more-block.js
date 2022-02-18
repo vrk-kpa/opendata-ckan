@@ -40,7 +40,7 @@ ckan.module('show-more-block', function ($) {
             `);
             // Fix button positioning after module-container
             const buttonTop = -parseInt(this.el.css('margin-bottom'));
-            this.$showMoreButton.css({top: buttonTop})
+            this.$showMoreButton.css({marginTop: buttonTop})
             this.el.after(this.$showMoreButton);
             this.$showMoreButton.on('click', this.toggleState.bind(this))
         },
