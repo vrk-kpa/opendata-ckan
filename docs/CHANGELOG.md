@@ -1,3 +1,12 @@
+## [1.5.8](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.7...v1.5.8) (2022-02-18)
+
+
+### Bug Fixes
+
+* **AV-1644:** Fixed dataset descriptions font-size. Also fixed issue with show more-buttons top margin when description is long enough ([3f607da](https://github.com/vrk-kpa/opendata-ckan/commit/3f607da58575680ee549b031959e0ae4ce704a9f))
+* **AV-1644:** Update assets ([2a96f14](https://github.com/vrk-kpa/opendata-ckan/commit/2a96f140419ade36107eb540fa1519909c32fe8b))
+* **AV-1644:** Update assets ([dd92882](https://github.com/vrk-kpa/opendata-ckan/commit/dd92882d38e3ed472e3082367e981720d2e03290))
+
 ## [1.5.7](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.6...v1.5.7) (2022-02-18)
 
 
