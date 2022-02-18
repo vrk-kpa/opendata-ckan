@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.6...v1.5.7) (2022-02-18)
+
+
+### Bug Fixes
+
+* **AV-1618:** Minor fixes to make tests working. Also remove store icons from template as those doesn't exist in new design ([07f2ac2](https://github.com/vrk-kpa/opendata-ckan/commit/07f2ac2fd2dfad488e03b718646904a5e8e72b21))
+
 ## [1.5.6](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.5...v1.5.6) (2022-02-10)
 
 
