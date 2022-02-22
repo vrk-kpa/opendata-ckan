@@ -644,6 +644,7 @@ def site_url_with_root_path():
     else:
         return site_url.rstrip('/')
 
+
 def get_organization_filters_count():
     organizations = get_action('organization_tree_list')({}, {
                                 'include_datasets': False,
