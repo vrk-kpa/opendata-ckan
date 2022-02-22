@@ -35,7 +35,7 @@ def tag_autocomplete():
         }
     }
 
-    return resultSet
+    return _finish_ok(resultSet)
 
 
 def dataset_autocomplete():

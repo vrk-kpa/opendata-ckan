@@ -193,7 +193,7 @@ ckanext.cloudstorage.driver = {{ environ('CKAN_CLOUDSTORAGE_DRIVER') }}
 ckanext.cloudstorage.container_name = {{ environ('CKAN_CLOUDSTORAGE_CONTAINER_NAME') }}
 ckanext.cloudstorage.use_secure_urls = {{ environ('CKAN_CLOUDSTORAGE_USE_SECURE_URLS') }}
 ckanext.cloudstorage.aws_use_boto3_sessions = {{ environ('CKAN_CLOUDSTORAGE_AWS_USE_BOTO3_SESSIONS') }}
-ckanext.cloudstorage.driver_options = {}
+ckanext.cloudstorage.driver_options = {{ environ('CKAN_CLOUDSTORAGE_DRIVER_OPTIONS') }}
 {% endif %}
 
 sentry.dsn = {{ environ('SENTRY_DSN') }}
