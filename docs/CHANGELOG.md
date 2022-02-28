@@ -1,3 +1,11 @@
+## [1.5.10](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.9...v1.5.10) (2022-02-28)
+
+
+### Bug Fixes
+
+* **AV-1530:** Replace inline-css on error pages ([23859b6](https://github.com/vrk-kpa/opendata-ckan/commit/23859b64917db21b4eb59269e490e28eb98ec741))
+* **AV-1530:** Update also submodule ([6cbd45c](https://github.com/vrk-kpa/opendata-ckan/commit/6cbd45c78104571d82711ab95f7cd326a4eab70d))
+
 ## [1.5.9](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.8...v1.5.9) (2022-02-25)
 
 
