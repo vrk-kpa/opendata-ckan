@@ -1,3 +1,11 @@
+## [1.5.9](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.8...v1.5.9) (2022-02-25)
+
+
+### Bug Fixes
+
+* **AV-1550:** Flake8-fix ([002a20d](https://github.com/vrk-kpa/opendata-ckan/commit/002a20d491616571898d6080f448801c2a70c3a4))
+* **AV-1550:** Implementation of new design for organization list. Also fixes for issues that was broken by new changes ([d1dfc08](https://github.com/vrk-kpa/opendata-ckan/commit/d1dfc08ddc9f37e1c0d154eb3370ab90e9b50c6c))
+
 ## [1.5.8](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.7...v1.5.8) (2022-02-18)
 
 

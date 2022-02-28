@@ -10,11 +10,13 @@
 
 {% block secondary %}
     {% block stages %}
-    <aside class="sidebar col-sm-4 pull-left">
-        <h4>{{_("Stages")}}</h4>
-        <div class="ytp-group-divider"></div>
-        {{ h.snippet('package/snippets/stages.html', stages=form_vars.stage, pkg_name=form_vars.data.name) }}
-    </aside>
+    <div class="col-sm-4 sidebar-container">
+        <aside class="sidebar">
+            <h4>{{_("Stages")}}</h4>
+            <div class="ytp-group-divider"></div>
+            {{ h.snippet('package/snippets/stages.html', stages=form_vars.stage, pkg_name=form_vars.data.name) }}
+        </aside>
+    </div>
     {% endblock %}
 {% endblock  %}
 
