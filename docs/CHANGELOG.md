@@ -1,3 +1,14 @@
+## [1.5.11](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.10...v1.5.11) (2022-03-02)
+
+
+### Bug Fixes
+
+* **AV-1414:** Use also url_type in comparison for resources action text ([c821ce9](https://github.com/vrk-kpa/opendata-ckan/commit/c821ce9f274df717e641ee0db4b28c7371718893))
+* **AV-1588:** Don't use REMOTE_ADDR as fallback ([5f3f2c4](https://github.com/vrk-kpa/opendata-ckan/commit/5f3f2c44a3f6a92e692422ccd15bd13895232208))
+* **AV-1588:** Make recommendation feature to use original client ip instead of proxy servers ([ce3a6be](https://github.com/vrk-kpa/opendata-ckan/commit/ce3a6be53244fd9cc076cb786aa6e478cc923df2))
+* **AV-1589:** Reposition recommend button and text ([19ccbb3](https://github.com/vrk-kpa/opendata-ckan/commit/19ccbb35fd9c591b94df50225660f18af5178bef))
+* **AV-1618:** Export translations for showcase ([cbf449f](https://github.com/vrk-kpa/opendata-ckan/commit/cbf449f02905d5817e213307a5297c71c6708460))
+
 ## [1.5.10](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.9...v1.5.10) (2022-02-28)
 
 
