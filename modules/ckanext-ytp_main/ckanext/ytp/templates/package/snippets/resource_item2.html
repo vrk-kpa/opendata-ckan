@@ -9,7 +9,7 @@
             <a href="{{ h.url_for(controller='package', action='resource_edit', id=pkg.name, resource_id=res.id) }}" class="resource-action">{{ _('Manage') }}</a>
         {% endif %}
       <a href="{{ res.url }}" target="_blank" class="resource-url-analytics resource-type-{{ res.resource_type }} resource-action">
-        {% if res.resource_type in ('listing', 'service') or res.resource_type == 'api' or not res.can_be_previewed %}
+        {% if (res.resource_type in ('listing', 'service') or res.resource_type == 'api' or not res.can_be_previewed) and res.url_type != 'upload' %}
           {{ _('Open') }}
         {% else %}
           {{ _('Download') }}
