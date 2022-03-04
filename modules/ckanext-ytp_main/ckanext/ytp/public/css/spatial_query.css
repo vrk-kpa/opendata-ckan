@@ -12,14 +12,12 @@
 }
 
 .dataset-map-expanded #dataset-map {
-  position: static;
   width: 940px;
   height: 435px;
-  top: -384px;
-  left: -1px;
+  top: 3% !important;
+  z-index: 1000;
   background-color: white;
   border: 1px solid #CCC;
-  margin: 0;
 }
 
 .dataset-map-expanded #dataset-map #dataset-map-attribution div {
