@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.11...v1.6.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* **AV-1509:** Merge pull request [#22](https://github.com/vrk-kpa/opendata-ckan/issues/22) from vrk-kpa/AV-1509--facet-filters-WCAB-fix ([3873ab4](https://github.com/vrk-kpa/opendata-ckan/commit/3873ab4babfdbd64cbdd8bb1a91070acf5f5431d))
+
+
+### Features
+
+* **AV-1361:** Merge pull request [#29](https://github.com/vrk-kpa/opendata-ckan/issues/29) from vrk-kpa/AV-1361--spatial-search ([e782037](https://github.com/vrk-kpa/opendata-ckan/commit/e78203746a6620dfe16a0cb00f5672dbf7c1a4e2))
+
 ## [1.5.11](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.10...v1.5.11) (2022-03-02)
 
 
