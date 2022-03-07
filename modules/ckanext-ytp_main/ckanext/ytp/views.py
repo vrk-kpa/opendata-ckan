@@ -37,6 +37,8 @@ def tag_autocomplete():
 
     return _finish_ok(resultSet)
 
+from model import MunicipalityBoundingBox
+
 
 def dataset_autocomplete():
     q = request.args.get('incomplete', '')
@@ -69,6 +71,15 @@ class GroupView(CkanDatasetGroupView):
             return abort(404, _('Dataset not found'))
 
 
+def get_all_locations():
+    """Endpoint for getting all geocoded bounding boxes for Finnish municipalities"""
+    all_bboxes = model.Session.query(MunicipalityBoundingBox).all()
+    data = []
+    for bbox in all_bboxes:
+        data.append({'text': bbox.name, 'id': [bbox.lng_min, bbox.lat_min, bbox.lng_max, bbox.lat_max]})
+
+    return _finish_ok({'results': data})
+
 ytp_main = Blueprint('ytp_main', __name__)
 ytp_main_dataset = Blueprint('ytp_main_dataset', __name__,
                              url_prefix='/dataset',
@@ -78,6 +89,7 @@ ytp_main.add_url_rule('/api/util/dataset/autocomplete', view_func=dataset_autoco
 ytp_main.add_url_rule('/api/2/util/dataset/autocomplete', view_func=dataset_autocomplete)
 ytp_main.add_url_rule('/api/util/tag/autocomplete', view_func=tag_autocomplete)
 ytp_main.add_url_rule('/api/2/util/tag/autocomplete', view_func=tag_autocomplete)
+ytp_main.add_url_rule('/api/util/dataset/locations', view_func=get_all_locations)
 
 
 def get_blueprint():

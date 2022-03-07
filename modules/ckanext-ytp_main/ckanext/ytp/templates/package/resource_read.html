@@ -42,7 +42,7 @@
                             <i class="fas fa-eye"></i> {{ _('View') }}
                           {% elif  res.resource_type == 'api' %}
                             <i class="fas fa-key"></i> {{ _('API Endpoint') }}
-                          {% elif not res.can_be_previewed %}
+                          {% elif not res.can_be_previewed and res.url_type != 'upload' %}
                             <i class="fas fa-external-link-alt"></i> {{ _('Open') }}
                           {% else %}
                             <i class="fas fa-download"></i> {{ _('Download') }}

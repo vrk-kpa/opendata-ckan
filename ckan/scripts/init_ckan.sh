@@ -44,5 +44,9 @@ ckan -c ${APP_DIR}/production.ini recommendations init
 echo "rebuild solr search indexes ..."
 ckan -c ${APP_DIR}/production.ini search-index rebuild
 
+# Create and opulate the MunicipalityBoundingBox table
+ckan -c ${APP_DIR}/production.ini ytp-build-models build_ytp_models
+ckan -c ${APP_DIR}/production.ini ytp-build-models populate_municipality_bounding_box
+
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done

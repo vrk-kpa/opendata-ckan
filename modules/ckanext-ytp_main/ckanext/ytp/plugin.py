@@ -28,7 +28,7 @@ from ckanext.showcase.model import ShowcaseAdmin
 from sqlalchemy import and_, or_
 from sqlalchemy.sql.expression import false
 
-from ckanext.ytp.logic import package_autocomplete
+from ckanext.ytp.logic import package_autocomplete, store_municipality_bbox_data
 import ckanext.ytp.views as views
 from ckanext.ytp import auth, menu, cli, validators, views_organization
 
@@ -232,6 +232,8 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
     def update_config(self, config):
         toolkit.add_template_directory(config, 'templates')
+        toolkit.add_resource('public/javascript/', 'ytp_common_js')
+        toolkit.add_resource('public/css/', 'ytp_common_css')
         toolkit.add_template_directory(config, '../common/templates')
 
     # IDatasetForm
@@ -456,7 +458,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
     # IActions #
     def get_actions(self):
         return {'package_show': action_package_show, 'package_search': action_package_search,
-                'package_autocomplete': package_autocomplete}
+                'package_autocomplete': package_autocomplete, 'store_municipality_bbox_data': store_municipality_bbox_data}
 
     # IValidators
     def get_validators(self):

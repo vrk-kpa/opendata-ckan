@@ -1,3 +1,34 @@
+# [1.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.11...v1.6.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* **AV-1509:** Merge pull request [#22](https://github.com/vrk-kpa/opendata-ckan/issues/22) from vrk-kpa/AV-1509--facet-filters-WCAB-fix ([3873ab4](https://github.com/vrk-kpa/opendata-ckan/commit/3873ab4babfdbd64cbdd8bb1a91070acf5f5431d))
+
+
+### Features
+
+* **AV-1361:** Merge pull request [#29](https://github.com/vrk-kpa/opendata-ckan/issues/29) from vrk-kpa/AV-1361--spatial-search ([e782037](https://github.com/vrk-kpa/opendata-ckan/commit/e78203746a6620dfe16a0cb00f5672dbf7c1a4e2))
+
+## [1.5.11](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.10...v1.5.11) (2022-03-02)
+
+
+### Bug Fixes
+
+* **AV-1414:** Use also url_type in comparison for resources action text ([c821ce9](https://github.com/vrk-kpa/opendata-ckan/commit/c821ce9f274df717e641ee0db4b28c7371718893))
+* **AV-1588:** Don't use REMOTE_ADDR as fallback ([5f3f2c4](https://github.com/vrk-kpa/opendata-ckan/commit/5f3f2c44a3f6a92e692422ccd15bd13895232208))
+* **AV-1588:** Make recommendation feature to use original client ip instead of proxy servers ([ce3a6be](https://github.com/vrk-kpa/opendata-ckan/commit/ce3a6be53244fd9cc076cb786aa6e478cc923df2))
+* **AV-1589:** Reposition recommend button and text ([19ccbb3](https://github.com/vrk-kpa/opendata-ckan/commit/19ccbb35fd9c591b94df50225660f18af5178bef))
+* **AV-1618:** Export translations for showcase ([cbf449f](https://github.com/vrk-kpa/opendata-ckan/commit/cbf449f02905d5817e213307a5297c71c6708460))
+
+## [1.5.10](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.9...v1.5.10) (2022-02-28)
+
+
+### Bug Fixes
+
+* **AV-1530:** Replace inline-css on error pages ([23859b6](https://github.com/vrk-kpa/opendata-ckan/commit/23859b64917db21b4eb59269e490e28eb98ec741))
+* **AV-1530:** Update also submodule ([6cbd45c](https://github.com/vrk-kpa/opendata-ckan/commit/6cbd45c78104571d82711ab95f7cd326a4eab70d))
+
 ## [1.5.9](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.8...v1.5.9) (2022-02-25)
 
 
