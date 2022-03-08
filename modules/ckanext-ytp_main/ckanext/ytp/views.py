@@ -79,6 +79,7 @@ def get_all_locations():
 
     return _finish_ok({'results': data})
 
+
 ytp_main = Blueprint('ytp_main', __name__)
 ytp_main_dataset = Blueprint('ytp_main_dataset', __name__,
                              url_prefix='/dataset',
