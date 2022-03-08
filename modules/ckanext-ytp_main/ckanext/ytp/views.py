@@ -4,6 +4,7 @@ import ckan.model as model
 from ckan.views.api import _finish_ok
 from ckan.views.dataset import GroupView as CkanDatasetGroupView
 
+from .model import MunicipalityBoundingBox
 from ckan.plugins.toolkit import h, g, abort, request, get_action, NotAuthorized, ObjectNotFound, _
 
 
@@ -36,8 +37,6 @@ def tag_autocomplete():
     }
 
     return _finish_ok(resultSet)
-
-from model import MunicipalityBoundingBox
 
 
 def dataset_autocomplete():
