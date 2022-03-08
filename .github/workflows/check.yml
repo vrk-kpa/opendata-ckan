@@ -20,4 +20,4 @@ jobs:
 
       - name: Run linter
         run: |
-          flake8 modules --count --max-line-length=127 --statistics --exclude=modules/ckanext-spatial
+          flake8 modules --count --max-line-length=127 --statistics --exclude=modules/ckanext-spatial,modules/ckanext-qa
