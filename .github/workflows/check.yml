@@ -8,7 +8,7 @@ jobs:
   flake8:
     name: flake8
     runs-on: ubuntu-latest
-    container: python:2.7
+    container: python:3.8
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,4 +20,4 @@ jobs:
 
       - name: Run linter
         run: |
-          flake8 modules --count --max-line-length=127 --statistics
+          flake8 modules --count --max-line-length=127 --statistics --exclude=modules/ckanext-spatial,modules/ckanext-qa,modules/ckanext-prh_tools,modules/ckanext-ytp_comments

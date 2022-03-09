@@ -1,8 +1,9 @@
-from ckan.logic import get_action
+from ckan.plugins.toolkit import get_action
 from ckanext.matomo.model import PackageStats
-from commands import package_generator
+from .cli import package_generator
 from datetime import timedelta, datetime
 import logging
+from functools import reduce
 
 log = logging.getLogger(__name__)
 
@@ -135,7 +136,7 @@ def deprecated_datasets_report():
         return resolved_dict
 
     # Loop through all packages and run them through resolver
-    map_iterator = map(handle_package, all_deprecated)
+    map_iterator = list(map(handle_package, all_deprecated))
     packages = list(map_iterator)
 
     # Filter package output to table:
@@ -206,25 +207,3 @@ def openness_score_avg(context, datasets):
 
 def tuple_sum(*xs):
     return tuple(sum(x) for x in zip(*xs))
-
-
-def harvester_report():
-
-    harvest_sources = get_action('harvest_source_list')({}, {})
-
-    sources = [{"id": source['id'], "title": source['title'], "status": source['status'],
-                "next_run": source['next_run']} for source in harvest_sources if source['active']]
-
-    return {
-        'sources': sources
-    }
-
-
-harvester_report_info = {
-    'name': 'harvester-status',
-    'description': 'Harvester statuses',
-    'option_defaults': None,
-    'option_combinations': None,
-    'generate': harvester_report,
-    'template': 'report/harvester_report.html',
-}

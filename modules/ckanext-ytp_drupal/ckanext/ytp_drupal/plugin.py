@@ -1,18 +1,14 @@
 from ckan import plugins
 from ckan.plugins import toolkit
-from paste.deploy.converters import asbool
 import sqlalchemy
 from ckan.common import c
 from ckan.logic import NotFound
 from ckan.lib import helpers
 from ckan.lib.plugins import DefaultTranslation
-from ckan.plugins.toolkit import config
 
-from pylons import request
-
+from flask import request
 import requests
 import urllib
-from webhelpers.html.tags import literal
 
 import logging
 log = logging.getLogger(__name__)
@@ -52,7 +48,7 @@ class YtpDrupalPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
         self.cancel_url = config.get(self._config_template % "cancel_url", "/cancel-user.php")
         self._node_type = config.get(self._config_template % "node_type", self._node_type)
-        self._translations_disabled = asbool(config.get(self._config_template % "translations_disabled", "false"))
+        self._translations_disabled = toolkit.asbool(config.get(self._config_template % "translations_disabled", "false"))
 
         self.engine = sqlalchemy.create_engine(self.drupal_connection_url)
 
@@ -93,11 +89,11 @@ class YtpDrupalPlugin(plugins.SingletonPlugin, DefaultTranslation):
                 if result:
                     break
             if not result:
-                result = results.itervalues().next()
+                result = next(iter(results.values()))
 
         if result:
-            result['edit'] = urllib.quote("/%s/node/%s/edit" % (language, str(result['node_id'])))
-            result['body'] = literal(result['body'])
+            result['edit'] = urllib.parse.quote("/%s/node/%s/edit" % (language, str(result['node_id'])))
+            result['body'] = toolkit.h.literal(result['body'])
 
         return result
 
@@ -119,7 +115,7 @@ class YtpDrupalPlugin(plugins.SingletonPlugin, DefaultTranslation):
     def get_drupal_session_token(self, domain, service, cookie_header=''):
         '''return text of X-CSRF-Token)'''
         token_url = 'https://' + domain + '/' + service + '/?q=services/session/token'
-        verify_cert = config.get('ckanext.drupal8.development_cert', '') or True
+        verify_cert = plugins.toolkit.config.get('ckanext.drupal8.development_cert', '') or True
         token_request = requests.get(token_url, headers={"Cookie": cookie_header}, verify=verify_cert)
         token = token_request.text
         return token

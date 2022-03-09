@@ -1,10 +1,15 @@
 {% extends "package/search.html" %}
 {% import 'macros/form.html' as form %}
+{% if q is not defined %}{% set q = c.q %}{% endif %}
+{% if fields_grouped is not defined %}{% set fields_grouped = c.fields_grouped %}{% endif %}
+{% if sort_by_selected is not defined %}{% set sort_by_selected = c.sort_by_selected %}{% endif %}
+{% if page is not defined %}{% set page = c.page %}{% endif %}
+{% if facet_titles is not defined %}{% set facet_titles = c.facet_titles %}{% endif %}
 
 {% block subtitle %}{{ _("Showcases") }}{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{{ h.nav_link(_('Showcases'), controller='ckanext.sixodp_showcase.controller:Sixodp_ShowcaseController', action='search', highlight_actions = 'new index') }}</li>
+  <li class="active">{{ h.nav_link(_('Showcases'), named_route='sixodp_showcase.search', highlight_actions = 'new index') }}</li>
 {% endblock %}
 
 
@@ -20,7 +25,7 @@
     {% if h.check_access('ckanext_showcase_create') %}
       <div>
         <div class="btn-group d-flex align-items-center flex-wrap">
-          {% link_for _('Add Showcase'), controller='ckanext.sixodp_showcase.controller:Sixodp_ShowcaseController', action='new', class_='btn btn-avoindata-header pr-0', icon='plus-sign' %}
+          {% link_for _('Add Showcase'), named_route='sixodp_showcase.new', class_='btn btn-avoindata-header pr-0', icon='plus-sign' %}
         </div>
       </div>
     {% endif %}
@@ -35,12 +40,12 @@
       {{ h.snippet('sixodp_showcase/snippets/showcase_greeting.html') }}
       {% block form %}
         <div class="search-form-container search-form-container-borderless">
-          {{ h.snippet('sixodp_showcase/snippets/showcase_search_input.html', query=c.q, placeholder=_('Search applications...'), query_params=c.fields_grouped, sorting=c.sort_by_selected) }}
+          {{ h.snippet('sixodp_showcase/snippets/showcase_search_input.html', query=q, placeholder=_('Search applications...'), query_params=fields_grouped, sorting=sort_by_selected, page=page) }}
         </div>
       {% endblock %}
 
       {% block package_search_results_list %}
-        {{ h.snippet('sixodp_showcase/snippets/showcase_list.html', packages=c.page.items) }}
+        {{ h.snippet('sixodp_showcase/snippets/showcase_list.html', packages=page.items) }}
       {% endblock %}
     </div>
   </section>

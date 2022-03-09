@@ -7,4 +7,4 @@ set -e
 echo "job started: prh-start"
 
 # run commands
-paster --plugin=ckanext-prh prh-tools fetch-data ${CKAN_STORAGE_PATH}/prh --package_id=yritykset -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini prh-tools fetch-data ${CKAN_STORAGE_PATH}/prh --package_id=yritykset

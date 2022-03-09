@@ -7,4 +7,4 @@ set -e
 echo "job started: matomo-fetch"
 
 # run commands
-[[ "${MATOMO_ENABLED}" == "true" ]] && paster --plugin=ckanext-matomo matomo fetch -c ${APP_DIR}/production.ini
+[[ "${MATOMO_ENABLED}" == "true" ]] && ckan -c ${APP_DIR}/production.ini matomo fetch

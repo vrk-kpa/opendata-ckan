@@ -15,39 +15,38 @@ jinja2 ${TEMPLATE_DIR}/datastore_permissions.sql.j2 -o ${SCRIPT_DIR}/datastore_p
 python prerun.py || { echo '[CKAN prerun] FAILED. Exiting...' ; exit 1; }
 
 # minify JS files
-paster --plugin=ckan minify ${SRC_DIR}/ckan/public/base/javascript -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini minify ${SRC_DIR}/ckan/public/base/javascript
 
 # execute SQL scripts
 cat ${SCRIPT_DIR}/datastore_permissions.sql | PGPASSWORD="${DB_CKAN_PASS}" psql -d ${DB_DATASTORE_READONLY} -h ${DB_HOST} -U ${DB_CKAN_USER} --set ON_ERROR_STOP=1
 
 # init ckan extensions
 echo "init ckan extensions ..."
-paster --plugin=ckanext-ytp_main ytp-facet-translations ${EXT_DIR}/ckanext-ytp_main/ckanext/ytp/i18n -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-sixodp_showcase sixodp_showcase create_platform_vocabulary -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-sixodp_showcase sixodp_showcase create_showcase_type_vocabulary -c ${APP_DIR}/production.ini
-paster --plugin=ckan db migrate-filestore -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini opendata add-facet-translations ${EXT_DIR}/ckanext-ytp_main/ckanext/ytp/i18n
+ckan -c ${APP_DIR}/production.ini sixodp-showcase create_platform_vocabulary
+ckan -c ${APP_DIR}/production.ini sixodp-showcase create_showcase_type_vocabulary
 
 # init ckan extension databases
 echo "init ckan extension databases ..."
-paster --plugin=ckanext-ytp_request initdb -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-harvest harvester initdb -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-spatial spatial initdb -c ${APP_DIR}/production.ini
-[[ "${CKAN_PLUGINS}" == *" archiver "* ]]     && paster --plugin=ckanext-archiver archiver init -c ${APP_DIR}/production.ini
-[[ "${CKAN_PLUGINS}" == *" qa "* ]]           && paster --plugin=ckanext-qa qa init -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-report report initdb -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-matomo matomo init_db -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-cloudstorage cloudstorage initdb -c ${APP_DIR}/production.ini
-[[ "${CKAN_PLUGINS}" == *" rating "* ]]       && paster --plugin=ckanext-rating rating init -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-reminder reminder init -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-ytp_recommendation recommendation init -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini opendata-request init-db
+ckan -c ${APP_DIR}/production.ini harvester initdb
+ckan -c ${APP_DIR}/production.ini spatial initdb
+[[ "${CKAN_PLUGINS}" == *" archiver "* ]]     && ckan -c ${APP_DIR}/production.ini archiver init
+[[ "${CKAN_PLUGINS}" == *" qa "* ]]           && ckan -c ${APP_DIR}/production.ini qa init
+ckan -c ${APP_DIR}/production.ini report initdb
+[[ "${CKAN_PLUGINS}" == *" matomo "* ]]           && ckan -c ${APP_DIR}/production.ini matomo init_db
+[[ "${CKAN_PLUGINS}" == *" cloudstorage "* ]]           && ckan -c ${APP_DIR}/production.ini cloudstorage initdb
+[[ "${CKAN_PLUGINS}" == *" rating "* ]]       && ckan -c ${APP_DIR}/production.ini rating init
+ckan -c ${APP_DIR}/production.ini reminder initdb
+ckan -c ${APP_DIR}/production.ini recommendations init
 
 # refresh solr search indexes
 echo "rebuild solr search indexes ..."
-paster --plugin=ckan search-index rebuild -i -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini search-index rebuild
 
 # Create and opulate the MunicipalityBoundingBox table
-paster --plugin=ckanext-ytp_main ytp-build-models build_ytp_models -c ${APP_DIR}/production.ini
-paster --plugin=ckanext-ytp_main ytp-build-models populate_municipality_bounding_box -c ${APP_DIR}/production.ini
+ckan -c ${APP_DIR}/production.ini ytp-build-models build_ytp_models
+ckan -c ${APP_DIR}/production.ini ytp-build-models populate_municipality_bounding_box
 
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done

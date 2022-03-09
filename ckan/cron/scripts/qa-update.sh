@@ -7,4 +7,4 @@ set -e
 echo "job started: qa-update"
 
 # run commands
-[[ "${CKAN_PLUGINS}" == *" qa "* ]] && paster --plugin=ckanext-qa qa update -c ${APP_DIR}/production.ini
+[[ "${CKAN_PLUGINS}" == *" qa "* ]] && ckan -c ${APP_DIR}/production.ini qa update
