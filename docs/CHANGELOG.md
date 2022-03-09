@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.0...v1.6.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* spatial search expanded map bug ([4741530](https://github.com/vrk-kpa/opendata-ckan/commit/4741530f8387a678cd1a088cfc85f43e5ecfe27f))
+
 # [1.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.11...v1.6.0) (2022-03-04)
 
 
