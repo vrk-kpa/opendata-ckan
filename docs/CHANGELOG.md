@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.1...v2.0.0) (2022-03-09)
+
+
+### Features
+
+* Merge pull request [#36](https://github.com/vrk-kpa/opendata-ckan/issues/36) from vrk-kpa/ckan-2.9 ([63fd6cb](https://github.com/vrk-kpa/opendata-ckan/commit/63fd6cb3cd18a3fcb3cace95a0721503778a9466))
+
+
+### BREAKING CHANGES
+
+* Upgrade to ckan 2.9.5
+
 ## [1.6.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.0...v1.6.1) (2022-03-09)
 
 
