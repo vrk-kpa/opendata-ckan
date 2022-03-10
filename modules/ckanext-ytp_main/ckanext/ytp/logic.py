@@ -12,7 +12,7 @@ import logging
 import sqlalchemy
 import sqlalchemy.sql
 
-from model import MunicipalityBoundingBox
+from .model import MunicipalityBoundingBox
 
 _select = sqlalchemy.sql.select
 _or_ = sqlalchemy.or_
