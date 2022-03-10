@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.1...v2.0.2) (2022-03-10)
+
+
+### Bug Fixes
+
+* Update licence year to trigger build ([17b207f](https://github.com/vrk-kpa/opendata-ckan/commit/17b207f94167c9ce578d71a0991c150051d55108))
+
 ## [2.0.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.0...v2.0.1) (2022-03-10)
 
 
