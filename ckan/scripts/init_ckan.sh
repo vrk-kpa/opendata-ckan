@@ -22,7 +22,7 @@ cat ${SCRIPT_DIR}/datastore_permissions.sql | PGPASSWORD="${DB_CKAN_PASS}" psql 
 
 # init ckan extensions
 echo "init ckan extensions ..."
-ckan -c ${APP_DIR}/production.ini opendata add-facet-translations ${EXT_DIR}/ckanext-ytp_main/ckanext/ytp/i18n
+#ckan -c ${APP_DIR}/production.ini opendata add-facet-translations ${EXT_DIR}/ckanext-ytp_main/ckanext/ytp/i18n
 ckan -c ${APP_DIR}/production.ini sixodp-showcase create_platform_vocabulary
 ckan -c ${APP_DIR}/production.ini sixodp-showcase create_showcase_type_vocabulary
 
@@ -45,8 +45,8 @@ echo "rebuild solr search indexes ..."
 ckan -c ${APP_DIR}/production.ini search-index rebuild
 
 # Create and opulate the MunicipalityBoundingBox table
-ckan -c ${APP_DIR}/production.ini ytp-build-models build_ytp_models
-ckan -c ${APP_DIR}/production.ini ytp-build-models populate_municipality_bounding_box
+#ckan -c ${APP_DIR}/production.ini ytp-build-models build_ytp_models
+#ckan -c ${APP_DIR}/production.ini ytp-build-models populate_municipality_bounding_box
 
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done
