@@ -14,6 +14,9 @@ jinja2 ${TEMPLATE_DIR}/datastore_permissions.sql.j2 -o ${SCRIPT_DIR}/datastore_p
 # run prerun script that checks connections and inits db
 python prerun.py || { echo '[CKAN prerun] FAILED. Exiting...' ; exit 1; }
 
+echo "Upgrade CKAN database ..."
+ckan -c ${APP_DIR}/production.ini db upgrade
+
 # minify JS files
 ckan -c ${APP_DIR}/production.ini minify ${SRC_DIR}/ckan/public/base/javascript
 
