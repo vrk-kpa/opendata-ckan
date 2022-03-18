@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.2...v2.0.3) (2022-03-18)
+
+
+### Bug Fixes
+
+* Upgrade ckan database ([a3e5e1c](https://github.com/vrk-kpa/opendata-ckan/commit/a3e5e1c6551a1241fe2df3fc7280f3cc75c3f469))
+
 ## [2.0.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.1...v2.0.2) (2022-03-10)
 
 
