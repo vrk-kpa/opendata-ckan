@@ -1,3 +1,35 @@
+## [2.0.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.3...v2.0.4) (2022-03-28)
+
+
+### Bug Fixes
+
+* tag list route name, advanced search link translation ([b489437](https://github.com/vrk-kpa/opendata-ckan/commit/b4894373a2441c443477091c68d5c1a112b81c0e))
+
+## [2.0.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.2...v2.0.3) (2022-03-18)
+
+
+### Bug Fixes
+
+* Upgrade ckan database ([a3e5e1c](https://github.com/vrk-kpa/opendata-ckan/commit/a3e5e1c6551a1241fe2df3fc7280f3cc75c3f469))
+
+## [2.0.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.1...v2.0.2) (2022-03-10)
+
+
+### Bug Fixes
+
+* Update licence year to trigger build ([17b207f](https://github.com/vrk-kpa/opendata-ckan/commit/17b207f94167c9ce578d71a0991c150051d55108))
+
+## [2.0.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.0...v2.0.1) (2022-03-10)
+
+
+### Bug Fixes
+
+* Disable archiver for now ([2d1dae1](https://github.com/vrk-kpa/opendata-ckan/commit/2d1dae10c5a8ff0dd7af7b85ed240923e0f533cc))
+* disable non-working cli commands ([0f89454](https://github.com/vrk-kpa/opendata-ckan/commit/0f894548f55a6f58d47e02e38cea78c9a6a20067))
+* Fix relative import ([3dc31ac](https://github.com/vrk-kpa/opendata-ckan/commit/3dc31ac01f84dc8fd14dc48e46b6e85832729e3e))
+* use assets instead of resources ([41e2178](https://github.com/vrk-kpa/opendata-ckan/commit/41e21781534fd3c4cc9140a8c480ea3ad46a7fea))
+* Use correct ckan path for scripts ([747c8a8](https://github.com/vrk-kpa/opendata-ckan/commit/747c8a83134537d5bd29f8b9e972b5293a7907b7))
+
 # [2.0.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.1...v2.0.0) (2022-03-09)
 
 
