@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.3...v2.0.4) (2022-03-28)
+
+
+### Bug Fixes
+
+* tag list route name, advanced search link translation ([b489437](https://github.com/vrk-kpa/opendata-ckan/commit/b4894373a2441c443477091c68d5c1a112b81c0e))
+
 ## [2.0.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.2...v2.0.3) (2022-03-18)
 
 
