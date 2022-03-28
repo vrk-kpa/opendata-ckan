@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.5...v2.0.6) (2022-03-28)
+
+
+### Bug Fixes
+
+* disable ckanext-reminder snippets in dataset views pending migration ([9375a88](https://github.com/vrk-kpa/opendata-ckan/commit/9375a8826191601e937e7a8ae12d6a89c99b11ca))
+
 ## [2.0.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.4...v2.0.5) (2022-03-28)
 
 
