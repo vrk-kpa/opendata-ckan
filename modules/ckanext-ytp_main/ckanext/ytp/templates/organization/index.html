@@ -1,6 +1,7 @@
 {% ckan_extends %}
 
 {% set sorting = sorting if sorting else [(_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
+{% set organization_filters_count = h.get_organization_filters_count() %}
 
 {% block page_primary_action %}
 {% endblock %}
@@ -95,12 +96,11 @@
       </h2>
       <div class="module-content">
         <div class="organization-filters">
-          {% set count = h.get_organization_filters_count() %}
           <a class="{% if not with_datasets %} organization-filter-active{% endif %} d-block" href="{{ h.url_for('organization.index', q=q, sort=sort_by_selected) }}">
-            {{ _('Show all organizations') }} ({{ count['all_count'] }})
+            {{ _('Show all organizations') }} ({{ organization_filters_count['all_count'] }})
           </a>
           <a class="{% if with_datasets %} organization-filter-active{% endif %} d-block" href="{{ h.url_for('organization.index', q=q, sort=sort_by_selected, with_datasets=True) }}">
-            {{ _('Show only organizations with datasets') }} ({{ count['with_dataset_count'] }})
+            {{ _('Show only organizations with datasets') }} ({{ organization_filters_count['with_dataset_count'] }})
           </a>
         </div>
       </div>
