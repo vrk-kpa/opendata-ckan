@@ -587,7 +587,7 @@ def send_harvester_status_emails(ctx, dryrun, force, all_harvesters):
 @click.option('--dryrun', is_flag=True)
 @click.option('--force', is_flag=True)
 @click.option('--all-harvesters', is_flag=True)
-def send_stuck_runs_report(ctx, dryrun, force, all_harvesters):
+def send_stuck_runs_report(dryrun, force, all_harvesters):
     email_notification_recipients = t.aslist(t.config.get('ckanext.ytp.fault_recipients', ''))
 
     if not email_notification_recipients and not dryrun:
