@@ -1,3 +1,15 @@
+## [2.0.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.6...v2.0.7) (2022-03-30)
+
+
+### Bug Fixes
+
+* ckanext-matomo python3 compatibility fixes ([433ec28](https://github.com/vrk-kpa/opendata-ckan/commit/433ec28b33b44ada88b6da9723a20056af82f130))
+* migrate ckanext-spatial customizations ([3cc3d4d](https://github.com/vrk-kpa/opendata-ckan/commit/3cc3d4d83c0824dc5e172eb08e6488361c4fa8e8))
+* paging of organization list with dataset filtering ([de4aa76](https://github.com/vrk-kpa/opendata-ckan/commit/de4aa7697263af0c840c5510b99b2105135e4384))
+* remove extra parameter from send_stuck_runs_report cli command ([54b94a8](https://github.com/vrk-kpa/opendata-ckan/commit/54b94a884485304d8113903a4081e807b0f3af9a))
+* use iso8601 for determining dataset age ([f46872a](https://github.com/vrk-kpa/opendata-ckan/commit/f46872a504bf7964129a09df7f220fec0140b4d4))
+* ytp_recommendation webassets typo ([2fa4853](https://github.com/vrk-kpa/opendata-ckan/commit/2fa48532fb5f439fb93c99da68cfc9124c3bbf3a))
+
 ## [2.0.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.5...v2.0.6) (2022-03-28)
 
 
