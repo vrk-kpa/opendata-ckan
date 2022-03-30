@@ -301,26 +301,6 @@ def index(group_type, is_organization):
         context['user_id'] = g.userobj.id
         context['user_is_admin'] = g.userobj.sysadmin
 
-    try:
-        data_dict_global_results = {
-            'all_fields': False,
-            'q': q,
-            'sort': sort_by,
-            'type': group_type or 'group',
-        }
-        global_results = _action('group_list')(context,
-                                               data_dict_global_results)
-    except ValidationError as e:
-        if e.error_dict and e.error_dict.get('message'):
-            msg = e.error_dict['message']
-        else:
-            msg = str(e)
-        h.flash_error(msg)
-        extra_vars["page"] = h.Page([], 0)
-        extra_vars["group_type"] = group_type
-        return base.render(
-            _get_group_template('index_template', group_type), extra_vars)
-
     extra_vars['with_datasets'] = with_datasets = request.params.get('with_datasets', '').lower() in ('true', '1', 'yes')
     tree_list_params = {
                     'q': q, 'sort_by': sort_by, 'with_datasets': with_datasets,
@@ -328,7 +308,7 @@ def index(group_type, is_organization):
     page_results = _action('organization_tree_list')(context, tree_list_params)
 
     extra_vars["page"] = h.Page(
-        collection=global_results,
+        collection=page_results['global_results'],
         page=page,
         url=h.pager_url,
         items_per_page=items_per_page, )
