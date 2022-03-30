@@ -25,7 +25,7 @@ import itertools
 
 
 def get_commands():
-    return [opendata, opendata_dataset, opendata_group, opendata_harvest]
+    return [opendata, opendata_dataset, opendata_group, opendata_harvest, opendata_model]
 
 
 @click.group()
@@ -83,20 +83,16 @@ def opendata_dataset():
 
 
 @click.group()
-def ytp_build_models():
+def opendata_model():
     'Commands for building and populating DB tables'
 
 
-@ytp_build_models.command(
-    u'build_ytp_models',
-    help=u'Build custom models in this module')
-def build_ytp_models():
+@opendata_model.command(help=u'Build custom models in this module')
+def initdb():
     ytp_main_init_tables(model.meta.engine)
 
 
-@ytp_build_models.command(
-    u'populate_municipality_bounding_box',
-    help=u'Populate MunicipalityBoundingBox table from json file.')
+@opendata_model.command(help=u'Populate MunicipalityBoundingBox table from json file.')
 def populate_municipality_bounding_box():
     engine = model.meta.engine
     path = '{}/data/bbox_data.json'.format(os.path.dirname(__file__))

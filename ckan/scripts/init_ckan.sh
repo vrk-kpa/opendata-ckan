@@ -31,6 +31,7 @@ ckan -c ${APP_DIR}/production.ini sixodp-showcase create_showcase_type_vocabular
 
 # init ckan extension databases
 echo "init ckan extension databases ..."
+ckan -c ${APP_DIR}/production.ini opendata-model initdb
 ckan -c ${APP_DIR}/production.ini opendata-request init-db
 ckan -c ${APP_DIR}/production.ini harvester initdb
 ckan -c ${APP_DIR}/production.ini spatial initdb
@@ -43,13 +44,12 @@ ckan -c ${APP_DIR}/production.ini report initdb
 ckan -c ${APP_DIR}/production.ini reminder initdb
 ckan -c ${APP_DIR}/production.ini recommendations init
 
+# Import municipality data
+ckan -c ${APP_DIR}/production.ini opendata-model populate-municipality-bounding-box
+
 # refresh solr search indexes
 echo "rebuild solr search indexes ..."
 ckan -c ${APP_DIR}/production.ini search-index rebuild
-
-# Create and opulate the MunicipalityBoundingBox table
-#ckan -c ${APP_DIR}/production.ini ytp-build-models build_ytp_models
-#ckan -c ${APP_DIR}/production.ini ytp-build-models populate_municipality_bounding_box
 
 # set init flag to done
 echo "$CKAN_IMAGE_TAG" > ${DATA_DIR}/.init-done

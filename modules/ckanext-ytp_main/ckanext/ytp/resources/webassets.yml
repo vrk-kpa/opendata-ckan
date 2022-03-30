@@ -168,3 +168,16 @@ show_more_block_js:
   contents:
     - opendata/scripts/show-more-block.js
 
+spatial_query_css:
+  output: ckanext-ytp_main%(version)s_spatial-query.css
+  contents:
+    - opendata/styles/spatial_query.css
+
+spatial_search_js:
+  output: ckanext-ytp_main%(version)s_spatial-search.js
+  filters: rjsmin
+  extra:
+    preload:
+      - ytp_resources/main_js
+  contents:
+    - opendata/scripts/spatial_search.js
