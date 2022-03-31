@@ -161,7 +161,7 @@ deprecated_datasets_report_info = {
 
 
 def age(dataset):
-    return datetime.now() - iso8601.parse_date(dataset['metadata_created'])
+    return datetime.now() - iso8601.parse_date(dataset['metadata_created'], default_timezone=None)
 
 
 def glen(generator):
