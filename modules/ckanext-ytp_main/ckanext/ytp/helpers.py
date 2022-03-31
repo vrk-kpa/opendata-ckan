@@ -629,6 +629,10 @@ def get_organization_filters_count():
                                 'include_groups': False,
                                 'include_tags  ': False,
                                 'include_tags  ': False})
-    with_dataset_count = len(list(filter(lambda x: (x["package_count"] > 0), organizations["page_results"])))
-    all_count = len(organizations["page_results"])
+
+    organizations_with_datasets = get_action('organization_tree_list')({}, {'with_datasets': True})
+
+    with_dataset_count = len(organizations_with_datasets['global_results'])
+    all_count = len(organizations['global_results'])
+
     return {'with_dataset_count': with_dataset_count, 'all_count': all_count}
