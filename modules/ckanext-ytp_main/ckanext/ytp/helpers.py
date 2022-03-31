@@ -621,14 +621,13 @@ def site_url_with_root_path():
 
 
 def get_organization_filters_count():
-    organizations = get_action('organization_tree_list')({}, {
-                                'include_datasets': False,
+    organizations = get_action('organization_list')({}, {
+                                'all_fields': True,
                                 'include_dataset_count': True,
                                 'include_extras': False,
                                 'include_users': False,
                                 'include_groups': False,
-                                'include_tags  ': False,
                                 'include_tags  ': False})
-    with_dataset_count = len(list(filter(lambda x: (x["package_count"] > 0), organizations["page_results"])))
-    all_count = len(organizations["page_results"])
+    with_dataset_count = sum(1 for o in organizations if o.get('package_count', 0) > 0)
+    all_count = len(organizations)
     return {'with_dataset_count': with_dataset_count, 'all_count': all_count}

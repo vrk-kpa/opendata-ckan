@@ -717,7 +717,8 @@ def action_organization_tree_list(context, data_dict):
     if with_datasets:
         ids_and_titles = (
                 ids_and_titles
-                .outerjoin(model.Package, and_(model.Package.private == false(),
+                .outerjoin(model.Package, and_(model.Package.type == 'dataset',
+                                               model.Package.private == false(),
                                                or_(model.Package.owner_org == model.Group.name,
                                                    model.Package.owner_org == model.Group.id)))
                 .group_by(model.Group.id, model.Group.title, model.GroupExtra.value)
@@ -759,7 +760,8 @@ def action_organization_tree_list(context, data_dict):
                                 parent_group.name, parent_group.title, parent_extra.value,
                                 sqlalchemy.func.count(sqlalchemy.distinct(child_group.id)))
             .join(model.GroupExtra, model.GroupExtra.group_id == model.Group.id)
-            .outerjoin(model.Package, and_(model.Package.private == false(),
+            .outerjoin(model.Package, and_(model.Package.type == 'dataset',
+                                           model.Package.private == false(),
                                            or_(model.Package.owner_org == model.Group.name,
                                                model.Package.owner_org == model.Group.id)))
             .outerjoin(parent_member, and_(parent_member.group_id == model.Group.id,
