@@ -1,3 +1,11 @@
+## [2.0.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.8...v2.0.9) (2022-03-31)
+
+
+### Bug Fixes
+
+* remove double-encoding of unicode string ([5b1e063](https://github.com/vrk-kpa/opendata-ckan/commit/5b1e063fce270af6f02a4de15b81adae646e9f4c))
+* show correct organization counts in organization list filters ([83234a0](https://github.com/vrk-kpa/opendata-ckan/commit/83234a03f37b13ea27705046d7495eac25022f90))
+
 ## [2.0.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.7...v2.0.8) (2022-03-31)
 
 
