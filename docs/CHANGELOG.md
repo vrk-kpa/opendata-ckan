@@ -1,3 +1,12 @@
+## [2.0.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.7...v2.0.8) (2022-03-31)
+
+
+### Bug Fixes
+
+* ckanext-matomo/ckanext-statistics cooperation fixes ([a4f7166](https://github.com/vrk-kpa/opendata-ckan/commit/a4f716610b9b07b34fa99df27c515627ba33b9b3))
+* determining dataset age when timezone is not provided ([e3339d4](https://github.com/vrk-kpa/opendata-ckan/commit/e3339d4056fb4d2a77d5d5b1629930bfccc87322))
+* disable benign uWSGI write errors ([27adb41](https://github.com/vrk-kpa/opendata-ckan/commit/27adb41e935105ee012c9297b5ba295ccd4d1b7d))
+
 ## [2.0.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.6...v2.0.7) (2022-03-30)
 
 
