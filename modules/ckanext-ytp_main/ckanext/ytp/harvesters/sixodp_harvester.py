@@ -794,7 +794,7 @@ class SixodpHarvester(HarvesterBase):
 
             return result
         except ValidationError as e:
-            log.error("ValidationError: %s" % e)
+            log.warn("ValidationError: %s" % e)
             self._save_object_error('Invalid package with GUID %s: %r' %
                                     (harvest_object.guid, e.error_dict),
                                     harvest_object, 'Import')
