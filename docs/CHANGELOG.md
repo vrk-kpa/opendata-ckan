@@ -1,3 +1,12 @@
+## [2.0.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.9...v2.0.10) (2022-04-01)
+
+
+### Bug Fixes
+
+* downgrade sixodp_harvester object errors to warnings in log ([1467f36](https://github.com/vrk-kpa/opendata-ckan/commit/1467f363c361f098a9642a01f5853ff686838c63))
+* Parse matomo stats resource ids correctly to avoid database issues ([8c03003](https://github.com/vrk-kpa/opendata-ckan/commit/8c0300362d86d7d95c68eedb9537506efa92bec6))
+* work around CKAN API's organization list limit in organization filters ([ca8dc06](https://github.com/vrk-kpa/opendata-ckan/commit/ca8dc0664220a6e13972577f2850a8fd8677c122))
+
 ## [2.0.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.8...v2.0.9) (2022-03-31)
 
 
