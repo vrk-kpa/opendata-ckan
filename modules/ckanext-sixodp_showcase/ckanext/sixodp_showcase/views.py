@@ -68,9 +68,6 @@ class CreateView(views.CreateView):
             u'group_id'
         ] = request.args.get(u'group') or request.args.get(u'groups__0__id')
 
-        form_snippet = _get_pkg_template(
-            u'package_form', package_type=package_type
-        )
         form_vars = {
             u'data': data,
             u'errors': errors,
@@ -93,10 +90,9 @@ class CreateView(views.CreateView):
             new_template,
             extra_vars={
                 u'form_vars': form_vars,
-                u'form_snippet': form_snippet,
+                u'form_snippet': 'sixodp_showcase/package_form.html',
                 u'dataset_type': package_type,
                 u'resources_json': resources_json,
-                u'form_snippet': form_snippet,
                 u'errors_json': errors_json
             }
         )
@@ -180,9 +176,6 @@ class EditView(views.EditView):
                 h.dict_list_reduce(pkg_dict.get(u'tags', {}), u'name')
             )
         errors = errors or {}
-        form_snippet = _get_pkg_template(
-            u'package_form', package_type=package_type
-        )
         form_vars = {
             u'data': data,
             u'errors': errors,
@@ -212,12 +205,11 @@ class EditView(views.EditView):
             edit_template,
             extra_vars={
                 u'form_vars': form_vars,
-                u'form_snippet': form_snippet,
+                u'form_snippet': 'sixodp_showcase/package_form.html',
                 u'dataset_type': package_type,
                 u'pkg_dict': pkg_dict,
                 u'pkg': pkg,
                 u'resources_json': resources_json,
-                u'form_snippet': form_snippet,
                 u'errors_json': errors_json
             }
         )
