@@ -1,3 +1,13 @@
+## [2.0.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.10...v2.0.11) (2022-04-05)
+
+
+### Bug Fixes
+
+* flake8 style fixes to ckanext-harvest ([b030c08](https://github.com/vrk-kpa/opendata-ckan/commit/b030c0809cc003ed5728412f758bd58ff4afc928))
+* Handle removed harvest sources gracefully in harvest_source_list ([07ecf56](https://github.com/vrk-kpa/opendata-ckan/commit/07ecf569c0d1b8847ab8e3a1d816ed4b8b6b107e))
+* Modify showcase package form to enable multipart file uploads ([684f49a](https://github.com/vrk-kpa/opendata-ckan/commit/684f49aa81d4671795300f87c840f9e5a363f45a))
+* Skip reminder notifications for packages the user is not authorized to view ([2e5c873](https://github.com/vrk-kpa/opendata-ckan/commit/2e5c873e807772f08b300d6a07443dc1e6d7ea84))
+
 ## [2.0.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.9...v2.0.10) (2022-04-01)
 
 
