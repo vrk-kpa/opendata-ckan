@@ -58,7 +58,7 @@
   <div class="secondary__header">
     <h3 class="secondary__title">{{ _('Filter list') }}</h3>
   </div>
-  {% for facet in c.facet_titles %}
-    {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
+  {% for facet in facet_titles %}
+    {{ h.snippet('snippets/facet_list.html', title=facet_titles[facet], name=facet) }}
   {% endfor %}
 {% endblock %}
