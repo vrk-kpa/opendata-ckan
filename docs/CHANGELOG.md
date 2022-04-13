@@ -1,3 +1,12 @@
+## [2.0.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.11...v2.0.12) (2022-04-13)
+
+
+### Bug Fixes
+
+* ckanext-spatial/ckanext-geoview maps ([cb29a4d](https://github.com/vrk-kpa/opendata-ckan/commit/cb29a4d57dae48c57fac5b74b957f871570e7583))
+* matomo report route names ([160d487](https://github.com/vrk-kpa/opendata-ckan/commit/160d4874a05831d22a63a1138d5b7fa3d3c53721))
+* showcase filter list CKAN 2.9 compatibility ([9f78088](https://github.com/vrk-kpa/opendata-ckan/commit/9f7808884e129f3346048941a7f9a32d64c5fb38))
+
 ## [2.0.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.10...v2.0.11) (2022-04-05)
 
 
