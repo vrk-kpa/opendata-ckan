@@ -1,3 +1,10 @@
+## [2.0.13](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.12...v2.0.13) (2022-04-14)
+
+
+### Bug Fixes
+
+* ckanext-spatial styles ([971aa6f](https://github.com/vrk-kpa/opendata-ckan/commit/971aa6ffb6505a43611cad1fe1fcf7999f536006))
+
 ## [2.0.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.11...v2.0.12) (2022-04-13)
 
 
