@@ -1,3 +1,10 @@
+## [2.0.14](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.13...v2.0.14) (2022-04-19)
+
+
+### Bug Fixes
+
+* fix incorrectly sized resource icons ([621a268](https://github.com/vrk-kpa/opendata-ckan/commit/621a2683cdf2271f169e6c6868ec11c6d0580bd9))
+
 ## [2.0.13](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.12...v2.0.13) (2022-04-14)
 
 
