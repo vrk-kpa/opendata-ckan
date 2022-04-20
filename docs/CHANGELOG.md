@@ -1,3 +1,11 @@
+## [2.0.15](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.14...v2.0.15) (2022-04-20)
+
+
+### Bug Fixes
+
+* Align organization form buttons ([1c9ae36](https://github.com/vrk-kpa/opendata-ckan/commit/1c9ae3672a7c1e1266a26698a481d4735e59cd54))
+* Use suomifi buttons in organization form ([17de611](https://github.com/vrk-kpa/opendata-ckan/commit/17de6118a9646473363ffc126adc476bc4f3dbfa))
+
 ## [2.0.14](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.13...v2.0.14) (2022-04-19)
 
 
