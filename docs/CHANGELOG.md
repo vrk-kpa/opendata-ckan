@@ -1,3 +1,11 @@
+## [2.0.16](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.15...v2.0.16) (2022-04-29)
+
+
+### Bug Fixes
+
+* DataStore link in resource edit page ([22f2ad1](https://github.com/vrk-kpa/opendata-ckan/commit/22f2ad1ff5183c78da102aed4d2e154952565d0c))
+* spatial query draw icon ([7e1c41b](https://github.com/vrk-kpa/opendata-ckan/commit/7e1c41b90e4e2dfb6d8be87896aed24e2d7a9f7b))
+
 ## [2.0.15](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.14...v2.0.15) (2022-04-20)
 
 
