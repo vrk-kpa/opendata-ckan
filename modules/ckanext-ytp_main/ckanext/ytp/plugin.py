@@ -448,7 +448,10 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             # Add for each language
             for lang in languages:
                 if prop_value.get(lang):
+                    prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]}]
                     pkg_dict['vocab_%s_%s' % (prop_key, lang)] = [tag for tag in prop_value[lang]]
+
+            pkg_dict[prop_key] = json.dumps(prop_value)
 
         if 'date_released' in pkg_dict and ISO_DATETIME_FORMAT.match(pkg_dict['date_released']):
             pkg_dict['metadata_created'] = "%sZ" % pkg_dict['date_released']
