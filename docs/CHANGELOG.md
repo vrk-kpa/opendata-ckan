@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.16...v2.1.0) (2022-05-03)
+
+
+### Features
+
+* **AV-1690:** Convert package keywords to lowercase ([ac1dfee](https://github.com/vrk-kpa/opendata-ckan/commit/ac1dfeedcf1f357f2e8365e5993c69d8090ca150))
+
 ## [2.0.16](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.15...v2.0.16) (2022-04-29)
 
 
