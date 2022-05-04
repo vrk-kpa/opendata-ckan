@@ -670,11 +670,11 @@ def action_organization_tree_list(context, data_dict):
     check_access('site_read', context)
     check_access('group_list', context)
 
-    q = data_dict.get('q')
+    q = data_dict.get('q', '')
     sort_by = data_dict.get('sort_by', 'name asc')
-    page = data_dict.get('page', 1)
-    items_per_page = data_dict.get('items_per_page', 21)
-    with_datasets = data_dict.get('with_datasets', False)
+    page = toolkit.asint(data_dict.get('page', 1))
+    items_per_page = toolkit.asint(data_dict.get('items_per_page', 21))
+    with_datasets = toolkit.asbool(data_dict.get('with_datasets', False))
     user = context.get('user')
 
     # Determine non-visible organizations
@@ -712,8 +712,8 @@ def action_organization_tree_list(context, data_dict):
                       .filter(model.Group.state == 'active')
                       .filter(model.Group.is_organization.is_(True))
                       .filter(model.Group.name.notin_(non_approved))
-                      .join(model.GroupExtra, model.GroupExtra.group_id == model.Group.id)
-                      .filter(model.GroupExtra.key == 'title_translated')
+                      .outerjoin(model.GroupExtra, and_(model.GroupExtra.group_id == model.Group.id,
+                                                        model.GroupExtra.key == 'title_translated'))
                       .order_by(model.Group.title))
 
     # Optionally handle getting only organizations with datasets
@@ -731,7 +731,14 @@ def action_organization_tree_list(context, data_dict):
 
     # Pick translated title for each result
     lang = helpers.lang() or config.get('ckan.locale_default', 'en')
-    translated_titles_and_gids = (((json.loads(translated).get(lang) or title).lower(), gid)
+
+    def translated_or_title(translated, title):
+        if translated is not None:
+            return json.loads(translated)
+        else:
+            return {lang: title}
+
+    translated_titles_and_gids = ((translated_or_title(translated, title).get(lang, title).lower(), gid)
                                   for gid, title, translated in ids_and_titles)
 
     # Filter based on search query if provided
@@ -762,7 +769,9 @@ def action_organization_tree_list(context, data_dict):
                                 model.GroupExtra.value, sqlalchemy.func.count(sqlalchemy.distinct(model.Package.id)),
                                 parent_group.name, parent_group.title, parent_extra.value,
                                 sqlalchemy.func.count(sqlalchemy.distinct(child_group.id)))
-            .join(model.GroupExtra, model.GroupExtra.group_id == model.Group.id)
+            .outerjoin(model.GroupExtra, and_(model.GroupExtra.group_id == model.Group.id,
+                                              model.GroupExtra.key == 'title_translated',
+                                              model.GroupExtra.state == 'active'))
             .outerjoin(model.Package, and_(model.Package.type == 'dataset',
                                            model.Package.private == false(),
                                            or_(model.Package.owner_org == model.Group.name,
@@ -776,15 +785,13 @@ def action_organization_tree_list(context, data_dict):
                                           child_member.table_name == 'group'))
             .outerjoin(child_group, child_group.id == child_member.group_id)
             .filter(model.Group.id.in_(page_ids))
-            .filter(model.GroupExtra.state == 'active')
-            .filter(model.GroupExtra.key == 'title_translated')
             .group_by(model.Group.id, model.Group.name,
                       model.Group.title, model.GroupExtra.value,
                       parent_group.name, parent_group.title, parent_extra.value)
             .all())
 
     page_results_by_id = {gid: {
-        'id': name, 'title': title, 'title_translated': json.loads(title_translated),
+        'id': name, 'title': title, 'title_translated': translated_or_title(title_translated, title),
         'package_count': package_count, 'parent_name': parent_name,
         'parent_title': parent_title, 'parent_title_translated': parent_title_translated,
         'child_count': child_count
