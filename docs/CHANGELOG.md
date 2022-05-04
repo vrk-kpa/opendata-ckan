@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.0...v2.1.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1668:** Include organizations without translated titles in organization_tree_list ([f0a8757](https://github.com/vrk-kpa/opendata-ckan/commit/f0a875744f2861906c283b2f5ef2d4251e349c73))
+
 # [2.1.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.16...v2.1.0) (2022-05-03)
 
 
