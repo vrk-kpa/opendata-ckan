@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.1...v2.1.2) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1697:** Update ckanext-report from upstream. ([2cea3af](https://github.com/vrk-kpa/opendata-ckan/commit/2cea3af22621215dd7d32580f439622326e0d330))
+
 ## [2.1.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.0...v2.1.1) (2022-05-04)
 
 
