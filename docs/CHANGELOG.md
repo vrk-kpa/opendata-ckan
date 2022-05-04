@@ -1,3 +1,11 @@
+## [2.1.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.2...v2.1.3) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1698:** Add ckan 2.9 support for ckanext-disqus ([040b1bf](https://github.com/vrk-kpa/opendata-ckan/commit/040b1bfbd8d4714bcfd0d1f09bc3cf9d130125fb))
+* **AV-1698:** Update submodule commit after pr-merge in there ([d852d36](https://github.com/vrk-kpa/opendata-ckan/commit/d852d36364fd9c595aa443134de77b0c42c41c8d))
+
 ## [2.1.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.1...v2.1.2) (2022-05-04)
 
 
