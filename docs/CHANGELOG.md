@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.3...v2.2.0) (2022-05-09)
+
+
+### Features
+
+* **AV-1704:** Update translations ([bbc26ac](https://github.com/vrk-kpa/opendata-ckan/commit/bbc26ac4306b183ad3634c51e73a5a88bd671c7a))
+
 ## [2.1.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.2...v2.1.3) (2022-05-04)
 
 
