@@ -2220,7 +2220,7 @@ msgstr ""
 
 #: ckanext/ytp/templates/package/snippets/dataset_info.html:91
 msgid "Recommend dataset"
-msgstr ""
+msgstr "Like this dataset"
 
 #: ckanext/ytp/templates/package/snippets/dataset_info.html:99
 msgid "Follow dataset"
