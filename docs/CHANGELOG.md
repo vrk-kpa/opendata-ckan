@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.0...v2.2.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **AV-1676:** Use solr as a ckanext.spatial.search_backend to prevent issues with postgis ([e62762f](https://github.com/vrk-kpa/opendata-ckan/commit/e62762f0349829b7e0e8e60a3369ff825c7c6b17))
+
 # [2.2.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.3...v2.2.0) (2022-05-09)
 
 
