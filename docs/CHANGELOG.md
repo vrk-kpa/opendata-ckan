@@ -1,3 +1,11 @@
+## [2.2.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.2...v2.2.3) (2022-05-11)
+
+
+### Bug Fixes
+
+* **AV-1693:** Fix issue in header nav dropdowns with changing horizontal spacing on hover ([7464018](https://github.com/vrk-kpa/opendata-ckan/commit/7464018a2a93beb46c1b1dbce2dbd5ce44f431e5))
+* **AV-1693:** Update assets-commit ([ac9988f](https://github.com/vrk-kpa/opendata-ckan/commit/ac9988fda89ce7b6dcdd74ffc8358ca5b6089c20))
+
 ## [2.2.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.1...v2.2.2) (2022-05-11)
 
 
