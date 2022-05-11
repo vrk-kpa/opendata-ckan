@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.1...v2.2.2) (2022-05-11)
+
+
+### Bug Fixes
+
+* **AV-1699:** Fix matomo reports and fetching ([8d7a059](https://github.com/vrk-kpa/opendata-ckan/commit/8d7a059a242daf441c3b50526166c373de7a4706))
+
 ## [2.2.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.0...v2.2.1) (2022-05-09)
 
 
