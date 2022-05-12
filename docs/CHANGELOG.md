@@ -1,3 +1,11 @@
+## [2.2.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.3...v2.2.4) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1586:** Improve ckanext-matomo CKAN 2.8 compatibility ([c5e4ce2](https://github.com/vrk-kpa/opendata-ckan/commit/c5e4ce2e30228964ad16310ca607d884c3afc3c7))
+* **AV-1705:** Fix permissions related organization tree error ([5570416](https://github.com/vrk-kpa/opendata-ckan/commit/55704169103ad3535a01c3d678b850028a9f1dc5))
+
 ## [2.2.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.2...v2.2.3) (2022-05-11)
 
 
