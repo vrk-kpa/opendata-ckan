@@ -1,3 +1,10 @@
+## [2.2.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.5...v2.2.6) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1707:** Fix a non-admin logged in user causing an error in statistics ([bceff00](https://github.com/vrk-kpa/opendata-ckan/commit/bceff00e094c838d3c432c976da31b108b4c6db1))
+
 ## [2.2.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.4...v2.2.5) (2022-05-12)
 
 
