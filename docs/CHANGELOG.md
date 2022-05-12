@@ -1,3 +1,11 @@
+## [2.2.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.4...v2.2.5) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1706:** Fix UnboundLocalError when a linked user is requested by user name and not found ([98377fe](https://github.com/vrk-kpa/opendata-ckan/commit/98377fea3b8f9c3a4eba4ee0081e4233d6850a90))
+* **AV-1706:** Refactor to not reuse the user variable ([7f12217](https://github.com/vrk-kpa/opendata-ckan/commit/7f12217cdd6240acb0a9fd94d7fa3c206b0b4864))
+
 ## [2.2.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.3...v2.2.4) (2022-05-12)
 
 
