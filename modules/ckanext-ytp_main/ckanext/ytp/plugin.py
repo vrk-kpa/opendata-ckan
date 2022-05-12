@@ -1140,6 +1140,7 @@ def helper_linked_user(user, maxlength=0, avatar=20):
         user_name = user.name
         user_displayname = user.display_name
     else:
+        user_name = user
         user = model.User.get(six.text_type(user))
         if not user:
             return user_name
