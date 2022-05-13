@@ -14,7 +14,7 @@ Example:
 {% set resources = pkg.resources or [] %}
 {% if resources %}
   <section class="module module-narrow resources">
-    <h2 class="module-heading"> {{ _("Resources") }}</h2>
+    <h2 class="module-heading"> {{ list_title or _("Resources") }}</h2>
     <ul class="list-unstyled nav nav-simple nav--resource-list">
       {% for resource in resources %}
         <li class="nav-item{{ ' active' if active == resource.id }}">
