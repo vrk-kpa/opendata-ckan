@@ -1,3 +1,15 @@
+# [2.3.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.7...v2.3.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* **AV-1496:** Update opendata-assets commit ([5cd7eaa](https://github.com/vrk-kpa/opendata-ckan/commit/5cd7eaa6a8d86e6b8e5c773c1d1e743694120f20))
+
+
+### Features
+
+* **AV-1496:** Implement apisets single api views. Also minor changes to make templates using apisets templates based on dataset type ([0ca4b68](https://github.com/vrk-kpa/opendata-ckan/commit/0ca4b6825ddc469a94296114913c581bf3617c78))
+
 ## [2.2.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.6...v2.2.7) (2022-05-13)
 
 
