@@ -1,3 +1,12 @@
+## [2.2.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.6...v2.2.7) (2022-05-13)
+
+
+### Bug Fixes
+
+* **AV-1680:** Fix migration issues in cloudstorage ([a31d652](https://github.com/vrk-kpa/opendata-ckan/commit/a31d6522d28e08bb66c4e7ad68861e90561c8f36))
+* Futureproof version check in cloudstorage ([e12ad3b](https://github.com/vrk-kpa/opendata-ckan/commit/e12ad3b360c1fccff564b23dd7101ae5fdf75cf3))
+* Init matomo and cloudstorage databases based on env vars ([920744a](https://github.com/vrk-kpa/opendata-ckan/commit/920744a6e999910c715b61196ad0cac570f4f4ea))
+
 ## [2.2.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.5...v2.2.6) (2022-05-12)
 
 
