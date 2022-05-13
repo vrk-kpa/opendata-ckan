@@ -1,6 +1,6 @@
 [DEFAULT]
 
-debug = {% if environ('DEV_MODE') == 'true' %} true {% else %} false {% endif %}
+debug = {% if environ('DEV_MODE') == 'true' and environ('TEST') != 'true' %} true {% else %} false {% endif %}
 
 # smtp settings that need to be configured in default section for WebError middleware
 smtp_username = {{ environ('SMTP_USERNAME') }}
