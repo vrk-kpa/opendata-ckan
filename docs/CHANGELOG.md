@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.0...v2.3.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* **AV-1710:** Use named route instead controller+action for post-recommend redirect ([637f5d2](https://github.com/vrk-kpa/opendata-ckan/commit/637f5d295bf960de61eb3830303151ecf0c67c40))
+
 # [2.3.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.7...v2.3.0) (2022-05-13)
 
 
