@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.1...v2.3.2) (2022-05-17)
+
+
+### Bug Fixes
+
+* Logged in users should not get cached pages ([fa10a53](https://github.com/vrk-kpa/opendata-ckan/commit/fa10a536bbdca9bdef67689ae16ee77ea66e3c74))
+
 ## [2.3.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.0...v2.3.1) (2022-05-16)
 
 
