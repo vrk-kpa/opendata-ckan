@@ -15,16 +15,26 @@
 {% endblock %}
 
 {% block pre_primary %}
-  {% block page_primary_action %}
+       {% block page_primary_action %}
     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
       <h1 class="mb-0">
-        {{ _("Datasets") }}
-      </h1>
+        {% if request.path == '/dataset' %}
+          {{ _("Datasets") }}
+        {% else %}
+         {{ _("Apisets") }}
+        {% endif %}
+      </h1><p>{{ type }}</p>
       {% if h.check_access('package_create') %}
         <div>
           <div class="btn-group d-flex align-items-center flex-wrap">
-            {% link_for _('My Datasets'), named_route='dashboard.datasets', class_='btn btn-avoindata-header', icon='star-empty' %}
-            {% link_for _('Add Dataset'), named_route='dataset.new', class_='btn btn-avoindata-header pr-0', icon='plus-sign' %}
+            {% if request.path == '/dataset' %}
+              {% link_for _('My Datasets'), named_route='dashboard.datasets', class_='btn btn-avoindata-header', icon='star-empty' %}
+              {% link_for _('Add Dataset'), named_route='dataset.new', class_='btn btn-avoindata-header pr-0', icon='plus-sign' %}
+            {% else %}
+              {% link_for _('My Apisets'), named_route='dashboard.datasets', class_='btn btn-avoindata-header', icon='star-empty' %}
+              {% link_for _('Add Apiset'), named_route='dataset.new', class_='btn btn-avoindata-header pr-0', icon='plus-sign' %}
+            {% endif %}
+
           </div>
         </div>
       {% elif c.user %}

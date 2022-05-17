@@ -264,7 +264,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         lang = get_lang_prefix()
         facets_dict = OrderedDict()
         facets_dict.update({'vocab_international_benchmarks': _('International Benchmarks')})
-        facets_dict.update({'collection_type': _('Collection Types')})
+        facets_dict.update({'collection_type': _('Apiset') if package_type == 'apiset' else _('Collection Types')})
         facets_dict['vocab_keywords_' + lang] = _('Popular Tags')
         facets_dict.update({'vocab_content_type_' + lang: _('Content Types')})
         facets_dict.update({'organization': _('Organizations')})
