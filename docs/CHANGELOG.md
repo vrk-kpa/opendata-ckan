@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.3...v2.3.4) (2022-05-18)
+
+
+### Bug Fixes
+
+* **AV-1708:** Fix cloudstorage file handling ([32f6cee](https://github.com/vrk-kpa/opendata-ckan/commit/32f6cee5281ace34376c48bae7bcdcd317604b4d))
+
 ## [2.3.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.2...v2.3.3) (2022-05-18)
 
 
