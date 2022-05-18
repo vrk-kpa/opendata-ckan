@@ -21,6 +21,7 @@ main_js:
     - vendor/moment/dist/min/moment-with-locales.js
     - vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.js
     - vendor/jstree/dist/jstree.js
+    - opendata/scripts/drag-n-drop-uploader.js
 
 openapi_view_css:
   output: ckanext-ytp_main%(version)s_openapi_view.css

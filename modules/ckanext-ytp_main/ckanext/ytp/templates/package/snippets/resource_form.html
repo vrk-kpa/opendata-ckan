@@ -66,8 +66,10 @@
           <button class="btn suomifi-button-secondary" name="save" value="go-dataset" type="submit"><i class="far fa-long-arrow-left"></i>{{ _('Previous') }}</button>
         {% endblock %}
         {% block again_button %}
-          <button class="btn suomifi-button-secondary" name="save" value="again" type="submit">{{ _('Save & add another') }}</button>
-          {% endblock %}
+          {% if dataset_type!='apiset' %}
+            <button class="btn suomifi-button-secondary" name="save" value="again" type="submit">{{ _('Save & add another') }}</button>
+          {% endif %}
+        {% endblock %}
         {% block save_button %}
         <button class="btn suomifi-button-primary" name="save" value="go-metadata" type="submit">{% block save_button_text %}{{ _('Save dataset') }}{% endblock %}</button>
         {% endblock %}
