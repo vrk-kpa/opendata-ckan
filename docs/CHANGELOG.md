@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.2...v2.3.3) (2022-05-18)
+
+
+### Bug Fixes
+
+* **AV-1712:** Fix crash when viewing invalid geoview resources ([7e1c0c0](https://github.com/vrk-kpa/opendata-ckan/commit/7e1c0c0741ab6801c1d450b45c1ff965bc1890cf))
+
 ## [2.3.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.1...v2.3.2) (2022-05-17)
 
 
