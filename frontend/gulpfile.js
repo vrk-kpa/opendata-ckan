@@ -38,7 +38,9 @@ var paths = {
     moment_path: "./node_modules/moment",
     root: root_dir + "src"
   },
-  dist: root_dir + "resources"
+  dist: root_dir + "resources",
+  ckanResources: "../modules/ckanext-ytp_main/ckanext/ytp/resources",
+  ckanPublic: "../modules/ckanext-ytp_main/ckanext/ytp/public"
 };
 
 let fontawesomeLessPath = './node_modules/@fortawesome/fontawesome-pro/less';
@@ -84,7 +86,8 @@ gulp.task("ckan",(done) => {
     cleancss({ keepBreaks: false }),
     concat("ckan.css"),
     sourcemaps.write("."),
-    gulp.dest(paths.dist + "/styles")
+    gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -96,7 +99,8 @@ gulp.task("openapi_view",(done) => {
     prefixer(),
     cleancss({ keepBreaks: false }),
     concat("openapi_view.css"),
-    gulp.dest(paths.dist + "/styles")
+    gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -146,6 +150,7 @@ gulp.task("fontsCss", (done) => {
     concat("fonts.css"),
     sourcemaps.write("./maps"),
     gulp.dest(paths.dist + "/styles"),
+    gulp.dest(paths.ckanResources + "/styles"),
   ], done)
 });
 
@@ -173,7 +178,8 @@ gulp.task("templates", (done) => {
   pump([
     gulp.src(paths.src.templates),
     template({ timestamp: timestamp }),
-    gulp.dest(paths.dist + "/templates")
+    gulp.dest(paths.dist + "/templates"),
+    gulp.dest(paths.ckanResources + "/templates"),
   ], done)
 });
 
@@ -214,7 +220,7 @@ gulp.task("font", (done) => {
 gulp.task("scripts", (done) => {
   pump([
     gulp.src([paths.src.scripts, paths.src.drupal_avoindata_header]),
-    gulp.dest(paths.dist + "/scripts")
+    gulp.dest(paths.ckanResources + "/scripts")
   ], done)
 });
 
@@ -270,6 +276,7 @@ gulp.task("vendor",
     pump([
       gulp.src(paths.src.root + "/vendor/**/*"),
       gulp.dest(paths.dist + "/vendor"),
+      gulp.dest(paths.ckanPublic + "/vendor"),
     ], done)
   })
 );

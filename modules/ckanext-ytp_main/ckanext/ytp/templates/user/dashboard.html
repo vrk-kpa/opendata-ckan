@@ -3,7 +3,7 @@
 {% set user = c.userobj %}
 
 {% block breadcrumb_content %}
-  <li class="active"><a href="{{ h.url_for(controller='user', action='dashboard') }}">{{ _('Dashboard') }}</a></li>
+  <li class="active"><a href="{{ h.url_for('dashboard.index') }}">{{ _('Dashboard') }}</a></li>
 {% endblock %}
 
 {% block primary %}
@@ -27,7 +27,7 @@
             <small>{{ _("Activity from items that I'm following") }}</small>
           </h2>
           {% block activity_stream %}
-            {{dashboard_activity_stream|safe}}
+            {% snippet 'snippets/activity_stream.html', activity_stream=dashboard_activity_stream %}
           {% endblock %}
         </div>
       {% endblock %}

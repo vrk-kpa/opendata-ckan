@@ -1,3 +1,278 @@
+## [2.3.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.2...v2.3.3) (2022-05-18)
+
+
+### Bug Fixes
+
+* **AV-1712:** Fix crash when viewing invalid geoview resources ([7e1c0c0](https://github.com/vrk-kpa/opendata-ckan/commit/7e1c0c0741ab6801c1d450b45c1ff965bc1890cf))
+
+## [2.3.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.1...v2.3.2) (2022-05-17)
+
+
+### Bug Fixes
+
+* Logged in users should not get cached pages ([fa10a53](https://github.com/vrk-kpa/opendata-ckan/commit/fa10a536bbdca9bdef67689ae16ee77ea66e3c74))
+
+## [2.3.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.0...v2.3.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* **AV-1710:** Use named route instead controller+action for post-recommend redirect ([637f5d2](https://github.com/vrk-kpa/opendata-ckan/commit/637f5d295bf960de61eb3830303151ecf0c67c40))
+
+# [2.3.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.7...v2.3.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* **AV-1496:** Update opendata-assets commit ([5cd7eaa](https://github.com/vrk-kpa/opendata-ckan/commit/5cd7eaa6a8d86e6b8e5c773c1d1e743694120f20))
+
+
+### Features
+
+* **AV-1496:** Implement apisets single api views. Also minor changes to make templates using apisets templates based on dataset type ([0ca4b68](https://github.com/vrk-kpa/opendata-ckan/commit/0ca4b6825ddc469a94296114913c581bf3617c78))
+
+## [2.2.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.6...v2.2.7) (2022-05-13)
+
+
+### Bug Fixes
+
+* **AV-1680:** Fix migration issues in cloudstorage ([a31d652](https://github.com/vrk-kpa/opendata-ckan/commit/a31d6522d28e08bb66c4e7ad68861e90561c8f36))
+* Futureproof version check in cloudstorage ([e12ad3b](https://github.com/vrk-kpa/opendata-ckan/commit/e12ad3b360c1fccff564b23dd7101ae5fdf75cf3))
+* Init matomo and cloudstorage databases based on env vars ([920744a](https://github.com/vrk-kpa/opendata-ckan/commit/920744a6e999910c715b61196ad0cac570f4f4ea))
+
+## [2.2.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.5...v2.2.6) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1707:** Fix a non-admin logged in user causing an error in statistics ([bceff00](https://github.com/vrk-kpa/opendata-ckan/commit/bceff00e094c838d3c432c976da31b108b4c6db1))
+
+## [2.2.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.4...v2.2.5) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1706:** Fix UnboundLocalError when a linked user is requested by user name and not found ([98377fe](https://github.com/vrk-kpa/opendata-ckan/commit/98377fea3b8f9c3a4eba4ee0081e4233d6850a90))
+* **AV-1706:** Refactor to not reuse the user variable ([7f12217](https://github.com/vrk-kpa/opendata-ckan/commit/7f12217cdd6240acb0a9fd94d7fa3c206b0b4864))
+
+## [2.2.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.3...v2.2.4) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AV-1586:** Improve ckanext-matomo CKAN 2.8 compatibility ([c5e4ce2](https://github.com/vrk-kpa/opendata-ckan/commit/c5e4ce2e30228964ad16310ca607d884c3afc3c7))
+* **AV-1705:** Fix permissions related organization tree error ([5570416](https://github.com/vrk-kpa/opendata-ckan/commit/55704169103ad3535a01c3d678b850028a9f1dc5))
+
+## [2.2.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.2...v2.2.3) (2022-05-11)
+
+
+### Bug Fixes
+
+* **AV-1693:** Fix issue in header nav dropdowns with changing horizontal spacing on hover ([7464018](https://github.com/vrk-kpa/opendata-ckan/commit/7464018a2a93beb46c1b1dbce2dbd5ce44f431e5))
+* **AV-1693:** Update assets-commit ([ac9988f](https://github.com/vrk-kpa/opendata-ckan/commit/ac9988fda89ce7b6dcdd74ffc8358ca5b6089c20))
+
+## [2.2.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.1...v2.2.2) (2022-05-11)
+
+
+### Bug Fixes
+
+* **AV-1699:** Fix matomo reports and fetching ([8d7a059](https://github.com/vrk-kpa/opendata-ckan/commit/8d7a059a242daf441c3b50526166c373de7a4706))
+
+## [2.2.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.2.0...v2.2.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **AV-1676:** Use solr as a ckanext.spatial.search_backend to prevent issues with postgis ([e62762f](https://github.com/vrk-kpa/opendata-ckan/commit/e62762f0349829b7e0e8e60a3369ff825c7c6b17))
+
+# [2.2.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.3...v2.2.0) (2022-05-09)
+
+
+### Features
+
+* **AV-1704:** Update translations ([bbc26ac](https://github.com/vrk-kpa/opendata-ckan/commit/bbc26ac4306b183ad3634c51e73a5a88bd671c7a))
+
+## [2.1.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.2...v2.1.3) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1698:** Add ckan 2.9 support for ckanext-disqus ([040b1bf](https://github.com/vrk-kpa/opendata-ckan/commit/040b1bfbd8d4714bcfd0d1f09bc3cf9d130125fb))
+* **AV-1698:** Update submodule commit after pr-merge in there ([d852d36](https://github.com/vrk-kpa/opendata-ckan/commit/d852d36364fd9c595aa443134de77b0c42c41c8d))
+
+## [2.1.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.1...v2.1.2) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1697:** Update ckanext-report from upstream. ([2cea3af](https://github.com/vrk-kpa/opendata-ckan/commit/2cea3af22621215dd7d32580f439622326e0d330))
+
+## [2.1.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.1.0...v2.1.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* **AV-1668:** Include organizations without translated titles in organization_tree_list ([f0a8757](https://github.com/vrk-kpa/opendata-ckan/commit/f0a875744f2861906c283b2f5ef2d4251e349c73))
+
+# [2.1.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.16...v2.1.0) (2022-05-03)
+
+
+### Features
+
+* **AV-1690:** Convert package keywords to lowercase ([ac1dfee](https://github.com/vrk-kpa/opendata-ckan/commit/ac1dfeedcf1f357f2e8365e5993c69d8090ca150))
+
+## [2.0.16](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.15...v2.0.16) (2022-04-29)
+
+
+### Bug Fixes
+
+* DataStore link in resource edit page ([22f2ad1](https://github.com/vrk-kpa/opendata-ckan/commit/22f2ad1ff5183c78da102aed4d2e154952565d0c))
+* spatial query draw icon ([7e1c41b](https://github.com/vrk-kpa/opendata-ckan/commit/7e1c41b90e4e2dfb6d8be87896aed24e2d7a9f7b))
+
+## [2.0.15](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.14...v2.0.15) (2022-04-20)
+
+
+### Bug Fixes
+
+* Align organization form buttons ([1c9ae36](https://github.com/vrk-kpa/opendata-ckan/commit/1c9ae3672a7c1e1266a26698a481d4735e59cd54))
+* Use suomifi buttons in organization form ([17de611](https://github.com/vrk-kpa/opendata-ckan/commit/17de6118a9646473363ffc126adc476bc4f3dbfa))
+
+## [2.0.14](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.13...v2.0.14) (2022-04-19)
+
+
+### Bug Fixes
+
+* fix incorrectly sized resource icons ([621a268](https://github.com/vrk-kpa/opendata-ckan/commit/621a2683cdf2271f169e6c6868ec11c6d0580bd9))
+
+## [2.0.13](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.12...v2.0.13) (2022-04-14)
+
+
+### Bug Fixes
+
+* ckanext-spatial styles ([971aa6f](https://github.com/vrk-kpa/opendata-ckan/commit/971aa6ffb6505a43611cad1fe1fcf7999f536006))
+
+## [2.0.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.11...v2.0.12) (2022-04-13)
+
+
+### Bug Fixes
+
+* ckanext-spatial/ckanext-geoview maps ([cb29a4d](https://github.com/vrk-kpa/opendata-ckan/commit/cb29a4d57dae48c57fac5b74b957f871570e7583))
+* matomo report route names ([160d487](https://github.com/vrk-kpa/opendata-ckan/commit/160d4874a05831d22a63a1138d5b7fa3d3c53721))
+* showcase filter list CKAN 2.9 compatibility ([9f78088](https://github.com/vrk-kpa/opendata-ckan/commit/9f7808884e129f3346048941a7f9a32d64c5fb38))
+
+## [2.0.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.10...v2.0.11) (2022-04-05)
+
+
+### Bug Fixes
+
+* flake8 style fixes to ckanext-harvest ([b030c08](https://github.com/vrk-kpa/opendata-ckan/commit/b030c0809cc003ed5728412f758bd58ff4afc928))
+* Handle removed harvest sources gracefully in harvest_source_list ([07ecf56](https://github.com/vrk-kpa/opendata-ckan/commit/07ecf569c0d1b8847ab8e3a1d816ed4b8b6b107e))
+* Modify showcase package form to enable multipart file uploads ([684f49a](https://github.com/vrk-kpa/opendata-ckan/commit/684f49aa81d4671795300f87c840f9e5a363f45a))
+* Skip reminder notifications for packages the user is not authorized to view ([2e5c873](https://github.com/vrk-kpa/opendata-ckan/commit/2e5c873e807772f08b300d6a07443dc1e6d7ea84))
+
+## [2.0.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.9...v2.0.10) (2022-04-01)
+
+
+### Bug Fixes
+
+* downgrade sixodp_harvester object errors to warnings in log ([1467f36](https://github.com/vrk-kpa/opendata-ckan/commit/1467f363c361f098a9642a01f5853ff686838c63))
+* Parse matomo stats resource ids correctly to avoid database issues ([8c03003](https://github.com/vrk-kpa/opendata-ckan/commit/8c0300362d86d7d95c68eedb9537506efa92bec6))
+* work around CKAN API's organization list limit in organization filters ([ca8dc06](https://github.com/vrk-kpa/opendata-ckan/commit/ca8dc0664220a6e13972577f2850a8fd8677c122))
+
+## [2.0.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.8...v2.0.9) (2022-03-31)
+
+
+### Bug Fixes
+
+* remove double-encoding of unicode string ([5b1e063](https://github.com/vrk-kpa/opendata-ckan/commit/5b1e063fce270af6f02a4de15b81adae646e9f4c))
+* show correct organization counts in organization list filters ([83234a0](https://github.com/vrk-kpa/opendata-ckan/commit/83234a03f37b13ea27705046d7495eac25022f90))
+
+## [2.0.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.7...v2.0.8) (2022-03-31)
+
+
+### Bug Fixes
+
+* ckanext-matomo/ckanext-statistics cooperation fixes ([a4f7166](https://github.com/vrk-kpa/opendata-ckan/commit/a4f716610b9b07b34fa99df27c515627ba33b9b3))
+* determining dataset age when timezone is not provided ([e3339d4](https://github.com/vrk-kpa/opendata-ckan/commit/e3339d4056fb4d2a77d5d5b1629930bfccc87322))
+* disable benign uWSGI write errors ([27adb41](https://github.com/vrk-kpa/opendata-ckan/commit/27adb41e935105ee012c9297b5ba295ccd4d1b7d))
+
+## [2.0.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.6...v2.0.7) (2022-03-30)
+
+
+### Bug Fixes
+
+* ckanext-matomo python3 compatibility fixes ([433ec28](https://github.com/vrk-kpa/opendata-ckan/commit/433ec28b33b44ada88b6da9723a20056af82f130))
+* migrate ckanext-spatial customizations ([3cc3d4d](https://github.com/vrk-kpa/opendata-ckan/commit/3cc3d4d83c0824dc5e172eb08e6488361c4fa8e8))
+* paging of organization list with dataset filtering ([de4aa76](https://github.com/vrk-kpa/opendata-ckan/commit/de4aa7697263af0c840c5510b99b2105135e4384))
+* remove extra parameter from send_stuck_runs_report cli command ([54b94a8](https://github.com/vrk-kpa/opendata-ckan/commit/54b94a884485304d8113903a4081e807b0f3af9a))
+* use iso8601 for determining dataset age ([f46872a](https://github.com/vrk-kpa/opendata-ckan/commit/f46872a504bf7964129a09df7f220fec0140b4d4))
+* ytp_recommendation webassets typo ([2fa4853](https://github.com/vrk-kpa/opendata-ckan/commit/2fa48532fb5f439fb93c99da68cfc9124c3bbf3a))
+
+## [2.0.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.5...v2.0.6) (2022-03-28)
+
+
+### Bug Fixes
+
+* disable ckanext-reminder snippets in dataset views pending migration ([9375a88](https://github.com/vrk-kpa/opendata-ckan/commit/9375a8826191601e937e7a8ae12d6a89c99b11ca))
+
+## [2.0.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.4...v2.0.5) (2022-03-28)
+
+
+### Bug Fixes
+
+* Update README to trigger build ([50c0917](https://github.com/vrk-kpa/opendata-ckan/commit/50c0917d63340b3ef3908cf73c49f0c8e6be20aa))
+
+## [2.0.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.3...v2.0.4) (2022-03-28)
+
+
+### Bug Fixes
+
+* tag list route name, advanced search link translation ([b489437](https://github.com/vrk-kpa/opendata-ckan/commit/b4894373a2441c443477091c68d5c1a112b81c0e))
+
+## [2.0.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.2...v2.0.3) (2022-03-18)
+
+
+### Bug Fixes
+
+* Upgrade ckan database ([a3e5e1c](https://github.com/vrk-kpa/opendata-ckan/commit/a3e5e1c6551a1241fe2df3fc7280f3cc75c3f469))
+
+## [2.0.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.1...v2.0.2) (2022-03-10)
+
+
+### Bug Fixes
+
+* Update licence year to trigger build ([17b207f](https://github.com/vrk-kpa/opendata-ckan/commit/17b207f94167c9ce578d71a0991c150051d55108))
+
+## [2.0.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.0.0...v2.0.1) (2022-03-10)
+
+
+### Bug Fixes
+
+* Disable archiver for now ([2d1dae1](https://github.com/vrk-kpa/opendata-ckan/commit/2d1dae10c5a8ff0dd7af7b85ed240923e0f533cc))
+* disable non-working cli commands ([0f89454](https://github.com/vrk-kpa/opendata-ckan/commit/0f894548f55a6f58d47e02e38cea78c9a6a20067))
+* Fix relative import ([3dc31ac](https://github.com/vrk-kpa/opendata-ckan/commit/3dc31ac01f84dc8fd14dc48e46b6e85832729e3e))
+* use assets instead of resources ([41e2178](https://github.com/vrk-kpa/opendata-ckan/commit/41e21781534fd3c4cc9140a8c480ea3ad46a7fea))
+* Use correct ckan path for scripts ([747c8a8](https://github.com/vrk-kpa/opendata-ckan/commit/747c8a83134537d5bd29f8b9e972b5293a7907b7))
+
+# [2.0.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.1...v2.0.0) (2022-03-09)
+
+
+### Features
+
+* Merge pull request [#36](https://github.com/vrk-kpa/opendata-ckan/issues/36) from vrk-kpa/ckan-2.9 ([63fd6cb](https://github.com/vrk-kpa/opendata-ckan/commit/63fd6cb3cd18a3fcb3cace95a0721503778a9466))
+
+
+### BREAKING CHANGES
+
+* Upgrade to ckan 2.9.5
+
+## [1.6.1](https://github.com/vrk-kpa/opendata-ckan/compare/v1.6.0...v1.6.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* spatial search expanded map bug ([4741530](https://github.com/vrk-kpa/opendata-ckan/commit/4741530f8387a678cd1a088cfc85f43e5ecfe27f))
+
 # [1.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v1.5.11...v1.6.0) (2022-03-04)
 
 

@@ -12,7 +12,7 @@ import logging
 import sqlalchemy
 import sqlalchemy.sql
 
-from model import MunicipalityBoundingBox
+from .model import MunicipalityBoundingBox
 
 _select = sqlalchemy.sql.select
 _or_ = sqlalchemy.or_
@@ -97,7 +97,7 @@ def send_package_deprecation_emails(packages):
         else:
             grouped_by_maintainer[maintainer_email]["packages"].append(packageInfoForEmail)
 
-    for maintainer_email, details in grouped_by_maintainer.iteritems():
+    for maintainer_email, details in grouped_by_maintainer.items():
         send_deprecation_email_user(
             maintainer_email,
             details["packages"],
@@ -107,7 +107,7 @@ def send_package_deprecation_emails(packages):
 
 
 def send_deprecation_email_user(maintainer_email, packages, maintainer, valid_till):
-    from email_templates import deprecation_email_user
+    from .email_templates import deprecation_email_user
     log.info('send deprecation email user')
     subject = deprecation_email_user.subject.format(valid_till=valid_till)
     body = deprecation_email_user.messageBody(maintainer, packages)

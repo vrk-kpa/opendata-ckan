@@ -26,11 +26,11 @@ else
   flock -x ${DATA_DIR}/.init-lock -c '${SCRIPT_DIR}/reinit_ckan.sh'
 fi
 
-# run uwsgi or paster serve
+# run uwsgi or ckan run
 if [[ "${DEV_MODE}" != "true" ]]; then
   echo "entrypoint_ckan - running in PRODUCTION mode via uwsgi ..."
-  uwsgi --socket /tmp/uwsgi.sock --uid 92 --gid 92 --http :5000 --master --enable-threads --paste config:/srv/app/production.ini --paste-logger /srv/app/production.ini --lazy-apps --gevent 2000 -p 2 -L --gevent-early-monkey-patch
+  uwsgi --socket /tmp/uwsgi.sock --uid ckan --gid ckan --http :5000 --master --wsgi-file /srv/app/wsgi.py --module wsgi:application --lazy-apps --gevent 2000 -p 2 -L --gevent-early-monkey-patch --vacuum --harakiri 50 --callable application
 else
   echo "entrypoint_ckan - running in DEVELOPMENT mode via ckan ..."
-  paster serve --reload /srv/app/production.ini
+  ckan -c /srv/app/production.ini run --host 0.0.0.0
 fi

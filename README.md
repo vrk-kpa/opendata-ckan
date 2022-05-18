@@ -35,6 +35,7 @@ CKAN docker image for open data portal (avoindata.fi).
 | CKAN_EXT_LOG_LEVEL | production.ini | `logger_ckanext.level` | - |
 | CKAN_CLOUDSTORAGE_ENABLED | production.ini | `ckan.plugins` | - |
 | CKAN_CLOUDSTORAGE_DRIVER | production.ini | `ckanext.cloudstorage.driver` | - |
+| CKAN_CLOUDSTORAGE_DRIVER_OPTIONS | production.ini | `ckanext.cloudstorage.driver_options` | - |
 | CKAN_CLOUDSTORAGE_CONTAINER_NAME | production.ini | `ckanext.cloudstorage.container_name` | - |
 | CKAN_CLOUDSTORAGE_USE_SECURE_URLS | production.ini | `ckanext.cloudstorage.use_secure_urls` | - |
 | CKAN_CLOUDSTORAGE_AWS_USE_BOTO3_SESSIONS | production.ini | `ckanext.cloudstorage.aws_use_boto3_sessions` | - |
@@ -87,7 +88,7 @@ CKAN docker image for open data portal (avoindata.fi).
 
 ## Copying and License
 
-This material is copyright (c) 2013-2021 Digital and Population Data Services Agency, Finland.
+This material is copyright (c) 2013-2022 Digital and Population Data Services Agency, Finland.
 
 CKAN extensions are licensed under the GNU Affero General Public License (AGPL) v3.0
 whose full text may be found at: http://www.fsf.org/licensing/licenses/agpl-3.0.html

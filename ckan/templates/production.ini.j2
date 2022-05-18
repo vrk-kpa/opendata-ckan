@@ -1,6 +1,6 @@
 [DEFAULT]
 
-debug = {% if environ('DEV_MODE') == 'true' %} true {% else %} false {% endif %}
+debug = {% if environ('DEV_MODE') == 'true' and environ('TEST') != 'true' %} true {% else %} false {% endif %}
 
 # smtp settings that need to be configured in default section for WebError middleware
 smtp_username = {{ environ('SMTP_USERNAME') }}
@@ -193,7 +193,7 @@ ckanext.cloudstorage.driver = {{ environ('CKAN_CLOUDSTORAGE_DRIVER') }}
 ckanext.cloudstorage.container_name = {{ environ('CKAN_CLOUDSTORAGE_CONTAINER_NAME') }}
 ckanext.cloudstorage.use_secure_urls = {{ environ('CKAN_CLOUDSTORAGE_USE_SECURE_URLS') }}
 ckanext.cloudstorage.aws_use_boto3_sessions = {{ environ('CKAN_CLOUDSTORAGE_AWS_USE_BOTO3_SESSIONS') }}
-ckanext.cloudstorage.driver_options = {}
+ckanext.cloudstorage.driver_options = {{ environ('CKAN_CLOUDSTORAGE_DRIVER_OPTIONS') }}
 {% endif %}
 
 sentry.dsn = {{ environ('SENTRY_DSN') }}
@@ -216,7 +216,7 @@ ckanext.matomo.token_auth = {{ environ('MATOMO_TOKEN') }}
 {% endif %}
 
 ckanext.spatial.harvest.continue_on_validation_errors = true
-
+ckanext.spatial.search_backend = solr
 ckanext.spatial.common_map.type = custom
 ckanext.spatial.common_map.custom.url = https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 ckanext.spatial.common_map.attribution = &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors

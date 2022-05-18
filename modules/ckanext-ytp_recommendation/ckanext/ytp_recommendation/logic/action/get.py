@@ -43,7 +43,7 @@ def get_user_can_make_recommendation(context, data_dict):
             if ip_address is not None:
                 try:
                     # Validate ip address
-                    if ipaddress.ip_address(unicode(ip_address)):
+                    if ipaddress.ip_address(str(ip_address)):
                         return ip_address
                 except (ValueError):
                     pass

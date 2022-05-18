@@ -62,9 +62,7 @@
     {% if show_advanced_search  %}
       <div class="mb-2 d-flex justify-content-end">
           <a href="{{ h.url_for('advanced_search_blueprint.search') }}" class="btn-avoindata-header">
-              {% trans %}
-                  Use advanced search
-              {% endtrans %}
+            {{ _(' Use advanced search ') }}
           </a>
       </div>
     {% endif %}
@@ -96,7 +94,7 @@
         {% endblock %}
 
         {% if type == "dataset" %}
-            {% resource 'ytp_common_js/search_filtering.js' %}
+            {% asset 'ytp_resources/search_filtering_js' %}
             <button type="button" class="btn" id="search-filter-show-button"><i class="far fa-filter"></i> {{ _('Filter search') }}</button>
             <button type="button" class="btn" id="search-filter-lower-hide-button">
                 <span class="fa-stack">

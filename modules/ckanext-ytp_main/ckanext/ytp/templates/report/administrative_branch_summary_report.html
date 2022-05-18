@@ -1,5 +1,5 @@
-{% resource "ytp_dataset_js/d3.js" %}
-{% resource "ytp_dataset_js/administrative_branch_summary.js" %}
+{% asset "ytp_resources/d3_js" %}
+{% asset "ytp_resources/administrative_branch_summary_js" %}
 
 <script>
   var chartData = [
@@ -38,7 +38,7 @@
        class="report-pie-chart"></div>
 </div>
 <hr class="page-break">
-<table class="table table-condensed tablesorter" id="report-table" class="avoid-page-break">
+<table class="table table-condensed" id="report-table" class="avoid-page-break">
   <thead>
     <tr>
       <th rowspan="2">{{ _("Organization") }}</th>
