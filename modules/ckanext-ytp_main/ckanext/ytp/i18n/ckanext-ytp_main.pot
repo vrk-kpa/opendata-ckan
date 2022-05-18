@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-ytp_main 0.3\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-18 07:02+0000\n"
+"POT-Creation-Date: 2022-05-18 09:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2431,11 +2431,15 @@ msgstr ""
 msgid "Save & add another"
 msgstr ""
 
-#: ckanext/ytp/templates/package/snippets/resource_form.html:72
+#: ckanext/ytp/templates/package/snippets/resource_form.html:75
+msgid "Save api"
+msgstr ""
+
+#: ckanext/ytp/templates/package/snippets/resource_form.html:77
 msgid "Save dataset"
 msgstr ""
 
-#: ckanext/ytp/templates/package/snippets/resource_form.html:76
+#: ckanext/ytp/templates/package/snippets/resource_form.html:84
 msgid "Add"
 msgstr ""
 
