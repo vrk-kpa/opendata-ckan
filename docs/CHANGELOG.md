@@ -1,3 +1,10 @@
+## [2.3.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.4...v2.3.5) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1663:** Add pagination for showcase list ([3888ece](https://github.com/vrk-kpa/opendata-ckan/commit/3888ece0ea238b66ed0ba9221f2fd13008360167))
+
 ## [2.3.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.3...v2.3.4) (2022-05-18)
 
 
