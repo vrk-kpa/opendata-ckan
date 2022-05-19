@@ -379,7 +379,8 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
                 'get_field_from_resource_schema': get_field_from_resource_schema,
                 "is_boolean_selected": is_boolean_selected,
                 'site_url_with_root_path': site_url_with_root_path,
-                'get_organization_filters_count': get_organization_filters_count
+                'get_organization_filters_count': get_organization_filters_count,
+                'asbool': toolkit.asbool
                 }
 
     def get_auth_functions(self):
