@@ -1,3 +1,13 @@
+## [2.3.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.5...v2.3.6) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1507:** Fix submodules lint error ([5077808](https://github.com/vrk-kpa/opendata-ckan/commit/5077808c0f6ea38f1d2a6948894786a8d4a358c9))
+* **AV-1507:** Implement add api form design ([a0e4f31](https://github.com/vrk-kpa/opendata-ckan/commit/a0e4f311f3a206a3512cfcd37ff56ea37e0ce303))
+* **AV-1507:** Revert resource form back to use ckan default ui ([8ce9e1c](https://github.com/vrk-kpa/opendata-ckan/commit/8ce9e1cb1ef6db25045842d276116ff23ccd499c))
+* **AV-1507:** Update submodule commits ([ef4d937](https://github.com/vrk-kpa/opendata-ckan/commit/ef4d937ba312454b7fcb667e1d07a2dd42f330ee))
+
 ## [2.3.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.4...v2.3.5) (2022-05-19)
 
 
