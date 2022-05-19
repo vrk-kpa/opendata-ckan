@@ -1,3 +1,16 @@
+# [2.4.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.6...v2.4.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1507:** Fix undefined checkbox form-macro in drag-n-drop uploader ([9554372](https://github.com/vrk-kpa/opendata-ckan/commit/955437292054eabd60e8230ea067854f7a59d82b))
+* flake8 ([73f3e8a](https://github.com/vrk-kpa/opendata-ckan/commit/73f3e8a6b4fdc988f2600e2409715749c25542bb))
+
+
+### Features
+
+* Add browser javascript to sentry ([ee25515](https://github.com/vrk-kpa/opendata-ckan/commit/ee25515ef1942d5f5f04eb308d8fddc973104ef0))
+
 ## [2.3.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.5...v2.3.6) (2022-05-19)
 
 
