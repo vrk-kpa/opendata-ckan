@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.0...v2.4.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* Remove extra character from template ([b173c2e](https://github.com/vrk-kpa/opendata-ckan/commit/b173c2e3717f5dea01b0e385a3e51a2c893689e3))
+
 # [2.4.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.6...v2.4.0) (2022-05-19)
 
 
