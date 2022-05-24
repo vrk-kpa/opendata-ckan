@@ -1,9 +1,6 @@
 {% ckan_extends %}
 
 {% block page_primary_action %}
-  {% if group_dict.approval_status == 'approved' %}
-    {{ super() }}
-  {% endif %}
 {% endblock %}
 
 {% block groups_search_form %}
