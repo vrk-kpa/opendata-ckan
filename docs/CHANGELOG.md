@@ -1,3 +1,47 @@
+## [2.4.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.0...v2.4.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* Remove extra character from template ([b173c2e](https://github.com/vrk-kpa/opendata-ckan/commit/b173c2e3717f5dea01b0e385a3e51a2c893689e3))
+
+# [2.4.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.6...v2.4.0) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1507:** Fix undefined checkbox form-macro in drag-n-drop uploader ([9554372](https://github.com/vrk-kpa/opendata-ckan/commit/955437292054eabd60e8230ea067854f7a59d82b))
+* flake8 ([73f3e8a](https://github.com/vrk-kpa/opendata-ckan/commit/73f3e8a6b4fdc988f2600e2409715749c25542bb))
+
+
+### Features
+
+* Add browser javascript to sentry ([ee25515](https://github.com/vrk-kpa/opendata-ckan/commit/ee25515ef1942d5f5f04eb308d8fddc973104ef0))
+
+## [2.3.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.5...v2.3.6) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1507:** Fix submodules lint error ([5077808](https://github.com/vrk-kpa/opendata-ckan/commit/5077808c0f6ea38f1d2a6948894786a8d4a358c9))
+* **AV-1507:** Implement add api form design ([a0e4f31](https://github.com/vrk-kpa/opendata-ckan/commit/a0e4f311f3a206a3512cfcd37ff56ea37e0ce303))
+* **AV-1507:** Revert resource form back to use ckan default ui ([8ce9e1c](https://github.com/vrk-kpa/opendata-ckan/commit/8ce9e1cb1ef6db25045842d276116ff23ccd499c))
+* **AV-1507:** Update submodule commits ([ef4d937](https://github.com/vrk-kpa/opendata-ckan/commit/ef4d937ba312454b7fcb667e1d07a2dd42f330ee))
+
+## [2.3.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.4...v2.3.5) (2022-05-19)
+
+
+### Bug Fixes
+
+* **AV-1663:** Add pagination for showcase list ([3888ece](https://github.com/vrk-kpa/opendata-ckan/commit/3888ece0ea238b66ed0ba9221f2fd13008360167))
+
+## [2.3.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.3...v2.3.4) (2022-05-18)
+
+
+### Bug Fixes
+
+* **AV-1708:** Fix cloudstorage file handling ([32f6cee](https://github.com/vrk-kpa/opendata-ckan/commit/32f6cee5281ace34376c48bae7bcdcd317604b4d))
+
 ## [2.3.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.3.2...v2.3.3) (2022-05-18)
 
 
