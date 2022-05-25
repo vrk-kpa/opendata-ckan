@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-ytp_main 0.3\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-05-18 09:43+0000\n"
+"POT-Creation-Date: 2022-05-19 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: ckanext/ytp/controller.py:91 ckanext/ytp/templates/package/base.html:17
+#: ckanext/ytp/controller.py:91 ckanext/ytp/templates/package/base.html:21
 msgid "Create Dataset"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Integrity Error"
 msgstr ""
 
-#: ckanext/ytp/controller.py:439 ckanext/ytp/templates/package/search.html:82
+#: ckanext/ytp/controller.py:439 ckanext/ytp/templates/package/search.html:86
 #: ckanext/ytp/templates/package/snippets/related_item.html:21
 msgid "API"
 msgstr ""
@@ -277,7 +277,7 @@ msgstr ""
 msgid "News feed"
 msgstr ""
 
-#: ckanext/ytp/menu.py:70 ckanext/ytp/templates/package/search.html:26
+#: ckanext/ytp/menu.py:70 ckanext/ytp/templates/package/search.html:29
 msgid "My Datasets"
 msgstr ""
 
@@ -1715,7 +1715,7 @@ msgstr ""
 #: ckanext/ytp/templates/group/snippets/info.html:36
 #: ckanext/ytp/templates/organization/read_base.html:13
 #: ckanext/ytp/templates/package/base.html:12
-#: ckanext/ytp/templates/package/base.html:16
+#: ckanext/ytp/templates/package/base.html:20
 #: ckanext/ytp/templates/package/search.html:14
 #: ckanext/ytp/templates/package/search.html:21
 #: ckanext/ytp/templates/snippets/organization.html:52
@@ -1810,7 +1810,7 @@ msgstr ""
 
 #: ckanext/ytp/templates/organization/index.html:3
 #: ckanext/ytp/templates/organization/read.html:19
-#: ckanext/ytp/templates/package/search.html:55
+#: ckanext/ytp/templates/package/search.html:59
 #: ckanext/ytp/templates/snippets/search_form.html:59
 #: ckanext/ytp/templates/snippets/search_form_with_table_header.html:34
 #: ckanext/ytp/templates/snippets/search_form_without_input.html:30
@@ -1819,7 +1819,7 @@ msgstr ""
 
 #: ckanext/ytp/templates/organization/index.html:3
 #: ckanext/ytp/templates/organization/read.html:20
-#: ckanext/ytp/templates/package/search.html:56
+#: ckanext/ytp/templates/package/search.html:60
 #: ckanext/ytp/templates/snippets/search_form.html:59
 #: ckanext/ytp/templates/snippets/search_form_with_table_header.html:34
 #: ckanext/ytp/templates/snippets/search_form_without_input.html:30
@@ -1854,7 +1854,7 @@ msgid "No organizations found"
 msgstr ""
 
 #: ckanext/ytp/templates/organization/index.html:91
-#: ckanext/ytp/templates/package/search.html:102
+#: ckanext/ytp/templates/package/search.html:106
 msgid "Filter list"
 msgstr ""
 
@@ -1886,18 +1886,18 @@ msgid "Organization does not exist"
 msgstr ""
 
 #: ckanext/ytp/templates/organization/read.html:18
-#: ckanext/ytp/templates/package/search.html:54
+#: ckanext/ytp/templates/package/search.html:58
 msgid "Relevance"
 msgstr ""
 
 #: ckanext/ytp/templates/organization/read.html:21
-#: ckanext/ytp/templates/package/search.html:57
+#: ckanext/ytp/templates/package/search.html:61
 #: ckanext/ytp/templates/package/snippets/resource_form.html:45
 msgid "Last Modified"
 msgstr ""
 
 #: ckanext/ytp/templates/organization/read.html:22
-#: ckanext/ytp/templates/package/search.html:61
+#: ckanext/ytp/templates/package/search.html:65
 #: ckanext/ytp/templates/snippets/package_item.html:45
 #: ckanext/ytp/templates/snippets/popular.html:3
 msgid "Popular"
@@ -1962,6 +1962,17 @@ msgstr ""
 msgid "Add Organization"
 msgstr ""
 
+#: ckanext/ytp/templates/package/base.html:12
+#: ckanext/ytp/templates/package/base.html:17
+#: ckanext/ytp/templates/package/search.html:14
+#: ckanext/ytp/templates/package/search.html:21
+msgid "Apisets"
+msgstr ""
+
+#: ckanext/ytp/templates/package/base.html:18
+msgid "Create Apiset"
+msgstr ""
+
 #: ckanext/ytp/templates/package/group_list.html:14
 msgid "Dataset categories"
 msgstr ""
@@ -1972,11 +1983,15 @@ msgid ""
 "multiple accurate categories."
 msgstr ""
 
-#: ckanext/ytp/templates/package/new.html:7
+#: ckanext/ytp/templates/package/new.html:9
 msgid "Create new dataset"
 msgstr ""
 
-#: ckanext/ytp/templates/package/new.html:15
+#: ckanext/ytp/templates/package/new.html:9
+msgid "Create new apiset"
+msgstr ""
+
+#: ckanext/ytp/templates/package/new.html:19
 #: ckanext/ytp/templates/package/new_resource.html:23
 msgid "Stages"
 msgstr ""
@@ -2134,17 +2149,21 @@ msgid "Downloads"
 msgstr ""
 
 #: ckanext/ytp/templates/package/search.html:27
+msgid "Add Apiset"
+msgstr ""
+
+#: ckanext/ytp/templates/package/search.html:30
 #: ckanext/ytp/templates/user/dashboard_datasets.html:14
 msgid "Add Dataset"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:32
+#: ckanext/ytp/templates/package/search.html:36
 msgid ""
 "The Opendata.fi service does not have an organization where you can upload a "
 "data set."
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:33
+#: ckanext/ytp/templates/package/search.html:37
 msgid ""
 "Ask your employer's open data administrator to add your user account in your "
 "organization. If your employer's organization has not been created yet on "
@@ -2153,35 +2172,35 @@ msgid ""
 "private individual."
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:58
+#: ckanext/ytp/templates/package/search.html:62
 msgid "Date Created Ascending"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:59
+#: ckanext/ytp/templates/package/search.html:63
 msgid "Date Created Descending"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:60
+#: ckanext/ytp/templates/package/search.html:64
 #: ckanext/ytp/templates/package/snippets/additional_info.html:12
 msgid "Source"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:83
+#: ckanext/ytp/templates/package/search.html:87
 msgid "API Docs"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:85
+#: ckanext/ytp/templates/package/search.html:89
 msgid "full {format} dump"
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:86
+#: ckanext/ytp/templates/package/search.html:90
 #, python-format
 msgid ""
 "You can also access this registry using the %(api_link)s (see "
 "%(api_doc_link)s) or download a %(dump_link)s."
 msgstr ""
 
-#: ckanext/ytp/templates/package/search.html:90
+#: ckanext/ytp/templates/package/search.html:94
 #, python-format
 msgid ""
 "You can also access this registry using the %(api_link)s (see "
