@@ -1,3 +1,14 @@
+## [2.4.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.1...v2.4.2) (2022-05-25)
+
+
+### Bug Fixes
+
+* **AV-1496:** Add provider-, acces-right- and terms of service-infos in apiset view ([b24fcb1](https://github.com/vrk-kpa/opendata-ckan/commit/b24fcb17d5318d9315e68b76455f66536bf04b39))
+* **AV-1506:** Extract new translations ([447ca76](https://github.com/vrk-kpa/opendata-ckan/commit/447ca76befdad38f43ae5038b8ce977184e88999))
+* **AV-1506:** Fix some texts in templates to match with design ([5f37631](https://github.com/vrk-kpa/opendata-ckan/commit/5f37631dc7458d40c9c8062a8cb8afdfb9936730))
+* **AV-1715:** Fix showcases broken layout when there's query parameters ([d6c034d](https://github.com/vrk-kpa/opendata-ckan/commit/d6c034db29e411f80d90d1c495d9b2b0ec255a0e))
+* **AV-1727:** Fix dict merge to use python3 compatible syntax ([fcfbd82](https://github.com/vrk-kpa/opendata-ckan/commit/fcfbd824137c49ce02e65fe427bc798a6c361050))
+
 ## [2.4.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.0...v2.4.1) (2022-05-19)
 
 
