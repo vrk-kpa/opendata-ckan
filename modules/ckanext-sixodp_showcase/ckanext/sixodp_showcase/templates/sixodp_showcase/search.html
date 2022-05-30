@@ -48,6 +48,10 @@
         {{ h.snippet('sixodp_showcase/snippets/showcase_list.html', packages=page.items) }}
       {% endblock %}
     </div>
+
+    {% block page_pagination %}
+      {{ super() }}
+    {% endblock %}
   </section>
 {% endblock %}
 
