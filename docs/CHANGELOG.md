@@ -1,3 +1,11 @@
+# [2.5.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.2...v2.5.0) (2022-05-30)
+
+
+### Features
+
+* **AV-1551:** New organization page layout ([433ea60](https://github.com/vrk-kpa/opendata-ckan/commit/433ea6070c7a0ab4e6fbdb5ba4b2fd009ee9e6ec))
+* **AV-1551:** Update assets ([bcd4930](https://github.com/vrk-kpa/opendata-ckan/commit/bcd4930c36f4825608f2c6e2fce548f290b34901))
+
 ## [2.4.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.1...v2.4.2) (2022-05-25)
 
 
