@@ -13,7 +13,7 @@ Example:
 
 #}
 
-{% if (type == 'dataset' or type == 'showcase_dataset' or type == 'harvest') and request.path == '/apiset' %}
+{% if type == 'apiset' %}
   {% set text_query = ungettext('{number} apiset found for "{query}"', '{number} apisets found for "{query}"', count) %}
   {% set text_query_none = _('No apisets found for "{query}"') %}
   {% set text_no_query = ungettext('{number} apiset found', '{number} apisets found', count) %}
