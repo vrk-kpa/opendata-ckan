@@ -12,7 +12,7 @@ from ckan.views.group import BulkProcessView, CreateGroupView,\
                             EditGroupView, DeleteGroupView, MembersGroupView, \
                             about, activity, set_org, _action, _check_access, \
                             _db_to_form_schema, _read, _get_group_template, \
-                            member_delete, history, followers, follow, unfollow, admins
+                            member_delete, history, followers, follow, unfollow, admins, _replace_group_org
 from ckanext.organizationapproval.logic import send_new_organization_email_to_admin
 
 from flask import Blueprint
@@ -150,15 +150,13 @@ def members(id, group_type, is_organization):
     try:
         data_dict = {'id': id}
         check_access('group_edit_permissions', context, data_dict)
-        members = get_action('member_list')(context, {
-            'id': id,
-            'object_type': 'user'
-        })
+
         data_dict['include_datasets'] = False
         data_dict['include_users'] = True
-        group_dict = _action('group_show')(context, data_dict)
         context['keep_email'] = True
-        context['auth_user_obj'] = c.userobj
+        context['auth_user_obj'] = g.userobj
+        group_dict = _action('group_show')(context, data_dict)
+        members = group_dict['users']
     except NotFound:
         base.abort(404, _('Group not found'))
     except NotAuthorized:
@@ -171,7 +169,7 @@ def members(id, group_type, is_organization):
         "group_dict": group_dict,
         "group_type": group_type
     }
-    return base.render('group/members.html', extra_vars)
+    return base.render(_replace_group_org(u'group/members.html'), extra_vars)
 
 
 # kwargs needed because of blueprint default parameters
