@@ -1,3 +1,17 @@
+# [2.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.5.0...v2.6.0) (2022-06-01)
+
+
+### Bug Fixes
+
+* **AV-1551:** Update assets ([c7a220e](https://github.com/vrk-kpa/opendata-ckan/commit/c7a220e5aca3ed5ea7ea092aa7009f7cdd5addc5))
+* Fix wrong template used due to migration failure ([c0c85cc](https://github.com/vrk-kpa/opendata-ckan/commit/c0c85ccb934acfdd9acf267a33266c7dc000b0ec))
+
+
+### Features
+
+* **AV-1551:** New member page layouts ([2781877](https://github.com/vrk-kpa/opendata-ckan/commit/27818773beb6e7acfcc0f61fda00309635579724))
+* **AV-1551:** Style organization about page ([176f732](https://github.com/vrk-kpa/opendata-ckan/commit/176f73245af51584660eb7bbd942b6404ed8e8d5))
+
 # [2.5.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.4.2...v2.5.0) (2022-05-30)
 
 
