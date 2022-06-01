@@ -15,7 +15,6 @@
       "field_name": "name",
       "label": "URL",
       "preset": "organization_slug",
-      "form_snippet": "slug.html",
       "form_placeholder": "my-organization",
       "form_attrs": {
         "class": "form-control"
