@@ -34,4 +34,3 @@ def apiset_showcase_list_schema():
                        convert_package_name_or_id_to_id_for_type_showcase]
     }
     return schema
-    
