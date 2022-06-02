@@ -3,6 +3,7 @@ import ckan.plugins.toolkit as toolkit
 from ckanext.showcase.plugin import ShowcasePlugin
 import ckanext.showcase.logic.helpers as showcase_helpers
 from ckanext.showcase.logic import action as showcase_action
+from ckanext.sixodp_showcase.logic import action as sixodp_showcase_action
 from ckanext.sixodp_showcase import cli
 from .logic.action import create, update, get
 from ckanext.sixodp_showcase import helpers, views
@@ -11,6 +12,10 @@ from ckan.lib import i18n
 import json
 
 import ckan.lib.helpers as h
+
+from ckanext.sixodp_showcase.logic import auth
+from ckanext.showcase.model import setup as model_setup
+from ckanext.sixodp_showcase.model import setup as sixodp_model_setup
 
 try:
     from collections import OrderedDict  # 2.7
@@ -22,9 +27,11 @@ log = logging.getLogger(__name__)
 
 
 class Sixodp_ShowcasePlugin(ShowcasePlugin):
+    plugins.implements(plugins.IConfigurable)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IDatasetForm)
     plugins.implements(plugins.IActions)
+    plugins.implements(plugins.IAuthFunctions)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IFacets)
     plugins.implements(plugins.IClick)
@@ -36,6 +43,11 @@ class Sixodp_ShowcasePlugin(ShowcasePlugin):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic', 'sixodp_showcase')
+
+    # IConfigurable
+    def configure(self, config):
+        model_setup()
+        sixodp_model_setup()
 
     # IDatasetForm
 
@@ -104,8 +116,18 @@ class Sixodp_ShowcasePlugin(ShowcasePlugin):
                 showcase_action.delete.showcase_admin_remove,
             'ckanext_showcase_admin_list':
                 showcase_action.get.showcase_admin_list,
+            'ckanext_sixodp_showcase_apiset_association_create':
+                sixodp_showcase_action.create.showcase_apiset_association_create,
+            'ckanext_sixodp_showcase_apiset_association_delete':
+                sixodp_showcase_action.delete.showcase_apiset_association_delete,
+            'ckanext_sixodp_showcase_apiset_list':
+                sixodp_showcase_action.get.showcase_apiset_list,
         }
         return action_functions
+
+
+    def get_auth_functions(self):
+        return {**ShowcasePlugin.get_auth_functions(self), **auth.get_auth_functions()}
 
     # ITemplateHelpers
 

@@ -25,6 +25,12 @@ Example:
   {% set text_no_query = ungettext('{number} dataset found', '{number} datasets found', count) %}
   {% set text_no_query_none = _('No datasets found') %}
 
+{% elif type == 'showcase_apiset' %}
+  {% set text_query = ungettext('{number} apiset found for "{query}"', '{number} apisets found for "{query}"', count) %}
+  {% set text_query_none = _('No apisets found for "{query}"') %}
+  {% set text_no_query = ungettext('{number} apiset found', '{number} apisets found', count) %}
+  {% set text_no_query_none = _('No apisets found') %}
+
 {% elif type == 'group' %}
   {% set text_query = ungettext('{number} group found for "{query}"', '{number} groups found for "{query}"', count) %}
   {% set text_query_none = _('No groups found for "{query}"') %}

@@ -246,6 +246,10 @@ def manage_datasets(id):
     return showcase_utils.manage_datasets_view(id)
 
 
+def manage_apisets(id):
+    return utils.manage_apisets_view(id)
+
+
 def delete(id):
     return showcase_utils.delete_view(id)
 
@@ -279,6 +283,10 @@ showcase.add_url_rule('/showcase/delete/<id>',
 showcase.add_url_rule('/showcase/manage_datasets/<id>',
                       endpoint='showcase_manage_datasets',
                       view_func=manage_datasets,
+                      methods=[u'GET', u'POST'])
+showcase.add_url_rule('/showcase/manage_apisets/<id>',
+                      endpoint='manage_apisets',
+                      view_func=manage_apisets,
                       methods=[u'GET', u'POST'])
 showcase.add_url_rule('/dataset/showcases/<id>',
                       view_func=dataset_showcase_list,
