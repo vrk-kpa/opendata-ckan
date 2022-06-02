@@ -3141,3 +3141,39 @@ msgstr ""
 msgid "API Key"
 msgstr ""
 
+#: ckanext/ytp/templates/package/search.html:24
+msgid "Apisets"
+msgstr ""
+
+#: ckanext/ytp/templates/package/search.html:34
+msgid "My Apisets"
+msgstr ""
+
+#: ckanext/ytp/templates/package/search.html:35
+msgid "Add Apiset"
+msgstr ""
+
+#: ckanext/ytp/plugin.py:271 ckanext/ytp/plugin.py:285
+msgid "Apiset"
+msgstr ""
+
+#: ckanext/ytp/templates/snippets/search_result_text.html:23
+msgid "{number} apiset found for \"{query}\""
+msgid_plural "{number} apisets found for \"{query}\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/ytp/templates/snippets/search_result_text.html:24
+msgid "No apisets found for \"{query}\""
+msgstr ""
+
+#: ckanext/ytp/templates/snippets/search_result_text.html:25
+msgid "{number} apiset found"
+msgid_plural "{number} apisets found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/ytp/templates/snippets/search_result_text.html:26
+msgid "No apisets found"
+msgstr ""
+

@@ -15,11 +15,9 @@
 {% endblock %}
 
 {% block pre_primary %}
-  {% block page_primary_action %}
+       {% block page_primary_action %}
     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
-      <h1 class="mb-0">
-          {{ _("Datasets") if dataset_type!='apiset' else _("Apisets") }}
-      </h1>
+      <h1 class="mb-0">{{ _("Datasets") if dataset_type!='apiset' else _("Apisets") }}</h1>
       {% if h.check_access('package_create') %}
         <div>
           <div class="btn-group d-flex align-items-center flex-wrap">
@@ -64,7 +62,7 @@
             (_('Source'), 'source asc'),
             (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
           %}
-          {% snippet 'snippets/search_form.html', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error, query_params=c.fields_grouped, show_advanced_search=true %}
+          {% snippet 'snippets/search_form.html', type=dataset_type, query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error, query_params=c.fields_grouped, show_advanced_search=true %}
         </div>
         {% endblock %}
         <div class="container-search-result">
