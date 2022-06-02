@@ -12,14 +12,42 @@
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 {% endblock -%}
 
+
 {% block subtitle %}{{ h.dataset_display_name(c.package) }} - {{ h.resource_display_name(res) }}{% endblock %}
 
-{% block breadcrumb_content_selected %}
-{% endblock %}
+  {% block toolbar %}
+  <div class="toolbar">
+    {% block breadcrumb %}
+      {% if self.breadcrumb_content() | trim %}
+        <ol class="breadcrumb">
+          {% snippet 'snippets/home_breadcrumb_item.html' %}
+          {% block breadcrumb_content %}
+          {{ super() }}
+          <!-- Remove active from preceeding lists -->
+          <script>
+            var elements = document.querySelectorAll("breadcrumb");
+            [].forEach.call(elements, function(el){
+              el.classList.remove("active");
+            });
+          </script>
+          <li class="active"><a href="">{{ h.resource_display_name(res)| truncate(30) }}</a></li>
+          {% endblock %}
+        </ol>
+      {% endif %}
+    {% endblock %}
+    <div class="toolbar-secondary-wrapper">
+      <div class="row toolbar-resource-secondary">
+        <i class="fas fa-long-arrow-left"></i>
+        {% trans  url=h.url_for(pkg.type ~ '.read', id=c.package['name']) %}<a href="{{ url }}">{% endtrans %}{{_('dataset')}}</a>
+      </div>
+     
+    </div>
+      
+  </div>
+  {% endblock %}
 
-{% block breadcrumb_content %}
-  {{ super() }}
-  <li class="active"><a href="">{{ h.resource_display_name(res)| truncate(30) }}</a></li>
+{% block prelude %}
+
 {% endblock %}
 
 {% block primary_content %}
@@ -28,7 +56,7 @@
       <section class="module module-resource">
         <div class="module-content">
             <div class="row justify-content-between pb-2">
-              <div class="actions col-md-6 ">
+              <div class="actions col-md-6 justify-content-end">
                 {% block resource_actions %}
                   <ul>
                     {% block resource_actions_inner %}
