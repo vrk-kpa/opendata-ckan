@@ -1,3 +1,10 @@
+## [2.6.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.2...v2.6.3) (2022-06-02)
+
+
+### Bug Fixes
+
+* **AV-1734:** Remove report metadata translation during generation ([eb6e2fb](https://github.com/vrk-kpa/opendata-ckan/commit/eb6e2fbac0ea1ef9b1b3308a7788288d22c8f8ff))
+
 ## [2.6.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.1...v2.6.2) (2022-06-02)
 
 
