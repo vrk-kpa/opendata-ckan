@@ -536,7 +536,7 @@ msgstr "Hae ja lisää tietoaineistoja sovellukselle"
 #: ckanext/sixodp_showcase/templates/showcase/search.html:12
 #: ckanext/sixodp_showcase/templates/sixodp_showcase/snippets/showcase_search_input.html:16
 msgid "Relevance"
-msgstr "Relevanssi"
+msgstr "Osuvin ensin"
 
 #: ckanext/sixodp_showcase/templates/showcase/manage_datasets.html:64
 #: ckanext/sixodp_showcase/templates/showcase/search.html:13
@@ -633,7 +633,7 @@ msgstr "Ulkoinen lähde"
 
 #: ckanext/sixodp_showcase/templates/sixodp_showcase/new_package_form.html:44
 msgid "http://www.example.com"
-msgstr "http://www.example.com"
+msgstr "https://www.example.com"
 
 #: ckanext/sixodp_showcase/templates/sixodp_showcase/new_package_form.html:48
 msgid "Submitted By"
