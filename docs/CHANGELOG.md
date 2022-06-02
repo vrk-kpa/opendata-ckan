@@ -1,3 +1,14 @@
+## [2.6.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.0...v2.6.1) (2022-06-02)
+
+
+### Bug Fixes
+
+* **AV-1695:** fix search result text to also work for other types of datasets ([197ec50](https://github.com/vrk-kpa/opendata-ckan/commit/197ec50d46d9c4e7560668edbed0445391715867))
+* **AV-1695:** fix search result text to also work for other types of datasets ([b02be0f](https://github.com/vrk-kpa/opendata-ckan/commit/b02be0f6d908eb7851004bdf11326db511cb10a3))
+* **AV-1695:** fix search result text to also work for other types of datasets ([b1a3da4](https://github.com/vrk-kpa/opendata-ckan/commit/b1a3da401bc474390e865e278ea2584ab8be2eec))
+* **AV-1695:** revert change that is not needed ([5536800](https://github.com/vrk-kpa/opendata-ckan/commit/5536800b4301a30da8bd4e5c52e1542c9c5c8792))
+* **AV-1695:** solve merge conflicts ([33fd407](https://github.com/vrk-kpa/opendata-ckan/commit/33fd4076d1e89349c6c77d52e4a900ac41438be0))
+
 # [2.6.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.5.0...v2.6.0) (2022-06-01)
 
 
