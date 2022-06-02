@@ -3,7 +3,9 @@ import ckan.plugins.toolkit as toolkit
 from ckanext.showcase.plugin import ShowcasePlugin
 import ckanext.showcase.logic.helpers as showcase_helpers
 from ckanext.showcase.logic import action as showcase_action
-from ckanext.sixodp_showcase.logic import action as sixodp_showcase_action
+from ckanext.sixodp_showcase.logic.action import (delete as sixodp_showcase_action_delete,
+                                                  get as sixodp_showcase_action_get,
+                                                  create as sixodp_showcase_action_create)
 from ckanext.sixodp_showcase import cli
 from .logic.action import create, update, get
 from ckanext.sixodp_showcase import helpers, views
@@ -117,20 +119,18 @@ class Sixodp_ShowcasePlugin(ShowcasePlugin):
             'ckanext_showcase_admin_list':
                 showcase_action.get.showcase_admin_list,
             'ckanext_sixodp_showcase_apiset_association_create':
-                sixodp_showcase_action.create.showcase_apiset_association_create,
+                sixodp_showcase_action_create.showcase_apiset_association_create,
             'ckanext_sixodp_showcase_apiset_association_delete':
-                sixodp_showcase_action.delete.showcase_apiset_association_delete,
+                sixodp_showcase_action_delete.showcase_apiset_association_delete,
             'ckanext_sixodp_showcase_apiset_list':
-                sixodp_showcase_action.get.showcase_apiset_list,
+                sixodp_showcase_action_get.showcase_apiset_list,
         }
         return action_functions
-
 
     def get_auth_functions(self):
         return {**ShowcasePlugin.get_auth_functions(self), **auth.get_auth_functions()}
 
     # ITemplateHelpers
-
     def get_helpers(self):
         return {
             'facet_remove_field': showcase_helpers.facet_remove_field,

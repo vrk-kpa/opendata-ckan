@@ -20,6 +20,7 @@ def showcase_apiset_association_create_schema():
 def showcase_apiset_association_delete_schema():
     return showcase_apiset_association_create_schema()
 
+
 def showcase_apiset_list_schema():
     schema = {
         'showcase_id': [not_empty, six.text_type,

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-sixodp_showcase 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-02 11:14+0000\n"
+"POT-Creation-Date: 2022-06-02 11:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ckanext/sixodp_showcase/plugin.py:84 ckanext/sixodp_showcase/utils.py:183
-#: ckanext/sixodp_showcase/utils.py:333
+#: ckanext/sixodp_showcase/plugin.py:86 ckanext/sixodp_showcase/utils.py:182
+#: ckanext/sixodp_showcase/utils.py:332
 msgid "Groups"
 msgstr ""
 
-#: ckanext/sixodp_showcase/plugin.py:85
+#: ckanext/sixodp_showcase/plugin.py:87
 #: ckanext/sixodp_showcase/templates/sixodp_showcase/new_package_form.html:33
 #: ckanext/sixodp_showcase/templates/sixodp_showcase/snippets/showcase_info.html:5
-#: ckanext/sixodp_showcase/utils.py:184 ckanext/sixodp_showcase/utils.py:334
+#: ckanext/sixodp_showcase/utils.py:183 ckanext/sixodp_showcase/utils.py:333
 msgid "Tags"
 msgstr ""
 
-#: ckanext/sixodp_showcase/plugin.py:87
+#: ckanext/sixodp_showcase/plugin.py:89
 msgid "Platforms"
 msgstr ""
 
@@ -305,39 +305,39 @@ msgstr ""
 msgid "Visualisation"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:182 ckanext/sixodp_showcase/utils.py:332
+#: ckanext/sixodp_showcase/utils.py:181 ckanext/sixodp_showcase/utils.py:331
 msgid "Organizations"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:185 ckanext/sixodp_showcase/utils.py:335
+#: ckanext/sixodp_showcase/utils.py:184 ckanext/sixodp_showcase/utils.py:334
 msgid "Formats"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:186 ckanext/sixodp_showcase/utils.py:336
+#: ckanext/sixodp_showcase/utils.py:185 ckanext/sixodp_showcase/utils.py:335
 msgid "Licenses"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:246
+#: ckanext/sixodp_showcase/utils.py:245
 msgid "Parameter '{parameter_name}' is not an integer"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:262
+#: ckanext/sixodp_showcase/utils.py:261
 msgid "Not authorized to see this page"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:386
+#: ckanext/sixodp_showcase/utils.py:385
 msgid "Invalid search query: {error_message}"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:411
+#: ckanext/sixodp_showcase/utils.py:410
 msgid "Parameter u\"{parameter_name}\" is not an integer"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:439 ckanext/sixodp_showcase/utils.py:474
+#: ckanext/sixodp_showcase/utils.py:438 ckanext/sixodp_showcase/utils.py:474
 msgid "Showcase not found"
 msgstr ""
 
-#: ckanext/sixodp_showcase/utils.py:441 ckanext/sixodp_showcase/utils.py:476
+#: ckanext/sixodp_showcase/utils.py:440 ckanext/sixodp_showcase/utils.py:476
 msgid "Unauthorized to read showcase"
 msgstr ""
 

@@ -56,7 +56,7 @@ def _add_apiset_search(showcase_id, showcase_name):
 
     from ckan.lib.search import SearchError
 
-    package_type='apiset'
+    package_type = 'apiset'
     # unicode format (decoded from utf8)
     q = c.q = toolkit.request.params.get('q', u'')
     c.query_error = False
@@ -92,7 +92,6 @@ def _add_apiset_search(showcase_id, showcase_name):
     def _search_url(params, name):
         url = h.url_for('sixodp_showcase_manage_apisets', id=name)
         return url_with_params(url, params)
-
 
     def url_with_params(url, params):
         params = _encode_params(params)
@@ -450,6 +449,7 @@ def read(id):
     return toolkit.render('sixodp_showcase/read.html',
                           extra_vars={'dataset_type': package_type})
 
+
 def manage_apisets_view(id):
 
     context = {
@@ -476,7 +476,7 @@ def manage_apisets_view(id):
         return toolkit.abort(401, _('Unauthorized to read showcase'))
 
     # Are we removing a showcase/apiset association?
-    form_data = toolkit.request.form 
+    form_data = toolkit.request.form
 
     manage_route = 'sixodp_showcase.manage_apisets'
 

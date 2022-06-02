@@ -43,7 +43,8 @@ def showcase_apiset_association_delete(context, data_dict):
     if showcase_apiset_association is None:
         raise toolkit.ObjectNotFound(
             "ShowcaseApisetAssociation with package_id '{0}' and showcase_id '{1}' doesn't exist.".format(package_id,
-                                                                                                           showcase_id))
-                                                                                                           # delete the association
+                                                                                                          showcase_id))
+
+    # delete the association
     showcase_apiset_association.delete()
     model.repo.commit()

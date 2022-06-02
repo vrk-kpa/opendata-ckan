@@ -64,7 +64,6 @@ def showcase_apiset_association_create(context, data_dict):
     validated_data_dict, errors = validate(
         data_dict, showcase_apiset_association_create_schema(), context)
 
-
     if errors:
         raise toolkit.ValidationError(errors)
 
@@ -73,13 +72,13 @@ def showcase_apiset_association_create(context, data_dict):
                                                    'showcase_id'])
 
     if ShowcaseApisetAssociation.exists(package_id=package_id,
-                                         showcase_id=showcase_id):
+                                        showcase_id=showcase_id):
         raise toolkit.ValidationError(
             "ShowcaseApisetAssociation with package_id '{0}' and showcase_id '{1}' already exists.".format(package_id,
-                                                                                                            showcase_id),
+                                                                                                           showcase_id),
             error_summary=u"The dataset, {0}, is already in the showcase".format(
                 showcase_converters.convert_apiset_name_or_id_to_title_or_name(package_id, context)))
 
     # create the association
     return ShowcaseApisetAssociation.create(package_id=package_id,
-                                             showcase_id=showcase_id)
+                                            showcase_id=showcase_id)

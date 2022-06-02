@@ -4,7 +4,7 @@ import ckan.plugins.toolkit as toolkit
 import ckan.lib.dictization.model_dictize as model_dictize
 from ckan.lib.navl.dictization_functions import validate
 
-from ckanext.showcase.logic.schema import package_showcase_list_schema, showcase_package_list_schema
+from ckanext.showcase.logic.schema import package_showcase_list_schema
 from ckanext.sixodp_showcase.logic.schema import showcase_apiset_list_schema
 from ckanext.showcase.model import ShowcasePackageAssociation
 from ckanext.sixodp_showcase.model import ShowcaseApisetAssociation
