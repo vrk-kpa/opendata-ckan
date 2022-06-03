@@ -1,3 +1,11 @@
+# [2.7.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.3...v2.7.0) (2022-06-03)
+
+
+### Features
+
+* **AV-1528:** assets submodule update ([1350f0b](https://github.com/vrk-kpa/opendata-ckan/commit/1350f0be8769d15810027df11f894f16db37bd68))
+* **AV-1528:** Implementing the resource page ([9222aa9](https://github.com/vrk-kpa/opendata-ckan/commit/9222aa945b64fefef7b824e4283a1abcc6392f87))
+
 ## [2.6.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.2...v2.6.3) (2022-06-02)
 
 
