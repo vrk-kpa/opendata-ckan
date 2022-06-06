@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.0...v2.7.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* **AV-1675:** Convert CC0-1.0 license_id in sixodp-harvester ([4f0de82](https://github.com/vrk-kpa/opendata-ckan/commit/4f0de82915e9b144f249895cd9b6a767ac9010e2))
+
 # [2.7.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.6.3...v2.7.0) (2022-06-03)
 
 
