@@ -26,11 +26,12 @@ else
   flock -x ${DATA_DIR}/.init-lock -c '${SCRIPT_DIR}/reinit_ckan.sh'
 fi
 
+# TODO: ckan dev server is currently disabled as it does not support running in non-root path
 # run uwsgi or ckan run
-if [[ "${DEV_MODE}" != "true" ]]; then
+#if [[ "${DEV_MODE}" != "true" ]]; then
   echo "entrypoint_ckan - running in PRODUCTION mode via uwsgi ..."
-  uwsgi --socket /tmp/uwsgi.sock --uid ckan --gid ckan --http :5000 --master --wsgi-file /srv/app/wsgi.py --module wsgi:application --lazy-apps --gevent 2000 -p 2 -L --gevent-early-monkey-patch --vacuum --harakiri 50 --callable application
-else
-  echo "entrypoint_ckan - running in DEVELOPMENT mode via ckan ..."
-  ckan -c /srv/app/production.ini run --host 0.0.0.0
-fi
+  uwsgi -i /srv/app/ckan-uwsgi.ini
+#else
+#  echo "entrypoint_ckan - running in DEVELOPMENT mode via ckan ..."
+#  ckan -c /srv/app/production.ini run --host 0.0.0.0
+#fi

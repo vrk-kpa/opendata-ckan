@@ -57,6 +57,7 @@ COPY ckan/templates ${TEMPLATE_DIR}
 COPY ckan/supervisor ${SUPERV_DIR}
 COPY ckan/cron ${CRON_DIR}
 COPY ckan/src/ckan/patches ${SRC_DIR}/ckan/patches
+COPY ckan/src/ckan/ckan-uwsgi.ini ${APP_DIR}
 RUN chmod +x ${SCRIPT_DIR}/*.sh && \
     rm -f ${APP_DIR}/production.ini && \
     rm -f ${APP_DIR}/ckan.ini && \
