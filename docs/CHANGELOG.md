@@ -1,3 +1,11 @@
+## [2.7.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.1...v2.7.2) (2022-06-07)
+
+
+### Bug Fixes
+
+* **AV-1670:** Move ckan to data path ([6a08d7d](https://github.com/vrk-kpa/opendata-ckan/commit/6a08d7d85a16f21742750f351331b96f129afbc0))
+* **AV-1670:** Re-enable development server ([9fa164d](https://github.com/vrk-kpa/opendata-ckan/commit/9fa164da9ac41bf56200dd807a337b474da7e3cc))
+
 ## [2.7.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.0...v2.7.1) (2022-06-06)
 
 
