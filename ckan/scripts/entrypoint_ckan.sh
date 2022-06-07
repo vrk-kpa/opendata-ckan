@@ -29,8 +29,8 @@ fi
 # run uwsgi or ckan run
 if [[ "${DEV_MODE}" != "true" ]]; then
   echo "entrypoint_ckan - running in PRODUCTION mode via uwsgi ..."
-  uwsgi --socket /tmp/uwsgi.sock --uid ckan --gid ckan --http :5000 --master --wsgi-file /srv/app/wsgi.py --module wsgi:application --lazy-apps --gevent 2000 -p 2 -L --gevent-early-monkey-patch --vacuum --harakiri 50 --callable application
+  uwsgi -i /srv/app/ckan-uwsgi.ini
 else
   echo "entrypoint_ckan - running in DEVELOPMENT mode via ckan ..."
-  ckan -c /srv/app/production.ini run --host 0.0.0.0
+  ckan -c /srv/app/production.ini run --host 0.0.0.0 --prefix /data
 fi
