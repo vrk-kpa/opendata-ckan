@@ -1,3 +1,10 @@
+## [2.7.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.2...v2.7.3) (2022-06-08)
+
+
+### Bug Fixes
+
+* **AV-1640:** Fix migration of organization approval ([992ac81](https://github.com/vrk-kpa/opendata-ckan/commit/992ac81c3d106fc876989ef2b02245795e2e28ad))
+
 ## [2.7.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.1...v2.7.2) (2022-06-07)
 
 
