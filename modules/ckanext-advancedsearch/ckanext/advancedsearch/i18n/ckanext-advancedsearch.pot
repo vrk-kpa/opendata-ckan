@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-advancedsearch 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-08 12:43+0000\n"
+"POT-Creation-Date: 2022-06-09 09:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ckanext/advancedsearch/fanstatic/javascript/avoindata-utils.js:33
 #: ckanext/advancedsearch/fanstatic/javascript/avoindata-utils.js:38
-#: ckanext/advancedsearch/templates/advanced_search/search_form.html:30
+#: ckanext/advancedsearch/templates/advanced_search/search_form.html:45
 #: ckanext/advancedsearch/translations.py:26
 msgid "Show less options"
 msgstr ""
@@ -120,6 +120,11 @@ msgstr ""
 #: ckanext/advancedsearch/fanstatic/javascript/avoindata-utils.js:46
 #: ckanext/advancedsearch/translations.py:28
 msgid "Are you sure you want to clear all filters?"
+msgstr ""
+
+#: ckanext/advancedsearch/templates/advanced_search/search_form.html:24
+#: ckanext/advancedsearch/translations.py:31
+msgid "Release interval"
 msgstr ""
 
 #: ckanext/advancedsearch/fanstatic/javascript/avoindata-utils.js:16
@@ -189,8 +194,16 @@ msgstr ""
 msgid "Filter search"
 msgstr ""
 
-#: ckanext/advancedsearch/templates/advanced_search/search_form.html:21
-msgid "Release interval"
+#: ckanext/advancedsearch/templates/advanced_search/search_form.html:34
+msgid "Update interval"
+msgstr ""
+
+#: ckanext/advancedsearch/templates/advanced_search/display_snippets/datepicker-range.html:6
+msgid "before"
+msgstr ""
+
+#: ckanext/advancedsearch/templates/advanced_search/display_snippets/datepicker-range.html:7
+msgid "after"
 msgstr ""
 
 #: ckanext/advancedsearch/templates/advanced_search/display_snippets/multiselect.html:18
