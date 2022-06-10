@@ -1,3 +1,12 @@
+## [2.7.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.3...v2.7.4) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1549:** added new translations and changed styling ([935732f](https://github.com/vrk-kpa/opendata-ckan/commit/935732fedc8eb2cd8a4b8de73801a07b26c68942))
+* **AV-1549:** advanced search fixes ([462eaf7](https://github.com/vrk-kpa/opendata-ckan/commit/462eaf7a431c7a950c6cf0451d3364f7f276d35d))
+* **AV-1549:** updated styling ([1cdd485](https://github.com/vrk-kpa/opendata-ckan/commit/1cdd4851e00dae38b7824042f672d2c0145ef209))
+
 ## [2.7.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.2...v2.7.3) (2022-06-08)
 
 
