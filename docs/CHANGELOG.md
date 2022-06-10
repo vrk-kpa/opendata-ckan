@@ -1,3 +1,17 @@
+# [2.8.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.4...v2.8.0) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1383:** Fix linter issues ([532dbdf](https://github.com/vrk-kpa/opendata-ckan/commit/532dbdfc357851d40706f79d6898c0de12a00020))
+* **AV-1383:** Still some linter fixes ([72cdbed](https://github.com/vrk-kpa/opendata-ckan/commit/72cdbed60622ea95ea9fb9e30f5abfe4af28dc08))
+* **AV-1383:** Update translation sources ([1b6d26a](https://github.com/vrk-kpa/opendata-ckan/commit/1b6d26a8038f9f371960341edd4fbb5ef85ad3bf))
+
+
+### Features
+
+* **AV-1383:** Add support for associating showcases with apisets. ([70ceee5](https://github.com/vrk-kpa/opendata-ckan/commit/70ceee5b604561c9d8c0d436a2ae6ea39b4ad229))
+
 ## [2.7.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.3...v2.7.4) (2022-06-10)
 
 
