@@ -182,3 +182,12 @@ spatial_search_js:
       - ytp_resources/main_js
   contents:
     - opendata/scripts/spatial_search.js
+
+slug_preview_ex:
+  output: ckanext-ytp_main%(version)s_slug_preview_ex.js
+  filters: rjsmin
+  extra:
+    preload:
+      - ytp_resources/main_js
+  contents:
+    - opendata/scripts/slug-preview-ex.js
