@@ -1,3 +1,16 @@
+# [2.9.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.8.0...v2.9.0) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1384:** Update submodule commit ([1cf50f8](https://github.com/vrk-kpa/opendata-ckan/commit/1cf50f8138664bdd3378040ebb78c0513b174fae))
+* **AV-1506:** Fixed texts in apiset resource list and apiset form ([dbc01f7](https://github.com/vrk-kpa/opendata-ckan/commit/dbc01f763b0e84fc98572c0c35b65e8fd5ca3994))
+
+
+### Features
+
+* **AV-1384:** Add support for related categories in apisets ([a6eb442](https://github.com/vrk-kpa/opendata-ckan/commit/a6eb4427103b80759e030f65753978e2c3ef453f))
+
 # [2.8.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.4...v2.8.0) (2022-06-10)
 
 
