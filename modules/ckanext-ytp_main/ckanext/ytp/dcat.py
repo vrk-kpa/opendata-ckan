@@ -446,8 +446,17 @@ class AvoindataDCATAPProfile(RDFProfile):
         title = p.config.get('ckan.site_title', '')
         g.add((catalog_ref, DCT.title, Literal(title)))
 
-        description = p.config.get('ckan.site_description', '')
+        description = ('Suomen kansallinen avoimen datan portaali. Avoindata.fi on kaikille tarkoitettu palvelu avoimen '
+                      'datan julkaisemiseen ja hyödyntämiseen. Den finska nationella dataportalen för öppna data. '
+                      'Avoindata.fi är en tjänst för att publicera och utnyttja öppna data. The Finnish national open data '
+                      'portal. Opendata.fi is a service for publishing and utilising open data for everyone.')
         g.add((catalog_ref, DCT.description, Literal(description)))
+
+        spatial = 'koko Suomi, hela Finland, entire Finland'
+        g.add((catalog_ref, DCT.spatial, Literal(spatial)))
+
+        issued = '15.09.2014'
+        g.add((catalog_ref, DCT.issued, Literal(issued)))
 
         homepage = URIRef(p.config.get('ckan.site_url', ''))
         g.add((catalog_ref, FOAF.homepage, homepage))
@@ -460,7 +469,8 @@ class AvoindataDCATAPProfile(RDFProfile):
         publisher = BNode()
         g.add((publisher, RDF.type, FOAF.Organization))
         g.add((publisher, FOAF.hasSite, URIRef(p.config.get('ckan.site_url', ''))))
-        g.add((publisher, FOAF.name, Literal(p.config.get('ckan.site_title'))))
+        name = u'Digi- ja väestötietovirasto, Myndigheten för digitalisering och befolkningsdata, the Finnish Digital Agency'
+        g.add((publisher, FOAF.name, Literal(name)))
         g.add((catalog_ref, DCT.publisher, publisher))
 
         # Dates
