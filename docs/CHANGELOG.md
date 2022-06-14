@@ -1,3 +1,10 @@
+## [2.9.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.0...v2.9.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1744:** Removed sort by source from dataset and advanced search ([6ddc057](https://github.com/vrk-kpa/opendata-ckan/commit/6ddc0576c94ccb5155e4ebe0a528afc5983e5db4))
+
 # [2.9.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.8.0...v2.9.0) (2022-06-10)
 
 
