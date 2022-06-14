@@ -1,3 +1,11 @@
+## [2.9.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.1...v2.9.2) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1323:** Lint-fixes ([24e1716](https://github.com/vrk-kpa/opendata-ckan/commit/24e1716cacc86a1c81be8cb55cb9f01e48e28b4d))
+* **AV-1323:** Update dcat catalogs publisher- description-, issued- and spatial- metadata ([a62466e](https://github.com/vrk-kpa/opendata-ckan/commit/a62466ef8a72b38c5b5d93a825817d0eb17287c3))
+
 ## [2.9.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.0...v2.9.1) (2022-06-14)
 
 
