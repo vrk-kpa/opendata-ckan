@@ -98,22 +98,10 @@
       }
     },
     {
-      "field_name": "valid_from",
-      "preset": "date_opendata",
-      "label": "Valid from",
-      "max_date_field": "valid_till"
-    },
-    {
-      "field_name": "valid_till",
-      "preset": "date_opendata",
-      "label": "Valid till",
-      "min_date_field": "valid_from"
-    },
-    {
       "field_name": "public_administration_organization",
       "label": "Public administration organization",
       "preset": "select",
-      "form_snippet": "radio.html",
+      "form_snippet": "radio_sysadmin.html",
       "choices": [
         {
           "label": "Yes",
@@ -125,13 +113,13 @@
         }
       ],
       "default_value": "false",
-      "validators": "boolean_validator"
+      "validators": "ignore_not_sysadmin keep_old_value_if_missing boolean_validator"
     },
     {
       "field_name": "edit_only_owned_datasets",
       "label": "Members can only edit their own datasets",
       "preset": "select",
-      "form_snippet": "radio.html",
+      "form_snippet": "radio_sysadmin.html",
       "choices": [
         {
           "label": "Yes",
@@ -143,7 +131,7 @@
         }
       ],
       "default_value": "false",
-      "validators": "boolean_validator"
+      "validators": "ignore_not_sysadmin keep_old_value_if_missing boolean_validator"
     },
     {
       "field_name": "features",
@@ -176,6 +164,22 @@
         "class": "form-control"
       },
       "divider": true
+    },
+    {
+      "field_name": "valid_from",
+      "preset": "date_opendata",
+      "form_snippet": "date_sysadmin.html",
+      "label": "Valid from",
+      "max_date_field": "valid_till",
+      "validators": "scheming_required isodate from_date_is_before_until_date convert_to_json_if_date ignore_not_sysadmin keep_old_value_if_missing"
+    },
+    {
+      "field_name": "valid_till",
+      "preset": "date_opendata",
+      "form_snippet": "date_sysadmin.html",
+      "label": "Valid till",
+      "min_date_field": "valid_from",
+      "validators": "scheming_required isodate from_date_is_before_until_date convert_to_json_if_date ignore_not_sysadmin keep_old_value_if_missing"
     },
     {
       "field_name": "last_harvested",

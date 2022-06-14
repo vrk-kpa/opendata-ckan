@@ -40,7 +40,7 @@
 
     <div class="form-actions">
         {% block delete_button %}
-          {% if h.check_access('group_delete', {'id': data.id}) and action=='edit'  %}
+          {% if action=='edit' and h.check_access('group_delete', {'id': data.id})  %}
             {% set locale = h.dump_json({'content': _('Are you sure you want to delete this Organization?')}) %}
             <a class="form-actions__delete" href="{% url_for controller='organization', action='delete', id=data.id %}" data-module="confirm-action" data-module-i18n="{{ locale }}">
               <i class="far fa-trash mr-2"></i>
@@ -49,7 +49,7 @@
           {% endif %}
         {% endblock %}
 
-        {% if h.check_access('organization_update', {'id': data.id}) and action=='edit' %}
+        {% if action=='edit' and h.check_access('organization_update', {'id': data.id}) %}
           {% link_for _('Close without saving'), named_route='organization.read', id=data.name, class_='btn suomifi-button-secondary form-actions__close', icon='' %}
         {% endif %}
 
