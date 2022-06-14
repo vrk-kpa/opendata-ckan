@@ -1,3 +1,68 @@
+## [2.9.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.3...v2.9.4) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1704:** Update localizations ([37c32cd](https://github.com/vrk-kpa/opendata-ckan/commit/37c32cd9dd5bae2c7d6c479882127447acb3c3fb))
+
+## [2.9.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.2...v2.9.3) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1750:** Removed sorting showcases by rating ([328a3d9](https://github.com/vrk-kpa/opendata-ckan/commit/328a3d94d2979ddaa0a70969f91eff094531f4c0))
+
+## [2.9.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.1...v2.9.2) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1323:** Lint-fixes ([24e1716](https://github.com/vrk-kpa/opendata-ckan/commit/24e1716cacc86a1c81be8cb55cb9f01e48e28b4d))
+* **AV-1323:** Update dcat catalogs publisher- description-, issued- and spatial- metadata ([a62466e](https://github.com/vrk-kpa/opendata-ckan/commit/a62466ef8a72b38c5b5d93a825817d0eb17287c3))
+
+## [2.9.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.0...v2.9.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1744:** Removed sort by source from dataset and advanced search ([6ddc057](https://github.com/vrk-kpa/opendata-ckan/commit/6ddc0576c94ccb5155e4ebe0a528afc5983e5db4))
+
+# [2.9.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.8.0...v2.9.0) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1384:** Update submodule commit ([1cf50f8](https://github.com/vrk-kpa/opendata-ckan/commit/1cf50f8138664bdd3378040ebb78c0513b174fae))
+* **AV-1506:** Fixed texts in apiset resource list and apiset form ([dbc01f7](https://github.com/vrk-kpa/opendata-ckan/commit/dbc01f763b0e84fc98572c0c35b65e8fd5ca3994))
+
+
+### Features
+
+* **AV-1384:** Add support for related categories in apisets ([a6eb442](https://github.com/vrk-kpa/opendata-ckan/commit/a6eb4427103b80759e030f65753978e2c3ef453f))
+
+# [2.8.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.4...v2.8.0) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1383:** Fix linter issues ([532dbdf](https://github.com/vrk-kpa/opendata-ckan/commit/532dbdfc357851d40706f79d6898c0de12a00020))
+* **AV-1383:** Still some linter fixes ([72cdbed](https://github.com/vrk-kpa/opendata-ckan/commit/72cdbed60622ea95ea9fb9e30f5abfe4af28dc08))
+* **AV-1383:** Update translation sources ([1b6d26a](https://github.com/vrk-kpa/opendata-ckan/commit/1b6d26a8038f9f371960341edd4fbb5ef85ad3bf))
+
+
+### Features
+
+* **AV-1383:** Add support for associating showcases with apisets. ([70ceee5](https://github.com/vrk-kpa/opendata-ckan/commit/70ceee5b604561c9d8c0d436a2ae6ea39b4ad229))
+
+## [2.7.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.3...v2.7.4) (2022-06-10)
+
+
+### Bug Fixes
+
+* **AV-1549:** added new translations and changed styling ([935732f](https://github.com/vrk-kpa/opendata-ckan/commit/935732fedc8eb2cd8a4b8de73801a07b26c68942))
+* **AV-1549:** advanced search fixes ([462eaf7](https://github.com/vrk-kpa/opendata-ckan/commit/462eaf7a431c7a950c6cf0451d3364f7f276d35d))
+* **AV-1549:** updated styling ([1cdd485](https://github.com/vrk-kpa/opendata-ckan/commit/1cdd4851e00dae38b7824042f672d2c0145ef209))
+
 ## [2.7.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.7.2...v2.7.3) (2022-06-08)
 
 

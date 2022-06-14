@@ -216,6 +216,12 @@ def _translations():
     _("Dataset maintainer")
     _("The dataset maintainer will receive updates about the dataset to the email address specified in this form. We recommend using a general email address instead of the contact information of a single employee. Note that the dataset information can only be managed by registered users with Editor- or Admin-rights in the publishing organisation.")  # noqa: E501
     _("e.g. avoindata@dvv.fi")
+    _('Deleted. The dataset is only visible to logged in users of the producer organization.')
+    _('In draft state. The dataset is only visible to logged in users of the producer organization.')
+    _('Private mode. The dataset is only visible to logged in users of the producer organization.')
+    _('Deleted. The apiset is only visible to logged in users of the producer organization.')
+    _('In draft state. The apiset is only visible to logged in users of the producer organization.')
+    _('Private mode. The apiset is only visible to logged in users of the producer organization.')
 
     # Resource
     _("Data resource title")

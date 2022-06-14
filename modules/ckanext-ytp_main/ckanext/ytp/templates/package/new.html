@@ -18,7 +18,7 @@
         <aside class="sidebar">
             <h4>{{_("Stages")}}</h4>
             <div class="ytp-group-divider"></div>
-            {{ h.snippet('package/snippets/stages.html', stages=form_vars.stage, pkg_name=form_vars.data.name) }}
+            {{ h.snippet('package/snippets/stages.html', stages=form_vars.stage, pkg_name=form_vars.data.name, dataset_type=dataset_type) }}
         </aside>
     </div>
     {% endblock %}
