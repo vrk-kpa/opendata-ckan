@@ -1,3 +1,10 @@
+## [2.9.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.3...v2.9.4) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1704:** Update localizations ([37c32cd](https://github.com/vrk-kpa/opendata-ckan/commit/37c32cd9dd5bae2c7d6c479882127447acb3c3fb))
+
 ## [2.9.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.2...v2.9.3) (2022-06-14)
 
 
