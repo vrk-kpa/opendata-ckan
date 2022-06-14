@@ -1,3 +1,10 @@
+## [2.9.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.2...v2.9.3) (2022-06-14)
+
+
+### Bug Fixes
+
+* **AV-1750:** Removed sorting showcases by rating ([328a3d9](https://github.com/vrk-kpa/opendata-ckan/commit/328a3d94d2979ddaa0a70969f91eff094531f4c0))
+
 ## [2.9.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.1...v2.9.2) (2022-06-14)
 
 
