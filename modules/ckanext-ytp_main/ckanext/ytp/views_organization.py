@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 import logging
-import re
 
 import ckan.lib.base as base
 import ckan.logic as logic
@@ -15,7 +14,7 @@ from ckan.views.group import BulkProcessView, CreateGroupView,\
                             _db_to_form_schema, _read, _get_group_template, _setup_template_variables, \
                             member_delete, history, followers, follow, unfollow, admins, _replace_group_org
 from ckanext.organizationapproval.logic import send_new_organization_email_to_admin
-from typing import Optional, Any
+from typing import Any
 
 from flask import Blueprint
 
@@ -92,9 +91,9 @@ class EditOrganizationView(EditGroupView):
             id: str,
             group_type: str,
             is_organization: bool,
-            data = None,
-            errors = None,
-            error_summary = None) -> str:
+            data=None,
+            errors=None,
+            error_summary=None) -> str:
         extra_vars = {}
         set_org(is_organization)
         context = self._prepare(id, is_organization)

@@ -126,9 +126,9 @@ def package_update(context, data_dict):
         # Showcases don't have organizations
         if package.type != "showcase":
             org = logic_auth.get_group_object(context, {'id': package.owner_org})
-            personal_datasets = (p.toolkit.asbool(org.extras.get('edit_only_owned_datasets', False)) 
-                                or ('personal_datasets' in org.extras.get('features', []) 
-                                and 'edit_only_owned_datasets' not in org.extras.keys()))
+            personal_datasets = (p.toolkit.asbool(org.extras.get('edit_only_owned_datasets', False))
+                                 or ('personal_datasets' in org.extras.get('features', [])
+                                 and 'edit_only_owned_datasets' not in org.extras.keys()))
 
             if personal_datasets and package.creator_user_id != user.id:
                 result = {
