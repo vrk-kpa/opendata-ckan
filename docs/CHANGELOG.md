@@ -1,3 +1,10 @@
+## [2.9.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.4...v2.9.5) (2022-06-22)
+
+
+### Bug Fixes
+
+* Do not index coupled resources ([1e36c66](https://github.com/vrk-kpa/opendata-ckan/commit/1e36c6654df5d88f4d31f9f7328a920c673d5b11))
+
 ## [2.9.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.3...v2.9.4) (2022-06-14)
 
 
