@@ -246,7 +246,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
     def _get_collection_type(self):
         """Gets the type of collection (Open Data, Interoperability Tools, or Public Services).
-
         This method can be used to identify which collection the user is currently looking at or editing,
         i.e., which page the user is on.
         """
@@ -264,16 +263,16 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         lang = get_lang_prefix()
         facets_dict = OrderedDict()
         facets_dict.update({'vocab_international_benchmarks': _('International Benchmarks')})
+        facets_dict.update({'vocab_geographical_coverage': _('Geographical coverage')}) 
         facets_dict.update({'collection_type': _('Collection Types')})
-        facets_dict['vocab_keywords_' + lang] = _('Popular Tags')
-        facets_dict.update({'vocab_content_type_' + lang: _('Content Types')})
-        facets_dict.update({'organization': _('Organizations')})
+        facets_dict['vocab_keywords_' + lang] = _('Tags') 
+        facets_dict.update({'organization': _('Organization')}) 
         facets_dict.update({'res_format': _('Formats')})
-        # BFW: source is not part of the schema. created artificially at before_index function
-        facets_dict.update({'source': _('Sources')})
-        facets_dict.update({'license_id': _('Licenses')})
-        # add more dataset facets here
+        facets_dict.update({'license_id': _('Licenses')}) 
+        facets_dict.update({'groups': _('Category')}) 
         facets_dict.update({'producer_type': _('Producer type')})
+        # BFW: source is not part of the schema. created artificially at before_index function
+        # add more dataset facets here
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
