@@ -18,7 +18,7 @@ from ckan.lib import helpers
 from ckan.lib.munge import munge_title_to_name
 from ckan.lib.navl.dictization_functions import Missing, Invalid
 from ckan.lib.plugins import DefaultOrganizationForm, DefaultTranslation, DefaultPermissionLabels
-from ckan.logic import NotFound, NotAuthorized, get_action, check_access
+from ckan.logic import NotFound, get_action, check_access
 from ckan.model import Session
 from ckan.plugins import toolkit
 from ckan.plugins.toolkit import config, chained_action
@@ -463,7 +463,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             if 'producer_type' in org:
                 pkg_dict['producer_type'] = org['producer_type']
 
-
         return pkg_dict
 
     # IActions #
@@ -659,7 +658,6 @@ def action_user_create(original_action, context, data_dict):
             plugins.toolkit.get_action('group_member_create')(context, member_data)
 
     return result
-
 
 
 @logic.side_effect_free
