@@ -654,17 +654,6 @@ def action_user_create(original_action, context, data_dict):
     return result
 
 
-@chained_action
-@logic.side_effect_free
-def action_organization_show(original_action, context, data_dict):
-    try:
-        result = original_action(context, data_dict)
-    except NotAuthorized:
-        raise NotFound
-
-    result['display_name'] = extra_translation(result, 'title') or result.get('display_name', None) or result.get('name', None)
-    return result
-
 
 @logic.side_effect_free
 def action_organization_tree_list(context, data_dict):
@@ -830,7 +819,7 @@ class YtpOrganizationsPlugin(plugins.SingletonPlugin, DefaultOrganizationForm, Y
         return {'organization_create': auth.organization_create}
 
     def get_actions(self):
-        return {'user_create': action_user_create, 'organization_show': action_organization_show,
+        return {'user_create': action_user_create,
                 'organization_tree_list': action_organization_tree_list}
 
     def get_blueprint(self):
