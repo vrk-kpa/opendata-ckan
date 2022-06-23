@@ -273,6 +273,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         facets_dict.update({'source': _('Sources')})
         facets_dict.update({'license_id': _('Licenses')})
         # add more dataset facets here
+        facets_dict.update({'producer_type': _('Producer type')})
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
@@ -456,6 +457,12 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
         if 'date_released' in pkg_dict and ISO_DATETIME_FORMAT.match(pkg_dict['date_released']):
             pkg_dict['metadata_created'] = "%sZ" % pkg_dict['date_released']
+
+        if 'organization' in pkg_dict:
+            org = toolkit.get_action('organization_show')({}, {'id': pkg_dict.get('organization')})
+            if 'producer_type' in org:
+                pkg_dict['producer_type'] = org['producer_type']
+
 
         return pkg_dict
 
