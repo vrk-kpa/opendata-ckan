@@ -18,7 +18,7 @@ from ckan.lib import helpers
 from ckan.lib.munge import munge_title_to_name
 from ckan.lib.navl.dictization_functions import Missing, Invalid
 from ckan.lib.plugins import DefaultOrganizationForm, DefaultTranslation, DefaultPermissionLabels
-from ckan.logic import NotFound, NotAuthorized, get_action, check_access
+from ckan.logic import NotFound, get_action, check_access
 from ckan.model import Session
 from ckan.plugins import toolkit
 from ckan.plugins.toolkit import config, chained_action
@@ -273,6 +273,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         facets_dict.update({'source': _('Sources')})
         facets_dict.update({'license_id': _('Licenses')})
         # add more dataset facets here
+        facets_dict.update({'producer_type': _('Producer type')})
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
@@ -456,6 +457,11 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
         if 'date_released' in pkg_dict and ISO_DATETIME_FORMAT.match(pkg_dict['date_released']):
             pkg_dict['metadata_created'] = "%sZ" % pkg_dict['date_released']
+
+        if 'organization' in pkg_dict:
+            org = toolkit.get_action('organization_show')({}, {'id': pkg_dict.get('organization')})
+            if 'producer_type' in org:
+                pkg_dict['producer_type'] = org['producer_type']
 
         return pkg_dict
 
@@ -654,18 +660,6 @@ def action_user_create(original_action, context, data_dict):
     return result
 
 
-@chained_action
-@logic.side_effect_free
-def action_organization_show(original_action, context, data_dict):
-    try:
-        result = original_action(context, data_dict)
-    except NotAuthorized:
-        raise NotFound
-
-    result['display_name'] = extra_translation(result, 'title') or result.get('display_name', None) or result.get('name', None)
-    return result
-
-
 @logic.side_effect_free
 def action_organization_tree_list(context, data_dict):
     check_access('site_read', context)
@@ -830,7 +824,7 @@ class YtpOrganizationsPlugin(plugins.SingletonPlugin, DefaultOrganizationForm, Y
         return {'organization_create': auth.organization_create}
 
     def get_actions(self):
-        return {'user_create': action_user_create, 'organization_show': action_organization_show,
+        return {'user_create': action_user_create,
                 'organization_tree_list': action_organization_tree_list}
 
     def get_blueprint(self):
