@@ -1,3 +1,16 @@
+# [2.10.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.5...v2.10.0) (2022-06-23)
+
+
+### Bug Fixes
+
+* **AV-1743:** Remove extra_translation from organization_show as it broke calls without flask request, and it is not needed anymore ([e516f73](https://github.com/vrk-kpa/opendata-ckan/commit/e516f73afedca9d3bbe727b868f8aea50abfbd91))
+* flake8 ([acc0efb](https://github.com/vrk-kpa/opendata-ckan/commit/acc0efb3c2ec65fb5195d7620a7732a1221f0936))
+
+
+### Features
+
+* **AV-1743:** Add producer_type to solr and facets ([800e029](https://github.com/vrk-kpa/opendata-ckan/commit/800e0293add11ab6cc5c7e7e0c3422fee1217641))
+
 ## [2.9.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.4...v2.9.5) (2022-06-22)
 
 
