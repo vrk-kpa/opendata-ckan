@@ -1,3 +1,12 @@
+## [2.10.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.10.0...v2.10.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* **AV-1743:** Removed comment ([324de87](https://github.com/vrk-kpa/opendata-ckan/commit/324de87e3974505ecb310d562bffd1ebc486ae24))
+* **AV-1743:** Updated dataset sorting ([c3c871f](https://github.com/vrk-kpa/opendata-ckan/commit/c3c871fee7b2bc9d9abae16778a86418f8415b2e))
+* **AV-1743:** Updated dataset sorting flake fix ([95da883](https://github.com/vrk-kpa/opendata-ckan/commit/95da883a8b19f137b0a5a466c17dea6a5cfd4a55))
+
 # [2.10.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.9.5...v2.10.0) (2022-06-23)
 
 
