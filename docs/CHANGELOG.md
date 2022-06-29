@@ -1,3 +1,10 @@
+## [2.11.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.2...v2.11.3) (2022-06-29)
+
+
+### Bug Fixes
+
+* **AV-762:** handle string group items ([a13b0c8](https://github.com/vrk-kpa/opendata-ckan/commit/a13b0c8f756f6e78c3937733a82a7c3a1f01b775))
+
 ## [2.11.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.1...v2.11.2) (2022-06-29)
 
 
