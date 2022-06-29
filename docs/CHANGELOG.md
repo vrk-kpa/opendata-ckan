@@ -1,3 +1,10 @@
+## [2.11.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.0...v2.11.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* **AV-762:** Updated fuseki configuration documentation to README.md ([8d34d74](https://github.com/vrk-kpa/opendata-ckan/commit/8d34d74dd8451c0c7a0f033ce8692c0af1202b4c))
+
 # [2.11.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.10.1...v2.11.0) (2022-06-29)
 
 
