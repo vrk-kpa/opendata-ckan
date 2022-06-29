@@ -85,6 +85,11 @@ CKAN docker image for open data portal (avoindata.fi).
 | DISQUS_DOMAIN | production.ini | `disqus.name` | - |
 | SENTRY_DSN | production.ini | `sentry.dsn` | - |
 | SENTRY_ENV | production.ini | `sentry.environment` | - |
+| FUSEKI_HOST | production.ini | `ckanext.dcat.sparql.query_endpoint` `ckanext.dcat.sparql.update_endpoint` | - |
+| FUSEKI_PORT | production.ini | `ckanext.dcat.sparql.query_endpoint` `ckanext.dcat.sparql.update_endpoint` | - |
+| FUSEKI_ADMIN_USER | production.ini | `ckanext.dcat.sparql.username` | - |
+| FUSEKI_ADMIN_PASS | production.ini | `ckanext.dcat.sparql.password` | - |
+| FUSEKI_OPENDATA_DATASET | production.ini | `ckanext.dcat.sparql.query_endpoint` `ckanext.dcat.sparql.update_endpoint` | - |
 
 ## Copying and License
 
