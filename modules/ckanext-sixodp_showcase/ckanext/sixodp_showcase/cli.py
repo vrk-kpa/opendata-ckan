@@ -57,7 +57,7 @@ def migrate_title_to_title_translated(dryrun):
 def create_platform_vocabulary(dryrun):
     context = {'ignore_auth': True}
     vocab_id = 'platform'
-    tags = (u"Android", u"iOS Apple", u"Windows", u"Mac OS X", u"Other")
+    tags = (u"Android", u"iOS Apple", u"Windows", u"Mac OS X", u"Website", u"Other")
     tags_to_delete = []
     tags_to_create = []
     if dryrun:
