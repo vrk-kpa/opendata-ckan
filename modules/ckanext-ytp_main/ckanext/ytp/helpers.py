@@ -6,6 +6,7 @@ import urllib.error
 import urllib.parse
 import datetime
 import itertools
+import flask
 from ckan.common import _, c, request
 from ckan.lib import helpers, i18n
 from ckan.logic import get_action
@@ -40,7 +41,11 @@ def get_translation(translated):
         translated = get_json_value(translated)
 
     if isinstance(translated, dict):
-        language = i18n.get_lang()
+        if flask.has_request_context():
+            language = i18n.get_lang()
+        else:
+            language = ''
+
         if language in translated:
             return translated[language]
         dialects = [lang for lang in translated

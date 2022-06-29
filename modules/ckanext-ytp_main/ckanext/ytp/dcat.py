@@ -310,7 +310,13 @@ class AvoindataDCATAPProfile(RDFProfile):
                 g.add((theme, SKOS.prefLabel, Literal(title)))
 
         # dcat:landingPage
-        external_urls = (u for u in dataset_dict.get('external_urls', []) if u)
+        external_urls = dataset_dict.get('external_urls', [])
+        if isinstance(external_urls, six.text_type):
+            try:
+                external_urls = json.loads(external_urls)
+            except json.JSONDecodeError:
+                external_urls = []
+        external_urls = (u for u in external_urls if u)
 
         for external_url in external_urls:
             # some external urls have whitespace in them
