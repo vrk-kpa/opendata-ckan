@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/vrk-kpa/opendata-ckan/compare/v2.10.1...v2.11.0) (2022-06-29)
+
+
+### Features
+
+* **AV-762:** Added SPARQL support and fixed some edge case errors in DCAT serialization ([164bb69](https://github.com/vrk-kpa/opendata-ckan/commit/164bb6960f872be3a3638d170bed62d4c734679f))
+
 ## [2.10.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.10.0...v2.10.1) (2022-06-27)
 
 
