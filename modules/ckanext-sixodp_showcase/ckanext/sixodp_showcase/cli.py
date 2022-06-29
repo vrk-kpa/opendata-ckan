@@ -110,63 +110,6 @@ def create_platform_vocabulary(dryrun):
 
 
 @sixodp_showcase.command(
-    u'create_showcase_type_vocabulary',
-    help=u'Creates a showcase_type vocabulary to use as a preset list of options'
-)
-@click.option(u'--dryrun', is_flag=True)
-def create_showcase_type_vocabulary(dryrun):
-    context = {'ignore_auth': True}
-    vocab_id = 'showcase_type'
-    tags = (u"Mobile application", u"Other application", u"Tools", u"Website", u"Visualisation")
-    tags_to_delete = []
-    tags_to_create = []
-    if dryrun:
-        click.echo("-- Dryrun --")
-    try:
-        data = {'id': vocab_id}
-        old_tags = toolkit.get_action('vocabulary_show')(context, data)
-        click.echo('Showcase type vocabulary found; clearing old tags if needed')
-        for old_tag in old_tags.get('tags'):
-            if old_tag['name'] in tags:
-                continue
-            else:
-                tags_to_delete.append({'name': old_tag['name']})
-                if dryrun:
-                    continue
-                toolkit.get_action('tag_delete')(context, {'id': old_tag['id']})
-        for tag in tags:
-            try:
-                toolkit.get_action('tag_show')(context, {'id': tag, 'vocabulary_id': vocab_id})
-            except toolkit.ObjectNotFound:
-                tags_to_create.append({'name': tag})
-                if dryrun:
-                    continue
-                toolkit.get_action('tag_create')(context, {'name': tag, 'vocabulary_id': old_tags.get('id')})
-    except NotFound:
-        click.echo('Showcase type vocabulary not found')
-        data = {'name': vocab_id}
-        vocab = toolkit.get_action('vocabulary_create')(context, data)
-        click.echo('Showcase type vocabulary created')
-        for tag in tags:
-            data = {'name': tag, 'vocabulary_id': vocab['id']}
-            tags_to_create.append({'name': tag})
-            if dryrun:
-                continue
-            else:
-                toolkit.get_action('tag_create')(context, data)
-
-    if len(tags_to_create) > 0 or len(tags_to_delete) > 0:
-        click.echo("Tags to be deleted:" if dryrun else "Deleted tags:")
-        click.echo(tags_to_delete)
-        click.echo("")
-        click.echo("Tags to be created:" if dryrun else "Created tags:")
-        click.echo(tags_to_create)
-        click.echo("")
-    else:
-        click.echo("No changes")
-
-
-@sixodp_showcase.command(
     u'migrate_category_to_showcase_type_and_new_categories',
     help=u'Migrates old showcase category to the new showcase_type AND new showcase (dataset) categories'
 )
