@@ -1,3 +1,10 @@
+## [2.11.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.1...v2.11.2) (2022-06-29)
+
+
+### Bug Fixes
+
+* **AV-1752:** Fix error with showcases indexing ([b241a31](https://github.com/vrk-kpa/opendata-ckan/commit/b241a31822c0b10d3282fc09cf762f680af32b84))
+
 ## [2.11.1](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.0...v2.11.1) (2022-06-29)
 
 
