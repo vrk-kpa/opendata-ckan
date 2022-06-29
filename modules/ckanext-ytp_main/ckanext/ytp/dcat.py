@@ -300,7 +300,8 @@ class AvoindataDCATAPProfile(RDFProfile):
         groups = dataset_dict.get('groups', [])
 
         for group_item in groups:
-            group_dict = get_group(group_item['id'])
+            group_id = group_item['id'] if isinstance(group_item, dict) else group_item
+            group_dict = get_group(group_id)
             theme = URIRef(p.url_for(controller='group', action='read', id=group_dict['id'], qualified=True))
             g.add((theme, RDF.type, SKOS.Concept))
             g.add((dataset_ref, DCAT.theme, theme))
