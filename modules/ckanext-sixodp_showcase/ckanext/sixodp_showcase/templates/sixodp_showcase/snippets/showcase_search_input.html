@@ -19,6 +19,6 @@
             (_('Last Modified'), 'metadata_modified desc')]
         %}
         <div class="search-options">
-            {% snippet 'sixodp_showcase/snippets/showcase_search_form.html', type='showcase', placeholder=_('Search showcases...'), query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, facets=facets, show_empty=request.params, error=query_error, fields=fields, no_bottom_border=true, show_advanced_search=false %}
+            {% snippet 'sixodp_showcase/snippets/showcase_search_form.html', type='showcase', placeholder=_('Search showcases...'), query=q, query_params=query_params, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, facets=facets, show_empty=request.params, error=query_error, fields=fields, no_bottom_border=true, show_advanced_search=false %}
         </div>
     {% endblock %}
