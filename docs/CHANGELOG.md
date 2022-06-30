@@ -1,3 +1,10 @@
+## [2.11.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.4...v2.11.5) (2022-06-30)
+
+
+### Bug Fixes
+
+* **AV-1701:** Bypass query_params for showcases search_form so that they wont be dropped off when sorting is changed. ([c68a2a7](https://github.com/vrk-kpa/opendata-ckan/commit/c68a2a7a0326c8ceb87f81dfdb4323b4be59b059))
+
 ## [2.11.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.3...v2.11.4) (2022-06-30)
 
 
