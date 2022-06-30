@@ -128,7 +128,7 @@ def migrate_website_showcase_type_to_platform(ctx, dryrun):
                 'id': old_showcase_dict['id'],
                 'platform': showcase_platforms,
             })
-    
+
     if dryrun:
         click.echo('\n'.join('%s' % p for p in showcase_patches))
     else:
