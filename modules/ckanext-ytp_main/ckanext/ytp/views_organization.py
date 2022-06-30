@@ -11,9 +11,10 @@ from ckan.common import g, request, _, c, config
 from ckan.views.group import BulkProcessView, CreateGroupView,\
                             EditGroupView, DeleteGroupView, MembersGroupView, \
                             about, activity, set_org, _action, _check_access, \
-                            _db_to_form_schema, _read, _get_group_template, \
+                            _db_to_form_schema, _read, _get_group_template, _setup_template_variables, \
                             member_delete, history, followers, follow, unfollow, admins, _replace_group_org
 from ckanext.organizationapproval.logic import send_new_organization_email_to_admin
+from typing import Any
 
 from flask import Blueprint
 
@@ -81,6 +82,61 @@ class CreateOrganizationView(CreateGroupView):
                             data_dict, errors, error_summary)
 
         return h.redirect_to(group['type'] + '.read', id=group['name'])
+
+
+class EditOrganizationView(EditGroupView):
+    '''Edit organization view '''
+
+    def get(self,
+            id: str,
+            group_type: str,
+            is_organization: bool,
+            data=None,
+            errors=None,
+            error_summary=None) -> str:
+        extra_vars = {}
+        set_org(is_organization)
+        context = self._prepare(id, is_organization)
+        data_dict: dict[str, Any] = {u'id': id, u'include_datasets': False}
+        try:
+            group_dict = _action(u'group_show')(context, data_dict)
+        except (NotFound, NotAuthorized):
+            base.abort(404, _(u'Group not found'))
+        data = data or group_dict
+        assert data is not None
+
+        if data.get('features', False):
+            # Convert old features field to match with new radiobuttons
+            data = {**data, **{
+                'public_administration_organization': 'public_administration_organization' in data.get('features', []),
+                'edit_only_owned_datasets': 'personal_datasets' in data.get('features', []),
+            }}
+
+        errors = errors or {}
+        extra_vars: dict[str, Any] = {
+            u'data': data,
+            u"group_dict": group_dict,
+            u'errors': errors,
+            u'error_summary': error_summary,
+            u'action': u'edit',
+            u'group_type': group_type
+        }
+
+        _setup_template_variables(context, data, group_type=group_type)
+        form = base.render(
+            _get_group_template(u'group_form', group_type), extra_vars)
+
+        # TODO: Remove
+        # ckan 2.9: Adding variables that were removed from c object for
+        # compatibility with templates in existing extensions
+        g.grouptitle = group_dict.get(u'title')
+        g.groupname = group_dict.get(u'name')
+        g.data = data
+        g.group_dict = group_dict
+
+        extra_vars["form"] = form
+        return base.render(
+            _get_group_template(u'edit_template', group_type), extra_vars)
 
 
 def read(group_type, is_organization, id=None, limit=20):
@@ -389,7 +445,7 @@ organization.add_url_rule(
 organization.add_url_rule('/organization/<id>', methods=['GET'], view_func=read)
 organization.add_url_rule('/organization/<id>/embed', methods=['GET'], view_func=embed)
 organization.add_url_rule(
-    '/organization/edit/<id>', view_func=EditGroupView.as_view(str('edit')))
+    '/organization/edit/<id>', view_func=EditOrganizationView.as_view(str('edit')))
 organization.add_url_rule(
     '/organization/activity/<id>/<int:offset>', methods=['GET'], view_func=activity)
 organization.add_url_rule('/organization/about/<id>', methods=['GET'], view_func=about)
