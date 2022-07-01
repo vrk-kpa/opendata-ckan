@@ -94,6 +94,7 @@
                       {% snippet 'advanced_search/display_field.html', field=schema.input_fields.search_query, prev_query=c.advanced_search.last_query %}
                     </div>
                     {% set sorting = [
+                      ('', 'auto'),
                       (_('Relevance'), 'score desc, metadata_modified desc'),
                       (_('Name Ascending'), 'title_string asc'),
                       (_('Name Descending'), 'title_string desc'),
@@ -103,6 +104,7 @@
                       (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
                     %}
                     {% set sorting_selected = c.advanced_search.sort_string %}
+                    {% set sorting_selection = c.advanced_search["sorting_selection"] %}
                     <div id="search-results">
                       <div id="search-results-header" class="d-flex flex-wrap justify-content-between align-items-center mt-3">{{_('Found {count} datasets').format(count=c.advanced_search.item_count)}}
                         <div class="form-inline">
@@ -110,11 +112,14 @@
                             <label for="field-order-by">{{ _('Sorting') }}</label>
                             <span class="select-wrapper">
                               <select id="field-order-by" name="sort" class="form-control ytp-input-element avoindata-order-by" data-module="avoindata-utils">
+                                <!-- Default empty option -->
+                                <option disable selected value="auto" {% if not sorting_selection or sorting_selection == "auto" %} selected="selected"{% endif %} style="display:none;"></option>
                                 {% for label, value in sorting %}
                                   {% if label and value %}
-                                    <option value="{{ value }}" {% if sorting_selected == value %} selected="selected" {% endif %}>{{ label }}</option>
+                                    <option value="{{ value }}" {% if sorting_selection == value  %} selected="selected" {% endif %}>{{ label }}</option>
                                   {% endif %}
                                 {% endfor %}
+                                
                               </select>
                             </span>
                           </div>
