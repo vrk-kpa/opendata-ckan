@@ -184,12 +184,12 @@ options     - A list/tuple of fields to be used as <options>.
 
 {% endmacro %}
 
-{% macro input_dragndrop(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={'class': 'form-control'}, is_required=false, max_filesize='-', max_total_size='-') %}
+{% macro input_dragndrop(name, id='', label=_('Paste or drag file in here'), value='', placeholder='', type='text', error="", classes=[], attrs={'class': 'form-control'}, is_required=false, max_filesize='-', max_total_size='-') %}
   {%- set extra_html = caller() if caller -%}
-  {% call input_block(id or name, label or name, error, classes, extra_html=extra_html, is_required=is_required) %}
+  {% call input_block(id or name, ' ', error, classes, extra_html=extra_html, is_required=is_required) %}
     {% if type == 'file' %}
     <div class="dropzone" data-module="drag-n-drop-uploader">
-      <h4>{{ _('Paste or drag file in here')}}</h4>
+      <h4>{{ label }}</h4>
       <p>{{ _('Maximum filesize of single file is {max_filesize}Mb. Total maximum size of all files is {max_total_size}Mb.').format(max_filesize=max_filesize, max_total_size=max_total_size) }}</p>
       <p>{{ _('Allowed filetypes are: pdf, jpg, jpeg, png, doc, docx, xls, xlsx, ppt, pptx, odt, ods, txt.') }}</p>
     {% endif %}

@@ -244,6 +244,12 @@ def _translations():
     _("Start date")
     _("End date")
 
+    # Organization
+    _('Producer name')
+    _('Producer description')
+    _('Common, compact and plain description about producer')
+    _('Other information')
+
     # Licenses
     _('cc-by')
     _('cc-by-4-fi')

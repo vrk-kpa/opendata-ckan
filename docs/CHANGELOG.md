@@ -1,3 +1,28 @@
+## [2.11.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.4...v2.11.5) (2022-06-30)
+
+
+### Bug Fixes
+
+* **AV-1701:** Bypass query_params for showcases search_form so that they wont be dropped off when sorting is changed. ([c68a2a7](https://github.com/vrk-kpa/opendata-ckan/commit/c68a2a7a0326c8ceb87f81dfdb4323b4be59b059))
+
+## [2.11.4](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.3...v2.11.4) (2022-06-30)
+
+
+### Bug Fixes
+
+* **AV-1552:** Design implementation for organization forms ([1fc0bcf](https://github.com/vrk-kpa/opendata-ckan/commit/1fc0bcf77d3fcd6507d106b028900062385c9685))
+* **AV-1552:** Hide some fields from non sysadmins on organization forms. ([d4a4ef5](https://github.com/vrk-kpa/opendata-ckan/commit/d4a4ef5d69f100502512f5e425b4d8062b70f61e))
+* **AV-1552:** If existing settings for personal_datasets or public organization is set, it should be used for new fields ([f6032ae](https://github.com/vrk-kpa/opendata-ckan/commit/f6032aecb1e707ca6b98211834bae611737cbea1))
+* **AV-1552:** Linter fixes ([c468ba7](https://github.com/vrk-kpa/opendata-ckan/commit/c468ba7a2ff35bbf155831ca0ab1c964ada18a6a))
+* **AV-1552:** Update opendata-assets module ([39d9dcb](https://github.com/vrk-kpa/opendata-ckan/commit/39d9dcb632bdd60c549dd6c6ee2b555087c3887a))
+
+## [2.11.3](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.2...v2.11.3) (2022-06-29)
+
+
+### Bug Fixes
+
+* **AV-762:** handle string group items ([a13b0c8](https://github.com/vrk-kpa/opendata-ckan/commit/a13b0c8f756f6e78c3937733a82a7c3a1f01b775))
+
 ## [2.11.2](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.1...v2.11.2) (2022-06-29)
 
 
