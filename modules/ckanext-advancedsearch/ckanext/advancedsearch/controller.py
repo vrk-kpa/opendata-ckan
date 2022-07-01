@@ -72,8 +72,8 @@ def search():
                     search_query_filters.append(res)
 
     sort_string = request.form.get('sort', 'metadata_created desc')
-    #if an actual sort parameter is provided, use that for selection in the template
-    sorting_selection = request.form.get('sort') 
+    # if an actual sort parameter is provided, use that for selection in the template
+    sorting_selection = request.form.get('sort')
 
     data_dict = {
         'q': q,
@@ -125,7 +125,7 @@ def search():
         "filters": filters,
         "sort_string": sort_string,
         "field_options": options,
-        "sorting_selection": sorting_selection   
+        "sorting_selection": sorting_selection
         }
     c.advanced_search['last_query']['page'] = page
 
