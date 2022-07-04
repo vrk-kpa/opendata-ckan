@@ -102,7 +102,9 @@
   <div class="secondary__header">
     <h3 class="secondary__title">{{ _('Filter list') }}</h3>
   </div>
-  {% snippet "spatial/snippets/spatial_query.html", default_extent="[[59.85, 20.65], [70.16, 31.52]]" %}
+  {% if dataset_type != 'apiset'%}
+    {% snippet "spatial/snippets/spatial_query.html", default_extent="[[59.85, 20.65], [70.16, 31.52]]" %}
+  {% endif %}
   {% for facet in c.facet_titles %}
     {% set title = c.facet_titles[facet] or h.get_facet_title(name) %}
     {% if facet.startswith('vocab_content_type_')  %}
