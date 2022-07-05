@@ -262,16 +262,27 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
     def dataset_facets(self, facets_dict, package_type):
         lang = get_lang_prefix()
         facets_dict = OrderedDict()
-        facets_dict.update({'vocab_international_benchmarks': _('International Benchmarks')})
-        facets_dict.update({'vocab_geographical_coverage': _('Geographical coverage')})
-        facets_dict.update({'collection_type': _('Collection Types')})
-        facets_dict['vocab_keywords_' + lang] = _('Tags')
-        facets_dict.update({'organization': _('Organization')})
-        facets_dict.update({'res_format': _('Formats')})
-        facets_dict.update({'license_id': _('Licenses')})
-        facets_dict.update({'groups': _('Category')})
-        facets_dict.update({'producer_type': _('Producer type')})
-        # add more dataset facets here
+        #use different ordering for apisets
+        if package_type == 'apiset':
+            facets_dict['vocab_keywords_' + lang] = _('Tags')
+            facets_dict['organization'] = _('Organization')
+            facets_dict['res_format'] = _('Formats')
+            facets_dict['vocab_update_frequency_' + lang] = _('Update frequency')
+            facets_dict['license_id'] = _('Licenses')
+            facets_dict['groups'] = _('Category')
+            facets_dict['producer_type'] = _('Producer type')
+        else:
+            facets_dict['vocab_international_benchmarks'] = _('International Benchmarks')
+            facets_dict['vocab_geographical_coverage'] = _('Geographical coverage')
+            facets_dict['collection_type'] = _('Collection Types')
+            facets_dict['vocab_keywords_' + lang] = _('Tags')
+            facets_dict['organization'] = _('Organization')
+            facets_dict['res_format'] = _('Formats')
+            facets_dict['license_id'] = _('Licenses')
+            facets_dict['groups'] = _('Category')
+            facets_dict['producer_type'] = _('Producer type')
+            # add more dataset facets here
+
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
@@ -436,8 +447,18 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             if pkg_dict.get(field):
                 pkg_dict['vocab_%s' % field] = [tag for tag in json.loads(pkg_dict[field])]
 
+        #populate update frequencies for apisets from resources[]
+        validated_data_dict = pkg_dict.get('validated_data_dict')
+        converted_validated_data_dict = json.loads(validated_data_dict)
+        resources = converted_validated_data_dict.get('resources')
+        if resources:
+            update_frequency = resources[0].get('update_frequency')
+            if update_frequency:
+                pkg_dict['update_frequency'] = json.dumps(update_frequency)
+
+
         # Map keywords to vocab_keywords_{lang}
-        translated_vocabs = ['keywords', 'content_type']
+        translated_vocabs = ['keywords', 'content_type', 'update_frequency']
         languages = ['fi', 'sv', 'en']
         for prop_key in translated_vocabs:
             prop_json = pkg_dict.get(prop_key)
