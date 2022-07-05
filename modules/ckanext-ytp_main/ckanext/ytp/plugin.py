@@ -262,7 +262,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
     def dataset_facets(self, facets_dict, package_type):
         lang = get_lang_prefix()
         facets_dict = OrderedDict()
-        #use different ordering for apisets
+        # use different ordering for apisets
         if package_type == 'apiset':
             facets_dict['vocab_keywords_' + lang] = _('Tags')
             facets_dict['organization'] = _('Organization')
@@ -447,7 +447,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             if pkg_dict.get(field):
                 pkg_dict['vocab_%s' % field] = [tag for tag in json.loads(pkg_dict[field])]
 
-        #populate update frequencies for apisets from resources[]
+        # Populate update frequencies for apisets from validated data_dict
         validated_data_dict = pkg_dict.get('validated_data_dict')
         converted_validated_data_dict = json.loads(validated_data_dict)
         resources = converted_validated_data_dict.get('resources')
@@ -455,7 +455,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             update_frequency = resources[0].get('update_frequency')
             if update_frequency:
                 pkg_dict['update_frequency'] = json.dumps(update_frequency)
-
 
         # Map keywords to vocab_keywords_{lang}
         translated_vocabs = ['keywords', 'content_type', 'update_frequency']
