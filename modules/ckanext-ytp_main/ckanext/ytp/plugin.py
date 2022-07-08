@@ -439,6 +439,8 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         # Map keywords to vocab_keywords_{lang}
         translated_vocabs = ['keywords', 'content_type']
         languages = ['fi', 'sv', 'en']
+        # Tags that should not be indexed 
+        ignored_tags = ["avoindata.fi"]
         for prop_key in translated_vocabs:
             prop_json = pkg_dict.get(prop_key)
             # Add only if not already there
@@ -448,9 +450,8 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             # Add for each language
             for lang in languages:
                 if prop_value.get(lang):
-                    prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]}]
+                    prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]} if tag not in ignored_tags]
                     pkg_dict['vocab_%s_%s' % (prop_key, lang)] = [tag for tag in prop_value[lang]]
-
             pkg_dict[prop_key] = json.dumps(prop_value)
 
         if 'date_released' in pkg_dict and ISO_DATETIME_FORMAT.match(pkg_dict['date_released']):
@@ -460,6 +461,18 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             org = toolkit.get_action('organization_show')({}, {'id': pkg_dict.get('organization')})
             if 'producer_type' in org:
                 pkg_dict['producer_type'] = org['producer_type']
+
+        return pkg_dict
+
+
+    def before_view(self, pkg_dict):
+        # remove unwanted keywords from being passed to the view
+        languages = ['fi', 'sv', 'en']
+        ignored_tags = ["avoindata.fi"]
+        keywords = pkg_dict.get('keywords')
+        for lang in languages:
+            if keywords.get(lang):
+                keywords[lang] = [tag for tag in {tag.lower() for tag in keywords[lang]} if tag not in ignored_tags]
 
         return pkg_dict
 
