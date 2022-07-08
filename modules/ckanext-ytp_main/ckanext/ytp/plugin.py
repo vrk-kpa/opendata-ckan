@@ -439,7 +439,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         # Map keywords to vocab_keywords_{lang}
         translated_vocabs = ['keywords', 'content_type']
         languages = ['fi', 'sv', 'en']
-        # Tags that should not be indexed 
         ignored_tags = ["avoindata.fi"]
         for prop_key in translated_vocabs:
             prop_json = pkg_dict.get(prop_key)
@@ -463,7 +462,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
                 pkg_dict['producer_type'] = org['producer_type']
 
         return pkg_dict
-
 
     def before_view(self, pkg_dict):
         # remove unwanted keywords from being passed to the view
