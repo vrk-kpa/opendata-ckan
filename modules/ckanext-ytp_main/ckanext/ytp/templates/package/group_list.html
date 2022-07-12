@@ -1,4 +1,16 @@
 {% ckan_extends %}
+
+{% block content_primary_nav %}
+
+{{ super() }}
+<!-- Add the active element to category <li> -->
+  <script>
+      let head_list = document.querySelectorAll('.nav.nav-tabs > li');
+      head_list[1].classList.add("active");
+  </script>
+{% endblock %}
+
+
 {% block primary_content_inner %}
   <h2 class="hide-heading">{{ _('Groups') }}</h2>
 
