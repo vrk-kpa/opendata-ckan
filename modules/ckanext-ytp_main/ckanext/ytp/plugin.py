@@ -154,13 +154,12 @@ def action_package_show(original_action, context, data_dict):
 def action_package_search(original_action, context, data_dict):
     sort_auto = data_dict.get('sort') in (None, '', 'auto')
     if sort_auto:
-        data_dict['sort'] = 'score desc' if data_dict.get('q') else 'metadata_created desc'
+        data_dict['sort'] = 'score desc, metadata_modified desc' if data_dict.get('q') else 'metadata_created desc'
 
     result = original_action(context, data_dict)
 
     if sort_auto:
         result['sort'] = 'auto'
-
     return result
 
 
