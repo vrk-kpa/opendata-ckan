@@ -1,3 +1,16 @@
+## [2.11.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.5...v2.11.6) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1172:** Default sorting fixes ([56ed47b](https://github.com/vrk-kpa/opendata-ckan/commit/56ed47b30d2bea8d9b489e85aa842db503b0a989))
+* **AV-1174:** Added a check for auto sorting option ([2c2e4a1](https://github.com/vrk-kpa/opendata-ckan/commit/2c2e4a14fde04c792045d438c1ad3512864a3180))
+* **AV-1174:** added default empty option to organization page ([5eb1c54](https://github.com/vrk-kpa/opendata-ckan/commit/5eb1c54cd072cab78dc75ac06aa7726815318c70))
+* **AV-1174:** Added secondary sorting term to search based sorting ([82f5936](https://github.com/vrk-kpa/opendata-ckan/commit/82f593679bf053e4c76d0bacf80fc2fa8dedc1e8))
+* **AV-1174:** Added the used default sorting option to the ones populated into the list ([86f3960](https://github.com/vrk-kpa/opendata-ckan/commit/86f3960665d4ad4f5602536222c7655c73518dcb))
+* **AV-1174:** Adding default sorting for advanced search and dataset ([e0e877b](https://github.com/vrk-kpa/opendata-ckan/commit/e0e877b42477535557d9da6bf14275c0506284fe))
+* **AV-1174:** flake8 ([39cb78c](https://github.com/vrk-kpa/opendata-ckan/commit/39cb78c9bdff7aab513f081358b7125b4ae3718c))
+
 ## [2.11.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.4...v2.11.5) (2022-06-30)
 
 
