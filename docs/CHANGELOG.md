@@ -1,3 +1,10 @@
+## [2.11.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.9...v2.11.10) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1741:** fixed nullcheck on keywords ([a36c1ad](https://github.com/vrk-kpa/opendata-ckan/commit/a36c1ad1cf8a0ceeceba8b78b71e3b4a22661627))
+
 ## [2.11.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.8...v2.11.9) (2022-07-15)
 
 
