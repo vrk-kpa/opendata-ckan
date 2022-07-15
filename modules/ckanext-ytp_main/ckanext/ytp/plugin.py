@@ -496,7 +496,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
         ignored_tags = ["avoindata.fi"]
         keywords = pkg_dict.get('keywords')
         for lang in languages:
-            if keywords.get(lang):
+            if keywords and keywords.get(lang):
                 keywords[lang] = [tag for tag in {tag.lower() for tag in keywords[lang]} if tag not in ignored_tags]
 
         return pkg_dict
