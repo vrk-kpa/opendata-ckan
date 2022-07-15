@@ -1,3 +1,11 @@
+## [2.11.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.8...v2.11.9) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1741:** Flake8 ([6a21f2f](https://github.com/vrk-kpa/opendata-ckan/commit/6a21f2fbd2a5fbd162f618c24bb90407d1e547fe))
+* **AV-1741:** Removing avoindata.fi keyword ([7773ba1](https://github.com/vrk-kpa/opendata-ckan/commit/7773ba19671a79d7a1f93d04761edcd9ade1d3bd))
+
 ## [2.11.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.7...v2.11.8) (2022-07-15)
 
 
