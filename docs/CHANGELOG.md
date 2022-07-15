@@ -1,3 +1,11 @@
+## [2.11.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.7...v2.11.8) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1745:** Apiset page filtering ([933d5b3](https://github.com/vrk-kpa/opendata-ckan/commit/933d5b3634ed6988067d118fd108771816f445d8))
+* **AV-1745:** flake8 ([2777964](https://github.com/vrk-kpa/opendata-ckan/commit/2777964edc7f2787482b72b63c06e5eca9318b02))
+
 ## [2.11.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.6...v2.11.7) (2022-07-15)
 
 
