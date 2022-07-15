@@ -1,3 +1,10 @@
+## [2.11.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.6...v2.11.7) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1746:** Removed spatial search from apisets page ([54e64ac](https://github.com/vrk-kpa/opendata-ckan/commit/54e64ac3034e5b250266ea4e9dbd4782756cca9f))
+
 ## [2.11.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.5...v2.11.6) (2022-07-15)
 
 
