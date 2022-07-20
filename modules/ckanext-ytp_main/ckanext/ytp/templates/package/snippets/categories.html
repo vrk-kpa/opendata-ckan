@@ -1,5 +1,7 @@
-{% asset "ytp_resources/categories_js" %} {% set lang = h.get_lang_prefix()
-%} {% if categories %}
+{% asset "ytp_resources/categories_js" %} 
+{% set lang = h.get_lang_prefix()%}
+
+{% if categories %}
 <section class="categories">
   {% block category_list %}
   <ul class="categories__list">
@@ -15,11 +17,11 @@
       />
       {% if category.get('title_translated', {}).get(lang) %}
       <h5 class="categories__list__item__title">
-        {{ category.get('title_translated', {}).get(lang) }}
+        <a href="{{h.url_for('group_read', id=category.get('name', {}))}}">{{ category.get('title_translated', {}).get(lang) }}</a>
       </h5>
       {% else %}
       <h5 class="categories__list__item__title">
-        {{ category.get('display_name') }}
+        <a href="{{h.url_for('group_read', id=category.get('name', {}))}}">{{ category.get('display_name') }}</a>
       </h5>
       {% endif %}
     </li>
