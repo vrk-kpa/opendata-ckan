@@ -775,7 +775,7 @@ def action_organization_tree_list(context, data_dict):
     # Filter based on search query if provided
     if q:
         result_titles_and_gids = ((title, gid) for title, gid in translated_titles_and_gids
-                                  if q in title)
+                                  if q.lower() in title)
     else:
         result_titles_and_gids = translated_titles_and_gids
 
