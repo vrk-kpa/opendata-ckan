@@ -1,3 +1,11 @@
+## [2.11.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.10...v2.11.11) (2022-07-26)
+
+
+### Bug Fixes
+
+* **AV-1184:** Flake8 ([5fed9ea](https://github.com/vrk-kpa/opendata-ckan/commit/5fed9eab07b2770d50b26b1ae5f659ee58f0d534))
+* **AV-1184:** user specific organizations ([1b3946e](https://github.com/vrk-kpa/opendata-ckan/commit/1b3946e232f0128b2b689e265da97f35fe83d986))
+
 ## [2.11.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.9...v2.11.10) (2022-07-15)
 
 
