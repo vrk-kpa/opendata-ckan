@@ -1,3 +1,13 @@
+## [2.11.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.11...v2.11.12) (2022-08-01)
+
+
+### Bug Fixes
+
+* **AV-1545:** Only include active packages in package_count (exclude draft and deleted) ([4a35bc7](https://github.com/vrk-kpa/opendata-ckan/commit/4a35bc798793e5fadf5d259f4d20769bda85029a))
+* **AV-1665:** dataset api instructions change ([98558e0](https://github.com/vrk-kpa/opendata-ckan/commit/98558e0316163dc39ccc37eb08726667b49e54bd))
+* **AV-1672:** Turn dataset categories into links ([1b0f40c](https://github.com/vrk-kpa/opendata-ckan/commit/1b0f40caa56d0db9208e927087cb8b87bc609730))
+* Merge pull request [#121](https://github.com/vrk-kpa/opendata-ckan/issues/121) from vrk-kpa/AV-1672_turn_dataset_categories_into_links ([6bf40e0](https://github.com/vrk-kpa/opendata-ckan/commit/6bf40e033dbaa331443e80584a2f4a74db5032d8))
+
 ## [2.11.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.10...v2.11.11) (2022-07-26)
 
 
