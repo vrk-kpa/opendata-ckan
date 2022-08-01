@@ -1,3 +1,11 @@
+## [2.11.13](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.12...v2.11.13) (2022-08-01)
+
+
+### Bug Fixes
+
+* **AV-1748:** Remove terms of service field from apisets ([6d71cfa](https://github.com/vrk-kpa/opendata-ckan/commit/6d71cfa13e36c986f7adffc236e6b34dac9af10c))
+* **AV-1748:** Update ckanext-apiset commit ([c5c08d0](https://github.com/vrk-kpa/opendata-ckan/commit/c5c08d0935b1e154ba6ddf6500aefdb91ae42d53))
+
 ## [2.11.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.11...v2.11.12) (2022-08-01)
 
 
