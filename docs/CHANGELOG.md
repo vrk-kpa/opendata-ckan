@@ -1,3 +1,64 @@
+## [2.11.12](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.11...v2.11.12) (2022-08-01)
+
+
+### Bug Fixes
+
+* **AV-1545:** Only include active packages in package_count (exclude draft and deleted) ([4a35bc7](https://github.com/vrk-kpa/opendata-ckan/commit/4a35bc798793e5fadf5d259f4d20769bda85029a))
+* **AV-1665:** dataset api instructions change ([98558e0](https://github.com/vrk-kpa/opendata-ckan/commit/98558e0316163dc39ccc37eb08726667b49e54bd))
+* **AV-1672:** Turn dataset categories into links ([1b0f40c](https://github.com/vrk-kpa/opendata-ckan/commit/1b0f40caa56d0db9208e927087cb8b87bc609730))
+* Merge pull request [#121](https://github.com/vrk-kpa/opendata-ckan/issues/121) from vrk-kpa/AV-1672_turn_dataset_categories_into_links ([6bf40e0](https://github.com/vrk-kpa/opendata-ckan/commit/6bf40e033dbaa331443e80584a2f4a74db5032d8))
+
+## [2.11.11](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.10...v2.11.11) (2022-07-26)
+
+
+### Bug Fixes
+
+* **AV-1184:** Flake8 ([5fed9ea](https://github.com/vrk-kpa/opendata-ckan/commit/5fed9eab07b2770d50b26b1ae5f659ee58f0d534))
+* **AV-1184:** user specific organizations ([1b3946e](https://github.com/vrk-kpa/opendata-ckan/commit/1b3946e232f0128b2b689e265da97f35fe83d986))
+
+## [2.11.10](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.9...v2.11.10) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1741:** fixed nullcheck on keywords ([a36c1ad](https://github.com/vrk-kpa/opendata-ckan/commit/a36c1ad1cf8a0ceeceba8b78b71e3b4a22661627))
+
+## [2.11.9](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.8...v2.11.9) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1741:** Flake8 ([6a21f2f](https://github.com/vrk-kpa/opendata-ckan/commit/6a21f2fbd2a5fbd162f618c24bb90407d1e547fe))
+* **AV-1741:** Removing avoindata.fi keyword ([7773ba1](https://github.com/vrk-kpa/opendata-ckan/commit/7773ba19671a79d7a1f93d04761edcd9ade1d3bd))
+
+## [2.11.8](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.7...v2.11.8) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1745:** Apiset page filtering ([933d5b3](https://github.com/vrk-kpa/opendata-ckan/commit/933d5b3634ed6988067d118fd108771816f445d8))
+* **AV-1745:** flake8 ([2777964](https://github.com/vrk-kpa/opendata-ckan/commit/2777964edc7f2787482b72b63c06e5eca9318b02))
+
+## [2.11.7](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.6...v2.11.7) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1746:** Removed spatial search from apisets page ([54e64ac](https://github.com/vrk-kpa/opendata-ckan/commit/54e64ac3034e5b250266ea4e9dbd4782756cca9f))
+
+## [2.11.6](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.5...v2.11.6) (2022-07-15)
+
+
+### Bug Fixes
+
+* **AV-1172:** Default sorting fixes ([56ed47b](https://github.com/vrk-kpa/opendata-ckan/commit/56ed47b30d2bea8d9b489e85aa842db503b0a989))
+* **AV-1174:** Added a check for auto sorting option ([2c2e4a1](https://github.com/vrk-kpa/opendata-ckan/commit/2c2e4a14fde04c792045d438c1ad3512864a3180))
+* **AV-1174:** added default empty option to organization page ([5eb1c54](https://github.com/vrk-kpa/opendata-ckan/commit/5eb1c54cd072cab78dc75ac06aa7726815318c70))
+* **AV-1174:** Added secondary sorting term to search based sorting ([82f5936](https://github.com/vrk-kpa/opendata-ckan/commit/82f593679bf053e4c76d0bacf80fc2fa8dedc1e8))
+* **AV-1174:** Added the used default sorting option to the ones populated into the list ([86f3960](https://github.com/vrk-kpa/opendata-ckan/commit/86f3960665d4ad4f5602536222c7655c73518dcb))
+* **AV-1174:** Adding default sorting for advanced search and dataset ([e0e877b](https://github.com/vrk-kpa/opendata-ckan/commit/e0e877b42477535557d9da6bf14275c0506284fe))
+* **AV-1174:** flake8 ([39cb78c](https://github.com/vrk-kpa/opendata-ckan/commit/39cb78c9bdff7aab513f081358b7125b4ae3718c))
+
 ## [2.11.5](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.4...v2.11.5) (2022-06-30)
 
 

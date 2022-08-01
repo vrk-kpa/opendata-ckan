@@ -152,8 +152,15 @@ def action_package_show(original_action, context, data_dict):
 @chained_action
 @logic.side_effect_free
 def action_package_search(original_action, context, data_dict):
-    data_dict['sort'] = data_dict.get('sort') or 'metadata_created desc'
-    return original_action(context, data_dict)
+    sort_auto = data_dict.get('sort') in (None, '', 'auto')
+    if sort_auto:
+        data_dict['sort'] = 'score desc, metadata_modified desc' if data_dict.get('q') else 'metadata_created desc'
+
+    result = original_action(context, data_dict)
+
+    if sort_auto:
+        result['sort'] = 'auto'
+    return result
 
 
 class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMainTranslation):
@@ -262,16 +269,27 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
     def dataset_facets(self, facets_dict, package_type):
         lang = get_lang_prefix()
         facets_dict = OrderedDict()
-        facets_dict.update({'vocab_international_benchmarks': _('International Benchmarks')})
-        facets_dict.update({'vocab_geographical_coverage': _('Geographical coverage')})
-        facets_dict.update({'collection_type': _('Collection Types')})
-        facets_dict['vocab_keywords_' + lang] = _('Tags')
-        facets_dict.update({'organization': _('Organization')})
-        facets_dict.update({'res_format': _('Formats')})
-        facets_dict.update({'license_id': _('Licenses')})
-        facets_dict.update({'groups': _('Category')})
-        facets_dict.update({'producer_type': _('Producer type')})
-        # add more dataset facets here
+        # use different ordering for apisets
+        if package_type == 'apiset':
+            facets_dict['vocab_keywords_' + lang] = _('Tags')
+            facets_dict['organization'] = _('Organization')
+            facets_dict['res_format'] = _('Formats')
+            facets_dict['vocab_update_frequency_' + lang] = _('Update frequency')
+            facets_dict['license_id'] = _('Licenses')
+            facets_dict['groups'] = _('Category')
+            facets_dict['producer_type'] = _('Producer type')
+        else:
+            facets_dict['vocab_international_benchmarks'] = _('International Benchmarks')
+            facets_dict['vocab_geographical_coverage'] = _('Geographical coverage')
+            facets_dict['collection_type'] = _('Collection Types')
+            facets_dict['vocab_keywords_' + lang] = _('Tags')
+            facets_dict['organization'] = _('Organization')
+            facets_dict['res_format'] = _('Formats')
+            facets_dict['license_id'] = _('Licenses')
+            facets_dict['groups'] = _('Category')
+            facets_dict['producer_type'] = _('Producer type')
+            # add more dataset facets here
+
         return facets_dict
 
     def organization_facets(self, facets_dict, organization_type, package_type):
@@ -436,9 +454,19 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             if pkg_dict.get(field):
                 pkg_dict['vocab_%s' % field] = [tag for tag in json.loads(pkg_dict[field])]
 
+        # Populate update frequencies for apisets from validated data_dict
+        validated_data_dict = pkg_dict.get('validated_data_dict')
+        converted_validated_data_dict = json.loads(validated_data_dict)
+        resources = converted_validated_data_dict.get('resources')
+        if resources:
+            update_frequency = resources[0].get('update_frequency')
+            if update_frequency:
+                pkg_dict['update_frequency'] = json.dumps(update_frequency)
+
         # Map keywords to vocab_keywords_{lang}
-        translated_vocabs = ['keywords', 'content_type']
+        translated_vocabs = ['keywords', 'content_type', 'update_frequency']
         languages = ['fi', 'sv', 'en']
+        ignored_tags = ["avoindata.fi"]
         for prop_key in translated_vocabs:
             prop_json = pkg_dict.get(prop_key)
             # Add only if not already there
@@ -448,9 +476,8 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             # Add for each language
             for lang in languages:
                 if prop_value.get(lang):
-                    prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]}]
+                    prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]} if tag not in ignored_tags]
                     pkg_dict['vocab_%s_%s' % (prop_key, lang)] = [tag for tag in prop_value[lang]]
-
             pkg_dict[prop_key] = json.dumps(prop_value)
 
         if 'date_released' in pkg_dict and ISO_DATETIME_FORMAT.match(pkg_dict['date_released']):
@@ -460,6 +487,17 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             org = toolkit.get_action('organization_show')({}, {'id': pkg_dict.get('organization')})
             if 'producer_type' in org:
                 pkg_dict['producer_type'] = org['producer_type']
+
+        return pkg_dict
+
+    def before_view(self, pkg_dict):
+        # remove unwanted keywords from being passed to the view
+        languages = ['fi', 'sv', 'en']
+        ignored_tags = ["avoindata.fi"]
+        keywords = pkg_dict.get('keywords')
+        for lang in languages:
+            if keywords and keywords.get(lang):
+                keywords[lang] = [tag for tag in {tag.lower() for tag in keywords[lang]} if tag not in ignored_tags]
 
         return pkg_dict
 
@@ -767,6 +805,7 @@ def action_organization_tree_list(context, data_dict):
                                               model.GroupExtra.state == 'active'))
             .outerjoin(model.Package, and_(model.Package.type == 'dataset',
                                            model.Package.private == false(),
+                                           model.Package.state == 'active',
                                            or_(model.Package.owner_org == model.Group.name,
                                                model.Package.owner_org == model.Group.id)))
             .outerjoin(parent_member, and_(parent_member.group_id == model.Group.id,
