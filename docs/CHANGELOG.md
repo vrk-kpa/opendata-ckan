@@ -1,3 +1,13 @@
+## [2.11.14](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.13...v2.11.14) (2022-08-02)
+
+
+### Bug Fixes
+
+* **AV-1198:** Update showcase submit image upload style ([4eac218](https://github.com/vrk-kpa/opendata-ckan/commit/4eac218e8626e4dc96a8d1df0ff2c2f0979f5abc))
+* **AV-1671:** Fix showcase tag/keyword links to point to correct page ([c28a3c9](https://github.com/vrk-kpa/opendata-ckan/commit/c28a3c9263f2aa087fe9bc089a8cf4350fc9b554))
+* **AV-1739:** Make dataset search filter pills translate ([cd202da](https://github.com/vrk-kpa/opendata-ckan/commit/cd202da1daa6238ef42705eab3f4a3224f1a0844))
+* **AV-1771:** Lowercase the search keywords ([b0f68cc](https://github.com/vrk-kpa/opendata-ckan/commit/b0f68cce8662be8ea99b5935e10b911513831955))
+
 ## [2.11.13](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.12...v2.11.13) (2022-08-01)
 
 
