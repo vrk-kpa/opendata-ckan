@@ -1,3 +1,11 @@
+## [2.11.15](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.14...v2.11.15) (2022-08-02)
+
+
+### Bug Fixes
+
+* **AV-1105:** Edit category page active fix ([0e25a9e](https://github.com/vrk-kpa/opendata-ckan/commit/0e25a9e262255aa921933b97458d2261744921ad))
+* **AV-1105:** Group active tab controller override ([a3a6c27](https://github.com/vrk-kpa/opendata-ckan/commit/a3a6c271c9f1566b8d5c7f8d3cb614a20164547c))
+
 ## [2.11.14](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.13...v2.11.14) (2022-08-02)
 
 
