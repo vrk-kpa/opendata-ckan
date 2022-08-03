@@ -671,8 +671,6 @@ class YTPSpatialHarvester(plugins.SingletonPlugin):
             try:
                 tag_name_validator(tag.get('name'), context)
                 tag_length_validator(tag.get('name'), context)
-                from pprint import pformat
-                log.debug('Spatial tag: %s', pformat(tag))
                 package_dict['keywords']['fi'].append(tag.get('name'))
             except Invalid:
                 log.info("Invalid tag found %s, skipping..", tag.get('name'))
