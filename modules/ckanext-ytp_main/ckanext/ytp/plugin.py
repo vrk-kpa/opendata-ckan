@@ -602,43 +602,50 @@ class YTPSpatialHarvester(plugins.SingletonPlugin):
 
         config_obj = json.loads(data_dict['harvest_object'].source.config)
         license_from_source = config_obj.get("license", None)
+        if license_from_source is not None:
+            package_dict['license_id'] = license_from_source
 
         for extra in package_dict['extras']:
+            if extra['key'] == 'licence' and license_from_source is None:
+                value = json.loads(extra['value'])
 
-            if license_from_source is None:
-                if extra['key'] == 'licence':
-                    value = json.loads(extra['value'])
-                    if len(value):
-                        package_dict['license'] = value
-                        urls = []
-                        for i in value:
-                            urls += re.findall(r'(https?://\S+)', i)
-                        if len(urls):
-                            if urls[0].endswith('.'):
-                                urls[0] = urls[0][:-1]
-                            package_dict['extras'].append({
-                                "key": 'license_url',
-                                'value': urls[0]
-                            })
-                package_dict['license_id'] = 'other'
-            else:
-                package_dict['license_id'] = license_from_source
+                license_id = 'other'
+                license_obj = value
 
-            if extra['key'] == 'temporal-extent-begin':
+                url_pattern = re.compile(r'(https?://\S+[^.,) ])')
+                urls = [url for v in value for url in url_pattern.findall(v)]
+
+                if urls:
+                    licenses = get_action('license_list')(context, {})
+                    http_urls = {re.sub('^https', 'http', url) for url in urls}
+                    matching_license = next((li for li in licenses if li.get('url') in http_urls), None)
+                    if matching_license is not None:
+                        license_id = matching_license['id']
+                        license_obj = matching_license
+                    else:
+                        package_dict['extras'].append({
+                            "key": 'license_url',
+                            'value': urls[0]
+                        })
+
+                package_dict['license_id'] = license_id
+                package_dict['license'] = license_obj
+
+            elif extra['key'] == 'temporal-extent-begin':
                 try:
                     value = iso8601.parse_date(extra['value'])
                     package_dict['valid_from'] = value
                 except iso8601.ParseError:
                     log.info("Could not convert %s to datetime" % extra['value'])
 
-            if extra['key'] == 'temporal-extent-end':
+            elif extra['key'] == 'temporal-extent-end':
                 try:
                     value = iso8601.parse_date(extra['value'])
                     package_dict['valid_till'] = value
                 except iso8601.ParseError:
                     log.info("Could not convert %s to datetime" % extra['value'])
 
-            if extra['key'] == 'dataset-reference-date':
+            elif extra['key'] == 'dataset-reference-date':
                 try:
                     value_list = json.loads(extra['value'])
                     for value in value_list:
@@ -650,7 +657,7 @@ class YTPSpatialHarvester(plugins.SingletonPlugin):
                     pass
 
             # TODO: Move to dataset level
-            if extra['key'] == "spatial-reference-system":
+            elif extra['key'] == "spatial-reference-system":
                 for resource in package_dict.get('resources', []):
                     resource['position_info'] = extra['value']
 
