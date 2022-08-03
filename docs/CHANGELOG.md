@@ -1,3 +1,11 @@
+## [2.11.16](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.15...v2.11.16) (2022-08-03)
+
+
+### Bug Fixes
+
+* **AV-1757:** Map license information in spatial datasets into known licenses ([a2e8942](https://github.com/vrk-kpa/opendata-ckan/commit/a2e894294cf0886bfb08a758f514b1e09d1a6de3))
+* **AV-1757:** Remove unnecessary logging ([0d09f5a](https://github.com/vrk-kpa/opendata-ckan/commit/0d09f5a3de499177ac151731789375d8fe648099))
+
 ## [2.11.15](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.14...v2.11.15) (2022-08-02)
 
 
