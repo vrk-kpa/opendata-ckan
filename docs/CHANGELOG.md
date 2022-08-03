@@ -1,3 +1,11 @@
+## [2.11.17](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.16...v2.11.17) (2022-08-03)
+
+
+### Bug Fixes
+
+* **AV-1773:** Ensure variable is dict before trying to get ([c6d0416](https://github.com/vrk-kpa/opendata-ckan/commit/c6d04163cc104bea5e6f5c4eaf34f82067303505))
+* **AV-1773:** Remove extraneous logging ([85edfd2](https://github.com/vrk-kpa/opendata-ckan/commit/85edfd2ae22c92a1e356c7a89d4024ac12772e00))
+
 ## [2.11.16](https://github.com/vrk-kpa/opendata-ckan/compare/v2.11.15...v2.11.16) (2022-08-03)
 
 
