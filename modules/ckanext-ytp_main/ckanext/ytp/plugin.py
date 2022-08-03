@@ -456,6 +456,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
         # Populate update frequencies for apisets from validated data_dict
         validated_data_dict = pkg_dict.get('validated_data_dict')
+        log.info(json.dumps(pkg_dict))
         converted_validated_data_dict = json.loads(validated_data_dict)
         resources = converted_validated_data_dict.get('resources')
         if resources:
@@ -475,7 +476,7 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
             prop_value = json.loads(prop_json)
             # Add for each language
             for lang in languages:
-                if prop_value.get(lang):
+                if type(prop_value) is dict and prop_value.get(lang):
                     prop_value[lang] = [tag for tag in {tag.lower() for tag in prop_value[lang]} if tag not in ignored_tags]
                     pkg_dict['vocab_%s_%s' % (prop_key, lang)] = [tag for tag in prop_value[lang]]
             pkg_dict[prop_key] = json.dumps(prop_value)
