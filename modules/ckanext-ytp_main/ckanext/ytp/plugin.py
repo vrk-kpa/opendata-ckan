@@ -456,7 +456,6 @@ class YTPDatasetForm(plugins.SingletonPlugin, toolkit.DefaultDatasetForm, YtpMai
 
         # Populate update frequencies for apisets from validated data_dict
         validated_data_dict = pkg_dict.get('validated_data_dict')
-        log.info(json.dumps(pkg_dict))
         converted_validated_data_dict = json.loads(validated_data_dict)
         resources = converted_validated_data_dict.get('resources')
         if resources:
